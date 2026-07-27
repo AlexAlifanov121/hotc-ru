@@ -1,0 +1,74 @@
+ErrorDocument 403 /404.html
+ErrorDocument 404 /404.html
+
+DirectoryIndex page39918971.html
+
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} /robots.txt
+RewriteCond "%{DOCUMENT_ROOT}/project7933474/robots_%{HTTP_HOST}.txt" -f
+RewriteRule ^(.*)$ robots_%{HTTP_HOST}.txt [NC,L]
+RewriteRule ^main$ page39918971.html [NC]
+RewriteRule ^main/$ page39918971.html [NC]
+
+RewriteRule ^services$ page40198543.html [NC]
+RewriteRule ^services/$ page40198543.html [NC]
+
+RewriteRule ^projects$ page40109669.html [NC]
+RewriteRule ^projects/$ page40109669.html [NC]
+
+RewriteRule ^whyus$ page40110933.html [NC]
+RewriteRule ^whyus/$ page40110933.html [NC]
+
+RewriteRule ^whydubai$ page40196348.html [NC]
+RewriteRule ^whydubai/$ page40196348.html [NC]
+
+RewriteRule ^contacts$ page40106292.html [NC]
+RewriteRule ^contacts/$ page40106292.html [NC]
+
+RewriteRule ^binghattibugatti$ page40159974.html [NC]
+RewriteRule ^binghattibugatti/$ page40159974.html [NC]
+
+RewriteRule ^burjbinghatti$ page40184758.html [NC]
+RewriteRule ^burjbinghatti/$ page40184758.html [NC]
+
+RewriteRule ^vela-omniyat$ page40184843.html [NC]
+RewriteRule ^vela-omniyat/$ page40184843.html [NC]
+
+RewriteRule ^opus-omniyat$ page40184927.html [NC]
+RewriteRule ^opus-omniyat/$ page40184927.html [NC]
+
+RewriteRule ^eywa$ page40185063.html [NC]
+RewriteRule ^eywa/$ page40185063.html [NC]
+
+RewriteRule ^como-nakheel$ page40185192.html [NC]
+RewriteRule ^como-nakheel/$ page40185192.html [NC]
+
+RewriteRule ^zuha-albarari$ page40185272.html [NC]
+RewriteRule ^zuha-albarari/$ page40185272.html [NC]
+
+RewriteRule ^kempinskifloatingvillas$ page40185388.html [NC]
+RewriteRule ^kempinskifloatingvillas/$ page40185388.html [NC]
+
+RewriteRule ^oceanhouse-ellington$ page40185489.html [NC]
+RewriteRule ^oceanhouse-ellington/$ page40185489.html [NC]
+
+RewriteRule ^sanctuary-ellington$ page40185576.html [NC]
+RewriteRule ^sanctuary-ellington/$ page40185576.html [NC]
+
+RewriteRule ^header$ page40161829.html [NC]
+RewriteRule ^header/$ page40161829.html [NC]
+
+RewriteRule ^footer$ page40161846.html [NC]
+RewriteRule ^footer/$ page40161846.html [NC]
+
+RewriteRule ^privacy$ page40212066.html [NC]
+RewriteRule ^privacy/$ page40212066.html [NC]
+
+RewriteRule ^license$ page40212136.html [NC]
+RewriteRule ^license/$ page40212136.html [NC]
+
+RewriteRule ^pagenotfound$ page40212295.html [NC]
+RewriteRule ^pagenotfound/$ page40212295.html [NC]
+
+

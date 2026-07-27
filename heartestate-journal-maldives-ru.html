@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<script>
+try{var t=localStorage.getItem('hotc-theme');if(t==='dark'||(!t&&window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.setAttribute('data-theme','dark');}}catch(e){}
+</script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Мальдивы за пределами курорта — тезис второй резиденции, о котором ещё никто не пишет · Heart of the City</title>
+<meta name="description" content="Maldives beyond the resort: a 3 billion dollar branded-residential pipeline, zero income tax, residence-by-investment from USD 250K." />
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="Heart of the City" />
+<meta property="og:title" content="Мальдивы, вне курорта · Журнал Heart of the City" />
+<meta property="og:description" content="Тезис о втором доме, о котором ещё не пишут. Пайплайн $3B+ и почему капитал из СНГ тихо ведёт вторую волну." />
+<meta property="og:url" content="https://heartestate.ae/heartestate-journal-maldives-ru" />
+<meta property="og:image" content="https://heartestate.ae/assets/og/heart-of-the-city-og.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Heart of the City · Residences" />
+<meta property="og:locale" content="ru" />
+<meta property="og:locale:alternate" content="en" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Мальдивы, вне курорта · Журнал Heart of the City" />
+<meta name="twitter:description" content="Тезис о втором доме, о котором ещё не пишут. Пайплайн $3B+ и почему капитал из СНГ тихо ведёт вторую волну." />
+<meta name="twitter:image" content="https://heartestate.ae/assets/og/heart-of-the-city-og.jpg" />
+<link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400&family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #F2EEE6;
+    --bg-alt: #E8E2D3;
+    --ink: #131211;
+    --ink-soft: #1E1C1A;
+    --ink-muted: #5E5A52;
+    --line: rgba(19,18,17,0.12);
+    --accent: #E5482A;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-size: 16.5px;
+    font-family: 'Bricolage Grotesque', system-ui, sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.05 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    opacity: 0.5;
+    z-index: 1000;
+    mix-blend-mode: multiply;
+  }
+  .serif { font-family: 'Newsreader', Georgia, serif; }
+
+  /* NAV */
+  nav.top {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 22px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(242, 238, 230, 0.85);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--line);
+  }
+  nav.top .logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: var(--ink);
+  }
+  nav.top .logo img { height: 50px; width: auto; }
+  nav.top .back {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.2s;
+  }
+  nav.top .back:hover { color: var(--accent); }
+
+  /* ARTICLE HEAD */
+  .article-head {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 90px 32px 60px;
+  }
+  .article-meta {
+    display: flex;
+    gap: 26px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    margin-bottom: 42px;
+  }
+  .article-meta .cat { color: var(--accent); }
+
+  .article-head h1 {
+    font-family: 'Newsreader', serif;
+    font-size: clamp(46px, 6.5vw, 88px);
+    font-weight: 300;
+    line-height: 1.02;
+    letter-spacing: -0.025em;
+    margin-bottom: 36px;
+  }
+  .article-head h1 em { font-style: italic; color: var(--accent); font-weight: 300; }
+
+  .standfirst {
+    font-family: 'Newsreader', serif;
+    font-size: clamp(20px, 1.8vw, 26px);
+    line-height: 1.45;
+    font-weight: 300;
+    color: var(--ink-soft);
+    margin-bottom: 40px;
+    font-style: italic;
+  }
+
+  .byline {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    padding-top: 22px;
+    border-top: 1px solid var(--line);
+  }
+  .byline .avatar {
+    width: 44px;
+    height: 44px;
+    background: var(--ink);
+    color: var(--bg);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Newsreader', serif;
+    font-size: 18px;
+  }
+  .byline .author { display: flex; flex-direction: column; }
+  .byline .name { font-weight: 500; font-size: 14px; }
+  .byline .role { font-size: 12px; color: var(--ink-muted); }
+
+  /* HERO IMAGE */
+  .hero-img {
+    max-width: 1480px;
+    margin: 0 auto 80px;
+    padding: 0 32px;
+  }
+  .hero-img .frame {
+    aspect-ratio: 16 / 9;
+    background-color: #2A2218;
+    background-image:
+      linear-gradient(180deg, rgba(0,0,0,0) 50%, rgba(0,0,0,0.4) 100%),
+      url('assets/video/maldives-poster.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+  }
+  .hero-img .caption {
+    margin-top: 16px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+  }
+
+  /* ARTICLE BODY */
+  .article-body {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+  .article-body h2 {
+    font-family: 'Newsreader', serif;
+    font-size: clamp(32px, 3.6vw, 48px);
+    font-weight: 300;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin: 80px 0 30px;
+  }
+  .article-body h2 em { font-style: italic; color: var(--accent); font-weight: 300; }
+  .article-body h2 .num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 16px;
+  }
+  .article-body h3 {
+    font-family: 'Newsreader', serif;
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 1.2;
+    margin: 50px 0 18px;
+    letter-spacing: -0.01em;
+  }
+  .article-body p {
+    font-size: 18px;
+    line-height: 1.65;
+    color: var(--ink-soft);
+    margin-bottom: 22px;
+  }
+  .article-body p.lead-graf {
+    font-family: 'Newsreader', serif;
+    font-size: 22px;
+    line-height: 1.55;
+    color: var(--ink);
+    margin-bottom: 32px;
+  }
+  .article-body p.lead-graf::first-letter {
+    font-family: 'Newsreader', serif;
+    font-size: 72px;
+    float: left;
+    line-height: 0.85;
+    margin: 4px 12px 0 0;
+    color: var(--accent);
+    font-weight: 300;
+  }
+  .article-body strong { color: var(--ink); font-weight: 600; }
+  .article-body em { font-style: italic; }
+  .article-body ul {
+    margin: 0 0 28px 0;
+    padding-left: 22px;
+    list-style: none;
+  }
+  .article-body li {
+    font-size: 17px;
+    line-height: 1.6;
+    color: var(--ink-soft);
+    margin-bottom: 14px;
+    position: relative;
+    padding-left: 18px;
+  }
+  .article-body li::before {
+    content: "—";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  /* PULL QUOTE */
+  .pull-quote {
+    margin: 60px -40px;
+    padding: 50px 40px;
+    background: var(--bg-alt);
+    border-radius: 12px;
+    text-align: center;
+  }
+  .pull-quote p {
+    font-family: 'Newsreader', serif;
+    font-size: clamp(24px, 2.4vw, 32px);
+    font-weight: 300;
+    line-height: 1.3;
+    letter-spacing: -0.012em;
+    color: var(--ink);
+    font-style: italic;
+    max-width: 680px;
+    margin: 0 auto;
+  }
+  .pull-quote p em { color: var(--accent); }
+
+  /* CASE CARD */
+  .case-card {
+    margin: 36px 0;
+    padding: 32px 36px;
+    background: var(--bg-alt);
+    border-radius: 10px;
+    border-left: 3px solid var(--accent);
+  }
+  .case-card.loss { border-left-color: #87827A; }
+  .case-card .label-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 14px;
+  }
+  .case-card .label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+  .case-card.loss .label { color: var(--ink-muted); }
+  .case-card .figure {
+    font-family: 'Newsreader', serif;
+    font-size: 32px;
+    font-weight: 300;
+    color: var(--ink);
+  }
+  .case-card.loss .figure { color: var(--ink-soft); }
+  .case-card .figure em { font-style: italic; color: var(--accent); }
+  .case-card.loss .figure em { color: #87827A; }
+  .case-card h4 {
+    font-family: 'Newsreader', serif;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 10px;
+    letter-spacing: -0.01em;
+  }
+  .case-card p { font-size: 15px; margin-bottom: 0; }
+
+  /* CONDITIONS GRID */
+  .conditions {
+    margin: 50px 0;
+    display: grid;
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .condition {
+    background: var(--bg);
+    padding: 28px 32px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 28px;
+    align-items: start;
+    transition: background 0.2s;
+  }
+  .condition:hover { background: var(--bg-alt); }
+  .condition .c-num {
+    font-family: 'Newsreader', serif;
+    font-size: 48px;
+    font-weight: 300;
+    color: var(--accent);
+    line-height: 0.9;
+    min-width: 60px;
+  }
+  .condition h4 {
+    font-family: 'Newsreader', serif;
+    font-size: 22px;
+    font-weight: 400;
+    margin-bottom: 6px;
+    letter-spacing: -0.005em;
+  }
+  .condition p { font-size: 15px; margin: 0; }
+
+  /* DISCLAIMER */
+  .disclaimer {
+    margin: 60px 0;
+    padding: 26px 30px;
+    border: 1px dashed var(--ink-muted);
+    border-radius: 8px;
+    font-size: 14px;
+    color: var(--ink-soft);
+    line-height: 1.6;
+  }
+  .disclaimer strong {
+    display: block;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 10px;
+  }
+
+  /* FAQ */
+  .faq-section {
+    max-width: 760px;
+    margin: 100px auto 0;
+    padding: 70px 32px 0;
+    border-top: 1px solid var(--line);
+  }
+  .faq-section .label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 18px;
+  }
+  .faq-section h2 {
+    font-family: 'Newsreader', serif;
+    font-size: clamp(32px, 3.6vw, 48px);
+    font-weight: 300;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin-bottom: 40px;
+  }
+  details.faq-item {
+    border-bottom: 1px solid var(--line);
+    padding: 24px 0;
+    cursor: pointer;
+  }
+  details.faq-item summary {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Newsreader', serif;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: -0.005em;
+  }
+  details.faq-item summary::-webkit-details-marker { display: none; }
+  details.faq-item .ico {
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--accent);
+    transition: transform 0.3s;
+  }
+  details.faq-item[open] .ico { transform: rotate(45deg); }
+  details.faq-item p {
+    margin-top: 14px;
+    font-size: 15px;
+    color: var(--ink-soft);
+    line-height: 1.65;
+  }
+
+  /* SOURCES */
+
+  .sources.related-lots ol { list-style: none; counter-reset: none; }
+  .sources.related-lots li { counter-increment: none; }
+  .sources.related-lots li::before { content: '\2192'; font-size: 13px; }
+  .sources.related-lots a { text-decoration-color: var(--line); }
+  .sources {
+    max-width: 760px;
+    margin: 80px auto 0;
+    padding: 60px 32px;
+    border-top: 1px solid var(--line);
+  }
+  .sources .label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    margin-bottom: 20px;
+  }
+  .sources ol {
+    list-style: none;
+    counter-reset: src;
+  }
+  .sources li {
+    counter-increment: src;
+    padding: 10px 0;
+    font-size: 13px;
+    color: var(--ink-soft);
+    line-height: 1.5;
+    border-bottom: 1px solid var(--line);
+    padding-left: 30px;
+    position: relative;
+  }
+  .sources li::before {
+    content: "[" counter(src) "]";
+    position: absolute;
+    left: 0;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--ink-muted);
+  }
+  .sources a { color: var(--ink); text-decoration: underline; text-decoration-color: var(--ink-muted); text-underline-offset: 3px; }
+  .sources a:hover { color: var(--accent); text-decoration-color: var(--accent); }
+
+  /* FOOTER */
+  .article-foot {
+    margin: 100px 0 0;
+    background: var(--ink);
+    color: var(--bg);
+    padding: 100px 32px 60px;
+  }
+  .article-foot-inner {
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .article-foot h2 {
+    font-family: 'Newsreader', serif;
+    font-size: clamp(40px, 5vw, 72px);
+    font-weight: 300;
+    line-height: 1.05;
+    letter-spacing: -0.025em;
+    margin-bottom: 36px;
+  }
+  .article-foot h2 em { font-style: italic; color: #F08B6F; }
+  .article-foot p {
+    color: rgba(242,238,230,0.7);
+    line-height: 1.65;
+    max-width: 540px;
+    margin: 0 auto 40px;
+    font-size: 16px;
+  }
+  .article-foot a.cta {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ink);
+    background: var(--bg);
+    padding: 18px 30px;
+    text-decoration: none;
+    border-radius: 100px;
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    transition: gap 0.25s;
+  }
+  .article-foot a.cta:hover { gap: 22px; }
+
+  @media (max-width: 700px) {
+    nav.top { padding: 16px 20px; }
+    .article-head { padding: 60px 20px 40px; }
+    .hero-img { padding: 0 20px; }
+    .article-body, .faq-section, .sources, .article-foot { padding-left: 20px; padding-right: 20px; }
+    .pull-quote { margin-left: -20px; margin-right: -20px; padding: 36px 20px; }
+    .case-card { padding: 24px 22px; }
+    .condition { grid-template-columns: 1fr; gap: 8px; }
+  }
+
+  /* ---- ТЁМНАЯ ТЕМА (общий блок) ---- */
+  :root[data-theme="dark"] {
+    --bg: #0E0D0C;
+    --bg-alt: #181614;
+    --ink: #F2EEE6;
+    --ink-soft: #D8D2C5;
+    --ink-muted: #8E867A;
+    --line: rgba(242,238,230,0.14);
+    --accent: #E5482A;
+    --accent-soft: #F08B6F;
+  }
+  :root[data-theme="dark"] nav.top { background: rgba(14,13,12,0.85); }
+  :root[data-theme="dark"] nav.top .logo img { filter: invert(1); }
+  :root[data-theme="dark"] body::before { mix-blend-mode: screen; opacity: 0.35; }
+  :root[data-theme="dark"] img:not(.logo img):not([data-keep]) { filter: brightness(0.92) contrast(1.02); }
+  .theme-toggle {
+    width: 36px; height: 36px; border-radius: 50%;
+    border: 1px solid var(--line); background: transparent; color: var(--ink);
+    display: inline-flex; align-items: center; justify-content: center;
+    cursor: pointer; padding: 0; transition: background 0.2s, color 0.2s, border-color 0.2s; flex-shrink: 0;
+  }
+  .theme-toggle:hover { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+  .theme-toggle svg { width: 18px; height: 18px; display: block; }
+  .theme-toggle .ic-moon { display: none; }
+  :root[data-theme="dark"] .theme-toggle .ic-sun { display: none; }
+  :root[data-theme="dark"] .theme-toggle .ic-moon { display: block; }
+
+
+  /* Тёмные блоки: в тёмной теме текст должен оставаться светлым */
+  :root[data-theme="dark"] .cta-block,
+  :root[data-theme="dark"] .cta-block * { color: #F2EEE6; }
+  :root[data-theme="dark"] .cta-block { background: #0A0A0A; }
+  :root[data-theme="dark"] .cta,
+  :root[data-theme="dark"] .hero .cta { background: #F2EEE6; color: #131211; }
+  :root[data-theme="dark"] .cta:hover,
+  :root[data-theme="dark"] .hero .cta:hover { background: var(--accent); color: #F2EEE6; }
+  :root[data-theme="dark"] .article-foot,
+  :root[data-theme="dark"] .article-foot * { color: #F2EEE6; }
+  :root[data-theme="dark"] .article-foot { background: #0A0A0A; }
+  :root[data-theme="dark"] .avatar { background: #F2EEE6; color: #131211; }
+  :root[data-theme="dark"] .package-cell { background: var(--bg); }
+  :root[data-theme="dark"] .package-cell:hover { background: var(--bg-alt); }
+</style>
+<link rel="alternate" hreflang="en" href="https://heartestate.ae/heartestate-journal-maldives" />
+<link rel="alternate" hreflang="ru" href="https://heartestate.ae/heartestate-journal-maldives-ru" />
+<link rel="alternate" hreflang="x-default" href="https://heartestate.ae/heartestate-journal-maldives" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://heartestate.ae/heartestate-journal-maldives-ru#article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://heartestate.ae/heartestate-journal-maldives-ru"
+      },
+      "headline": "Мальдивы за пределами курорта — тезис второй резиденции, о котором ещё никто не пишет.",
+      "description": "Maldives beyond the resort: a 3 billion dollar branded-residential pipeline, zero income tax, residence-by-investment from USD 250K.",
+      "inLanguage": "ru",
+      "datePublished": "2026-06-01",
+      "dateModified": "2026-07-26",
+      "image": "https://heartestate.ae/assets/og/heart-of-the-city-og.jpg",
+      "author": {
+        "@type": "Person",
+        "name": "Alexey Alifanov",
+        "jobTitle": "Managing Partner",
+        "url": "https://heartestate.ae/heartestate-about"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Heart of the City",
+        "url": "https://heartestate.ae/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://heartestate.ae/assets/logos/logo-black.png"
+        }
+      },
+      "isPartOf": {
+        "@type": "Blog",
+        "name": "Heart of the City Journal",
+        "url": "https://heartestate.ae/#journal"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://heartestate.ae/heartestate-journal-maldives-ru#faq",
+      "inLanguage": "ru",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Какова реалистичная цена входа в мальдивскую брендовую резиденцию в 2026?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Aman residential — от $4.75M (Soneva Jani). Брендовые квартиры в The Coral Residences (Dhaalu Atoll) — от $1M. Частные острова — от $1.9M на leasehold. Resort-quality villa estates — типичная вилка $5–10M. Трофейные отдельностоящие острова — $50M+, один из последних подтверждён за $65M."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Можно ли получить residency, купив недвижимость на Мальдивах?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Да — программа residence-by-investment запущена в июле 2025. Покупка от $250 000 квалифицирует покупателя на 5-летнее продлеваемое ВНЖ, с семьёй. Это структурное изменение, превратившее покупку недвижимости в смену юрисдикции."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Как leasehold-структура влияет на resale?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "В первые 30 лет — почти никак. После 30 года 50-летнего leasehold residual value сжимается по кривой. 99-летние lease (чаще у отдельностоящих resort-островов) держат стоимость через два поколения. Точный срок lease мы обсуждаем на каждом мальдивском engagement — он материально влияет на цену."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Действительно ли rental yield 6–15%?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Для оператор-управляемых брендовых резиденций со структурированной rental-программой — да, на net-основе. Маленькие серии (16–40 юнитов) с сильными операторами стабильно на верху диапазона. Yield — это валовый доход минус operator management минус обслуживание минус коммунальные; публикуемые цифры от операторов обычно net по всем трём."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Насколько реален климатический риск?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Реален. Мальдивы — самая низменная страна мира. Операторы сильно различаются по инфраструктурной устойчивости: Soneva и Aman вкладывают в подъём территории, волноломы и водоуправление; меньшие проекты часто нет. Мы явно взвешиваем infrastructure spend в оценке и рекомендуем личный визит до покупки."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Какие операторы лучше всего позиционированы на следующее десятилетие?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Операторы с глубиной бренда, инвестициями в инфраструктуру и глобальным rental-спросом. Aman, Soneva, Mandarin Oriental, Rosewood — топ. Baccarat — оператор, за которым мы наблюдаем наиболее пристально на upside: сильный бренд, маленькие серии, меньше конкурентного шума."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Почему этого нет в мейнстрим property-прессе?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Потому что сделки приватные, операторы не публикуют данные, и пул покупателей маленький. Транзакции, двигающие рынок, под NDA. Пресс-покрытие идёт downstream от этих потоков, не upstream. К моменту мейнстрима — трофейные юниты уже разобраны."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<script src="/js/consent.js?v=1" defer></script>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="canonical" href="https://heartestate.ae/heartestate-journal-maldives-ru" />
+</head>
+<script>
+window.addEventListener('load',function(){
+setTimeout(function(){
+var f=document.getElementById('rec649886123');
+if(!f)return;
+var a=f.querySelectorAll('[class*="tn-elem"]');
+for(var i=0;i<a.length;i++){
+var at=a[i].querySelector('.tn-atom');
+if(at&&at.textContent&&at.textContent.indexOf('Copyright')!==-1){
+if(at.textContent.indexOf('ORN')===-1){
+at.innerHTML=at.innerHTML.replace('Heart of the City','Heart of the City Properties L.L.C.');
+at.innerHTML+='<br>ORN 30550';
+}
+break;
+}
+}
+var lnks=f.querySelectorAll('a');
+var hm=false;
+for(var j=0;j<lnks.length;j++){if(lnks[j].textContent.trim().toLowerCase()==='maldives'){hm=true;break;}}
+if(!hm){
+for(var k=0;k<lnks.length;k++){
+if(lnks[k].textContent.trim()==='Contact us'){
+var wd=lnks[k].closest('[class*="tn-elem"]');
+if(wd){
+var me=document.createElement('div');
+me.className='t396__elem tn-elem';
+var st=wd.getAttribute('style')||'';
+var tm=st.match(/top:\s*([\d.]+)px/);
+var nt=tm?(parseFloat(tm[1])+22):210;
+var lm=st.match(/left:\s*([\d.]+)px/);
+var nl=lm?lm[1]:'318';
+var zm=st.match(/zoom:\s*([\d.]+)/);
+var z=zm?zm[1]:'1.86667';
+me.setAttribute('style','position:absolute;top:'+nt+'px;left:'+nl+'px;zoom:'+z+';');
+me.innerHTML='<a href="https://maldives.heartestate.ae/" target="_blank" style="color:rgb(201,169,110);font-family:TildaSans,Arial,sans-serif;font-size:9px;text-decoration:none;font-weight:400;line-height:1.55;">Maldives</a>';
+wd.parentNode.insertBefore(me,wd.nextSibling);
+}
+break;
+}
+}
+}
+var aa=f.querySelectorAll('.tn-atom');
+for(var m=0;m<aa.length;m++){
+if(aa[m].textContent&&aa[m].textContent.indexOf('One Central, The Offices 4, WeWork')!==-1){
+aa[m].innerHTML=aa[m].innerHTML.replace(/One Central, The Offices 4, WeWork[^<]*/g,'Office 8F-08-115, Offices 4, Building One Central, Building 4, Trade Centre');
+}
+}
+},500);
+});
+</script><body>
+
+<nav class="top">
+  <a href="heartestate-home-draft.html" class="logo">
+    <img src="assets/logos/logo-black.png" alt="Heart of the City" />
+  </a>
+  <div style="display:flex; gap:18px; align-items:center;">
+    <a href="heartestate-journal-maldives.html" style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:var(--ink-muted); text-decoration:none;">EN</a>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme" title="Светлая / тёмная"><svg class="ic-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg><svg class="ic-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/></svg></button>
+    <a href="heartestate-home-draft.html" class="back">← Назад в Журнал</a>
+  </div>
+</nav>
+
+<header class="article-head">
+  <div class="article-meta">
+    <span class="cat">— Гайд</span>
+    <span>Мальдивы · Рынок</span>
+    <span>9 мин чтения</span>
+    <span>Июнь 2026</span>
+    <span class="upd">Обновлено 26 июля 2026</span>
+  </div>
+  <h1>Мальдивы за пределами курорта — <em>тезис второй резиденции</em>, о котором ещё никто не пишет.</h1>
+  <p class="standfirst">$3+ млрд в пайплайне брендовых резиденций. Ноль income tax. Residence-by-investment от $250K. Россия и Азия тихо ведут вторую волну. Картируем структурный сдвиг, превращающий Мальдивы из направления отпуска в юрисдикцию для второй резиденции — и четыре риска, о которых брошюра не расскажет.</p>
+  <div class="byline">
+    <div class="avatar">A</div>
+    <div class="author">
+      <span class="name">Алексей Алифанов</span>
+      <span class="role">Управляющий партнёр, Heart of the City</span>
+    </div>
+  </div>
+</header>
+
+<div class="hero-img">
+  <div class="frame"></div>
+  <div class="caption">— Aman Residences, Мальдивы. Один из немногих ультра-люкс hospitality-брендов с активным резидентским присутствием в архипелаге — и первая когорта, на которую опирается тезис второй резиденции.</div>
+</div>
+
+<article class="article-body">
+
+  <p class="lead-graf">Большую часть последнего десятилетия Мальдивы лежали в боковом поле зрения люксовой недвижимости — направление отпуска, не юрисдикция второй резиденции. Это перестало быть правдой около 2023 года. Девелоперы из ОАЭ зашли с капиталом. UHNWI из России, Индии и Сингапура начали покупать. К 2026 году у Мальдив есть структурные ингредиенты рынка второй резиденции и один из самых недообсуждаемых пайплайнов в люксовом residential.</p>
+
+  <p>Heart of the City представляет активное портфолио Мальдив — Aman, Janu, Baccarat, Mandarin Oriental, Rosewood. Эта статья — фрейм, который мы делимся с серьёзными покупателями до первого звонка: как рынок реально работает, какие структурные рычаги имеют значение и какие риски не печатают брошюры.
+
+  </p><h2><span class="num">— I</span>Что изменилось.</h2>
+
+  <p>Три тихих сдвига сошлись:</p>
+
+  <p><strong>Девелоперы из ОАЭ зашли с капиталом.</strong> Заявлено <strong>больше $3 млрд нового брендового residential</strong> для Мальдив до 2030 года, основная часть подписана капиталом Дубая и Абу-Даби: DAMAC (Mandarin Oriental), Samana (Elie Saab), Atoll Estates (Zamani Islands), FAM Holding (Al Mahra). Впервые у Мальдив есть институциональный пайплайн в масштабе.</p>
+
+  <p><strong>Брендовые операторы расширили residential.</strong> Aman, Soneva, Baccarat, Bulgari, Mandarin Oriental, Rosewood — исторически отельные операторы в архипелаге — добавили private-residence инвентарь в 2023–2026. Средняя серия — 16–40 юнитов, самая маленькая в мировом люксе.</p>
+
+  <p><strong>Программа residence-by-investment запущена (июль 2025).</strong> Покупка от <strong>$250 000</strong> квалифицирует покупателя на 5-летнее ВНЖ по типу ОАЭ — продлеваемое, с семьёй. Это структурная развилка, превращающая покупку недвижимости в смену юрисдикции.</p>
+
+  <div class="pull-quote">
+    <p>Впервые у Мальдив есть институциональный пайплайн в масштабе.</p>
+  </div>
+
+  <h2><span class="num">— II</span>Почему Мальдивы — это теперь реальная юрисдикция второй резиденции.</h2>
+
+  <p>Четыре структурных рычага, ни один по отдельности не нов, — но вместе они дают более резкий кейс, чем три года назад:</p>
+
+  <div class="conditions">
+    <div class="condition">
+      <div class="c-num">01</div>
+      <div>
+        <h4>Ноль налога — и чисто</h4>
+        <p>Нет income tax, нет capital gains tax, нет налога на наследство. Мальдивы — одна из немногих zero-tax юрисдикций без compliance-проблем по grey-list. Для HNWI, уходящих из более тяжёлых налоговых режимов, структурная простота — это и есть смысл.</p>
+      </div>
+    </div>
+    <div class="condition">
+      <div class="c-num">02</div>
+      <div>
+        <h4>Leasehold, не freehold — и это нормально</h4>
+        <p>Иностранные покупатели приобретают на leasehold 50–99 лет, не freehold. Это та же структура, что у Сингапура, ОАЭ, большей части Азии. На горизонте 50 лет цена leasehold материально эквивалентна freehold для целей этого покупателя.</p>
+      </div>
+    </div>
+    <div class="condition">
+      <div class="c-num">03</div>
+      <div>
+        <h4>Прямая авиасеть</h4>
+        <p>Velana International (MLE) связан с 35+ международными хабами, включая прямые рейсы в Дубай, Москву, Сингапур, Лондон. «Правило 5 часов» — что вторая резиденция должна быть в пределах 5 часов от первой — теперь держится для Дубая, Мумбаи, Сингапура, Пекина, Стамбула.</p>
+      </div>
+    </div>
+    <div class="condition">
+      <div class="c-num">04</div>
+      <div>
+        <h4>Оператор-led rental yield</h4>
+        <p>Брендовые резиденции здесь обычно идут с оператор-управляемыми rental-программами. Чистый yield <strong>6–15%</strong> — типичный диапазон, в зависимости от оператора и размера серии. Мальдивы — один из немногих люкс-субрынков, где yield структурно выше cost of capital.</p>
+      </div>
+    </div>
+  </div>
+
+  <h2><span class="num">— III</span>Кто реально покупает.</h2>
+
+  <p>Российские покупатели не появляются в топе публичной статистики — обычно их раскладывают внутри «европейской» корзины. Мы их видим в двух местах: где операторы публикуют национальные данные, и в нашем собственном пайплайне.</p>
+
+  <ul>
+    <li><strong>Soneva (единственный оператор, опубликовавший данные о владельцах).</strong> UK — 4 владельца. Россия — 3 владельца (второе место). Дальше Франция, Китай, Германия, Швеция, Нидерланды, Швейцария — по 2.</li>
+    <li><strong>Опубликованный лидерборд туризма Мальдив, 2025.</strong> Топ прибытий: Китай, Россия, UK. Россия в топ-3 каждый из последних четырёх лет.</li>
+    <li><strong>Сообщённые сделки.</strong> Российский инвестор купил resort-остров за $65M в 2024 под NDA — имя не публикуется. Мы отслеживаем несколько похожих диалогов.</li>
+  </ul>
+
+  <p>Паттерн структурный: капитал, переехавший из России в Дубай в 2022–2024, теперь позиционируется на следующий шаг. Мальдивы — логичная вторичная юрисдикция: тот же налоговый фрейм, та же операторская вселенная, дополняющая география.</p>
+
+  <h2><span class="num">— IV</span>Чего не печатают брошюры.</h2>
+
+  <div class="case-card loss">
+    <div class="label-line"><span class="label">— Риск 01 · Уровень моря</span><span class="figure">~<em>1.5 м</em> средняя высота</span></div>
+    <h4>Климат</h4>
+    <p>Мальдивы — самая низменная страна мира. Вопрос горизонта 50 лет — реальный и нерешённый. Операторы с инфраструктурной устойчивостью (Soneva, Aman, Mandarin) торгуются на другой кривой риска, чем меньшие проекты. Мы обсуждаем это на каждом мальдивском звонке — не после.</p>
+  </div>
+
+  <div class="case-card loss">
+    <div class="label-line"><span class="label">— Риск 02 · Концентрация на операторах</span><span class="figure">5 брендов · 80% премии</span></div>
+    <h4>Брендовый риск</h4>
+    <p>Мальдивский люкс second-home рынок — структурно концентрированная ставка на 5–6 операторов. Если один из них меняет стратегию или ротирует владение, resale-рынок этой когорты резко сжимается. Диверсификация по операторам — часть брифа.</p>
+  </div>
+
+  <div class="case-card loss">
+    <div class="label-line"><span class="label">— Риск 03 · Ликвидность resale</span><span class="figure">Только приватные каналы</span></div>
+    <h4>Ликвидность</h4>
+    <p>Нет MLS, нет Zillow, нет эквивалента Bayut. Resale идёт только через кураторские каналы. Тот же паттерн, что у частных островов, суперъяхт и приватной авиации, — и цена это отражает. Горизонты удержания меньше 5 лет обычно не работают.</p>
+  </div>
+
+  <div class="case-card loss">
+    <div class="label-line"><span class="label">— Риск 04 · Геополитический шум</span><span class="figure">Треугольник Индия–Китай–Россия</span></div>
+    <h4>Политика</h4>
+    <p>Мальдивы сидят на геополитическом перекрёстке. Внутренняя политика за последнее десятилетие колебалась между индийским и китайским выравниванием. На leasehold и operator service code это не влияет — но может влиять на скорость регуляторных изменений. Стоит отслеживать, не паниковать.</p>
+  </div>
+
+  <h2><span class="num">— V</span>Что мы рекомендуем покупателю в 2026.</h2>
+
+  <p>Три позиции:</p>
+
+  <ul>
+    <li><strong>Если хотите самый чистый тезис второй резиденции:</strong> Aman, Soneva, Mandarin Oriental residential. Оператор-led, маленькие серии, устойчивый дизайн. Долгое удержание, реальное использование, для поколений.</li>
+    <li><strong>Если хотите yield с брендом:</strong> Baccarat, Rosewood residential. Чуть менее prime, чуть выше rental yield, оператор-управляемые.</li>
+    <li><strong>Если позиционируете капитал:</strong> Coral Residences и аналоги уровня Dhaalu Atoll — вход от $1–2M, квалифицирует на residence-by-investment, ниже брендовая премия, но чище risk-return.</li>
+  </ul>
+
+  <p>Мы не представляем каждый проект на островах. Мы представляем те проекты, где оператор, серия и локация проходят наш тот же четырёхусловный фильтр. На Мальдивах этот фильтр острее, не мягче — экспозиция к уровню моря поднимает планку по условию локации конкретно.</p>
+
+  <div class="pull-quote">
+    <p>Мальдивы — это теперь юрисдикция второй резиденции. Брошюры догоняют.</p>
+  </div>
+
+  <div class="disclaimer">
+    <strong>— Дисклеймер</strong>
+    Прошлая доходность не гарантирует будущего. Мальдивы работают по leasehold-режиму под мальдивским правом; юрист, зарегистрированный на Мальдивах, должен быть привлечён до любой сделки. Климатические и геополитические риски, обсуждаемые здесь, не исчерпывающи. Ничто в этой статье не является инвестиционной рекомендацией.
+  </div>
+
+</article>
+
+<section class="faq-section">
+  <div class="label">— Вопросы читателей</div>
+  <h2>Частые вопросы.</h2>
+
+  <details class="faq-item">
+    <summary>Какова реалистичная цена входа в мальдивскую брендовую резиденцию в 2026? <span class="ico">+</span></summary>
+    <p>Aman residential — от $4.75M (Soneva Jani). Брендовые квартиры в The Coral Residences (Dhaalu Atoll) — от $1M. Частные острова — от $1.9M на leasehold. Resort-quality villa estates — типичная вилка $5–10M. Трофейные отдельностоящие острова — $50M+, один из последних подтверждён за $65M.</p>
+  </details>
+
+  <details class="faq-item">
+    <summary>Можно ли получить residency, купив недвижимость на Мальдивах? <span class="ico">+</span></summary>
+    <p>Да — программа residence-by-investment запущена в июле 2025. Покупка от $250 000 квалифицирует покупателя на 5-летнее продлеваемое ВНЖ, с семьёй. Это структурное изменение, превратившее покупку недвижимости в смену юрисдикции.</p>
+  </details>
+
+  <details class="faq-item">
+    <summary>Как leasehold-структура влияет на resale? <span class="ico">+</span></summary>
+    <p>В первые 30 лет — почти никак. После 30 года 50-летнего leasehold residual value сжимается по кривой. 99-летние lease (чаще у отдельностоящих resort-островов) держат стоимость через два поколения. Точный срок lease мы обсуждаем на каждом мальдивском engagement — он материально влияет на цену.</p>
+  </details>
+
+  <details class="faq-item">
+    <summary>Действительно ли rental yield 6–15%? <span class="ico">+</span></summary>
+    <p>Для оператор-управляемых брендовых резиденций со структурированной rental-программой — да, на net-основе. Маленькие серии (16–40 юнитов) с сильными операторами стабильно на верху диапазона. Yield — это валовый доход минус operator management минус обслуживание минус коммунальные; публикуемые цифры от операторов обычно net по всем трём.</p>
+  </details>
+
+  <details class="faq-item">
+    <summary>Насколько реален климатический риск? <span class="ico">+</span></summary>
+    <p>Реален. Мальдивы — самая низменная страна мира. Операторы сильно различаются по инфраструктурной устойчивости: Soneva и Aman вкладывают в подъём территории, волноломы и водоуправление; меньшие проекты часто нет. Мы явно взвешиваем infrastructure spend в оценке и рекомендуем личный визит до покупки.</p>
+  </details>
+
+  <details class="faq-item">
+    <summary>Какие операторы лучше всего позиционированы на следующее десятилетие? <span class="ico">+</span></summary>
+    <p>Операторы с глубиной бренда, инвестициями в инфраструктуру и глобальным rental-спросом. Aman, Soneva, Mandarin Oriental, Rosewood — топ. Baccarat — оператор, за которым мы наблюдаем наиболее пристально на upside: сильный бренд, маленькие серии, меньше конкурентного шума.</p>
+  </details>
+
+  <details class="faq-item">
+    <summary>Почему этого нет в мейнстрим property-прессе? <span class="ico">+</span></summary>
+    <p>Потому что сделки приватные, операторы не публикуют данные, и пул покупателей маленький. Транзакции, двигающие рынок, под NDA. Пресс-покрытие идёт downstream от этих потоков, не upstream. К моменту мейнстрима — трофейные юниты уже разобраны.</p>
+  </details>
+
+  </details>
+</section>
+
+<section class="sources">
+  <div class="label">— Источники</div>
+  <ol>
+    <li><a href="https://www.cityrealty.com/nyc/market-insight/features/future-nyc/from-ando-zaha-nyc-condo-buildings-designed-pritzker-prize-winning-architects/20189" target="_blank" rel="noopener">CityRealty — NYC condo buildings designed by Pritzker Prize-winning architects. Per-square-foot premium data.</a></li>
+    <li><a href="https://www.lindseyarchitects.com/architecture-blog/why-architect-designed-homes-have-better-property-value" target="_blank" rel="noopener">Lindsey Architects — Long-run survey on architect-designed home appreciation (200.7% vs 172.6%).</a></li>
+    <li><a href="https://www.knightfrank.com/research/article/2026/4/piri-100-ultimate-prime-residential-property-index" target="_blank" rel="noopener">Knight Frank — Prime Residential Property Index 2026.</a></li>
+    <li><a href="https://www.knightfrank.co.uk/research/article/2025/9/the-global-branded-residence-survey-2025" target="_blank" rel="noopener">Knight Frank — Global Branded Residence Survey 2025.</a></li>
+    <li><a href="https://www.dezeen.com/2018/11/05/520-west-28th-50-million-penthouse-zaha-hadid-architects-chelsea-new-york/" target="_blank" rel="noopener">Dezeen — 520 West 28th by Zaha Hadid Architects, penthouse marketing and resale records.</a></li>
+    <li><a href="https://www.6sqft.com/facing-poor-sales-the-partners-behind-jean-nouvels-53w53-seek-additional-price-chops/" target="_blank" rel="noopener">6sqft — Jean Nouvel's 53W53, cumulative price cuts.</a></li>
+    <li><a href="https://www.cityrealty.com/nyc/market-insight/features/future-nyc/tour-exquisite-penthouse-tadao-ando039s-152-elizabeth-back-market-resale-discount/36141" target="_blank" rel="noopener">CityRealty — 152 Elizabeth by Tadao Ando, resale discount disclosure.</a></li>
+    <li><a href="https://architizer.com/blog/inspiration/stories/why-starchitecture-lost-its-shine/" target="_blank" rel="noopener">Architizer — From Sensationalism to Subtlety: Why Starchitecture Lost Its Shine.</a></li>
+    <li><a href="https://onlinelibrary.wiley.com/doi/full/10.1111/cura.12578" target="_blank" rel="noopener">Curator: The Museum Journal — Academic review of the Bilbao Effect (2024).</a></li>
+    <li><a href="https://www.khaleejtimes.com/business/property/dubai-branded-residences-market-trends-2026" target="_blank" rel="noopener">Khaleej Times — Dubai branded residences market trends 2026.</a></li>
+  </ol>
+</section>
+
+
+<section class="sources related-lots">
+  <div class="label">— Объекты по теме</div>
+  <ol><li><a href="heartestate-all-residences.html#mamsha">Mamsha Palm</a></li><li><a href="heartestate-all-residences.html#zuha">Zuha Island · Villa 26</a></li><li><a href="heartestate-all-residences.html#row">The Row Saadiyat</a></li><li><a href="https://maldives.heartestate.ae/" target="_blank" rel="noopener">Портфолио Мальдив ↗</a></li><li><a href="heartestate-all-residences.html">Все 24 объекта портфолио</a></li></ol>
+</section>
+<footer class="article-foot">
+  <div class="article-foot-inner">
+    <h2>Портфолио Мальдив,<br>открываем <em>приватно</em>, по запросу.</h2>
+    <p>
+      Активные мандаты с Aman, Janu, Baccarat, Mandarin Oriental и Rosewood. Каждый запрос ведёт человек.
+    </p>
+    <a href="heartestate-home-draft.html#contact" class="cta">Связаться →</a>
+    <p style="margin-top:24px;font-size:12px;opacity:.55;">© 2026 Heart of the City · ORN 12609 · <a href="https://heartestate.ae/privacy" style="color:inherit;">Политика конфиденциальности</a></p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var root=document.documentElement, btn=document.getElementById('themeToggle');
+  if(!btn) return;
+  btn.addEventListener('click',function(){
+    var dark=root.getAttribute('data-theme')==='dark';
+    if(dark){root.removeAttribute('data-theme');}else{root.setAttribute('data-theme','dark');}
+    try{localStorage.setItem('hotc-theme',dark?'light':'dark');}catch(e){}
+  });
+})();
+</script>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"c037cf0d245b4b0d8940fd729d478bc8","r":1}' crossorigin="anonymous"></script>
+</body>
+</html>

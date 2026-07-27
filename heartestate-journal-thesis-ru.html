@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<script>
+try{var t=localStorage.getItem('hotc-theme');if(t==='dark'||(!t&&window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.setAttribute('data-theme','dark');}}catch(e){}
+</script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Когда имя архитектора действительно растёт в цене — а когда нет · Heart of the City</title>
+<meta name="description" content="When does architectural pedigree actually appreciate? Pritzker premium data, four conditions that decide resale value, applied to Dubai." />
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="Heart of the City" />
+<meta property="og:title" content="Тезис Притцкера · Журнал Heart of the City" />
+<meta property="og:description" content="Когда авторская архитектура растёт в цене — и когда нет. Почему архитектурный бренд обгоняет модный на горизонте 10 лет." />
+<meta property="og:url" content="https://heartestate.ae/heartestate-journal-thesis-ru" />
+<meta property="og:image" content="https://heartestate.ae/assets/og/heart-of-the-city-og.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Heart of the City · Residences" />
+<meta property="og:locale" content="ru" />
+<meta property="og:locale:alternate" content="en" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Тезис Притцкера · Журнал Heart of the City" />
+<meta name="twitter:description" content="Когда авторская архитектура растёт в цене — и когда нет. Почему архитектурный бренд обгоняет модный на горизонте 10 лет." />
+<meta name="twitter:image" content="https://heartestate.ae/assets/og/heart-of-the-city-og.jpg" />
+<link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400&family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #F2EEE6;
+    --bg-alt: #E8E2D3;
+    --ink: #131211;
+    --ink-soft: #1E1C1A;
+    --ink-muted: #5E5A52;
+    --line: rgba(19,18,17,0.12);
+    --accent: #E5482A;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-size: 16.5px;
+    font-family: 'Bricolage Grotesque', system-ui, sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.05 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    opacity: 0.5;
+    z-index: 1000;
+    mix-blend-mode: multiply;
+  }
+  .serif { font-family: 'Newsreader', Georgia, serif; }
+
+  /* NAV */
+  nav.top {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 22px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(242, 238, 230, 0.85);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--line);
+  }
+  nav.top .logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: var(--ink);
+  }
+  nav.top .logo img { height: 50px; width: auto; }
+  nav.top .back {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.2s;
+  }
+  nav.top .back:hover { color: var(--accent); }
+
+  /* ARTICLE HEAD */
+  .article-head {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 90px 32px 60px;
+  }
+  .article-meta {
+    display: flex;
+    gap: 26px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    margin-bottom: 42px;
+  }
+  .article-meta .cat { color: var(--accent); }
+
+  .article-head h1 {
+    font-family: 'Newsreader', serif;
+    font-size: clamp(46px, 6.5vw, 88px);
+    font-weight: 300;
+    line-height: 1.02;
+    letter-spacing: -0.025em;
+    margin-bottom: 36px;
+  }
+  .article-head h1 em { font-style: italic; color: var(--accent); font-weight: 300; }
+
+  .standfirst {
+    font-family: 'Newsreader', serif;
+    font-size: clamp(20px, 1.8vw, 26px);
+    line-height: 1.45;
+    font-weight: 300;
+    color: var(--ink-soft);
+    margin-bottom: 40px;
+    font-style: italic;
+  }
+
+  .byline {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    padding-top: 22px;
+    border-top: 1px solid var(--line);
+  }
+  .byline .avatar {
+    width: 44px;
+    height: 44px;
+    background: var(--ink);
+    color: var(--bg);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Newsreader', serif;
+    font-size: 18px;
+  }
+  .byline .author { display: flex; flex-direction: column; }
+  .byline .name { font-weight: 500; font-size: 14px; }
+  .byline .role { font-size: 12px; color: var(--ink-muted); }
+
+  /* HERO IMAGE */
+  .hero-img {
+    max-width: 1480px;
+    margin: 0 auto 80px;
+    padding: 0 32px;
+  }
+  .hero-img .frame {
+    aspect-ratio: 16 / 9;
+    background-color: #2A2218;
+    background-image:
+      linear-gradient(180deg, rgba(0,0,0,0) 50%, rgba(0,0,0,0.4) 100%),
+      url('assets/journal/520-w-28th-zha-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+  }
+  .hero-img .caption {
+    margin-top: 16px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+  }
+
+  /* ARTICLE BODY */
+  .article-body {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+  .article-body h2 {
+    font-family: 'Newsreader', serif;
+    font-size: clamp(32px, 3.6vw, 48px);
+    font-weight: 300;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin: 80px 0 30px;
+  }
+  .article-body h2 em { font-style: italic; color: var(--accent); font-weight: 300; }
+  .article-body h2 .num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 16px;
+  }
+  .article-body h3 {
+    font-family: 'Newsreader', serif;
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 1.2;
+    margin: 50px 0 18px;
+    letter-spacing: -0.01em;
+  }
+  .article-body p {
+    font-size: 18px;
+    line-height: 1.65;
+    color: var(--ink-soft);
+    margin-bottom: 22px;
+  }
+  .article-body p.lead-graf {
+    font-family: 'Newsreader', serif;
+    font-size: 22px;
+    line-height: 1.55;
+    color: var(--ink);
+    margin-bottom: 32px;
+  }
+  .article-body p.lead-graf::first-letter {
+    font-family: 'Newsreader', serif;
+    font-size: 72px;
+    float: left;
+    line-height: 0.85;
+    margin: 4px 12px 0 0;
+    color: var(--accent);
+    font-weight: 300;
+  }
+  .article-body strong { color: var(--ink); font-weight: 600; }
+  .article-body em { font-style: italic; }
+  .article-body ul {
+    margin: 0 0 28px 0;
+    padding-left: 22px;
+    list-style: none;
+  }
+  .article-body li {
+    font-size: 17px;
+    line-height: 1.6;
+    color: var(--ink-soft);
+    margin-bottom: 14px;
+    position: relative;
+    padding-left: 18px;
+  }
+  .article-body li::before {
+    content: "—";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  /* PULL QUOTE */
+  .pull-quote {
+    margin: 60px -40px;
+    padding: 50px 40px;
+    background: var(--bg-alt);
+    border-radius: 12px;
+    text-align: center;
+  }
+  .pull-quote p {
+    font-family: 'Newsreader', serif;
+    font-size: clamp(24px, 2.4vw, 32px);
+    font-weight: 300;
+    line-height: 1.3;
+    letter-spacing: -0.012em;
+    color: var(--ink);
+    font-style: italic;
+    max-width: 680px;
+    margin: 0 auto;
+  }
+  .pull-quote p em { color: var(--accent); }
+
+  /* CASE CARD */
+  .case-card {
+    margin: 36px 0;
+    padding: 32px 36px;
+    background: var(--bg-alt);
+    border-radius: 10px;
+    border-left: 3px solid var(--accent);
+  }
+  .case-card.loss { border-left-color: #87827A; }
+  .case-card .label-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 14px;
+  }
+  .case-card .label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+  .case-card.loss .label { color: var(--ink-muted); }
+  .case-card .figure {
+    font-family: 'Newsreader', serif;
+    font-size: 32px;
+    font-weight: 300;
+    color: var(--ink);
+  }
+  .case-card.loss .figure { color: var(--ink-soft); }
+  .case-card .figure em { font-style: italic; color: var(--accent); }
+  .case-card.loss .figure em { color: #87827A; }
+  .case-card h4 {
+    font-family: 'Newsreader', serif;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 10px;
+    letter-spacing: -0.01em;
+  }
+  .case-card p { font-size: 15px; margin-bottom: 0; }
+
+  /* CONDITIONS GRID */
+  .conditions {
+    margin: 50px 0;
+    display: grid;
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .condition {
+    background: var(--bg);
+    padding: 28px 32px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 28px;
+    align-items: start;
+    transition: background 0.2s;
+  }
+  .condition:hover { background: var(--bg-alt); }
+  .condition .c-num {
+    font-family: 'Newsreader', serif;
+    font-size: 48px;
+    font-weight: 300;
+    color: var(--accent);
+    line-height: 0.9;
+    min-width: 60px;
+  }
+  .condition h4 {
+    font-family: 'Newsreader', serif;
+    font-size: 22px;
+    font-weight: 400;
+    margin-bottom: 6px;
+    letter-spacing: -0.005em;
+  }
+  .condition p { font-size: 15px; margin: 0; }
+
+  /* DISCLAIMER */
+  .disclaimer {
+    margin: 60px 0;
+    padding: 26px 30px;
+    border: 1px dashed var(--ink-muted);
+    border-radius: 8px;
+    font-size: 14px;
+    color: var(--ink-soft);
+    line-height: 1.6;
+  }
+  .disclaimer strong {
+    display: block;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 10px;
+  }
+
+  /* FAQ */
+  .faq-section {
+    max-width: 760px;
+    margin: 100px auto 0;
+    padding: 70px 32px 0;
+    border-top: 1px solid var(--line);
+  }
+  .faq-section .label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 18px;
+  }
+  .faq-section h2 {
+    font-family: 'Newsreader', serif;
+    font-size: clamp(32px, 3.6vw, 48px);
+    font-weight: 300;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin-bottom: 40px;
+  }
+  details.faq-item {
+    border-bottom: 1px solid var(--line);
+    padding: 24px 0;
+    cursor: pointer;
+  }
+  details.faq-item summary {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Newsreader', serif;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: -0.005em;
+  }
+  details.faq-item summary::-webkit-details-marker { display: none; }
+  details.faq-item .ico {
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--accent);
+    transition: transform 0.3s;
+  }
+  details.faq-item[open] .ico { transform: rotate(45deg); }
+  details.faq-item p {
+    margin-top: 14px;
+    font-size: 15px;
+    color: var(--ink-soft);
+    line-height: 1.65;
+  }
+
+  /* SOURCES */
+
+  .sources.related-lots ol { list-style: none; counter-reset: none; }
+  .sources.related-lots li { counter-increment: none; }
+  .sources.related-lots li::before { content: '\2192'; font-size: 13px; }
+  .sources.related-lots a { text-decoration-color: var(--line); }
+  .sources {
+    max-width: 760px;
+    margin: 80px auto 0;
+    padding: 60px 32px;
+    border-top: 1px solid var(--line);
+  }
+  .sources .label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    margin-bottom: 20px;
+  }
+  .sources ol {
+    list-style: none;
+    counter-reset: src;
+  }
+  .sources li {
+    counter-increment: src;
+    padding: 10px 0;
+    font-size: 13px;
+    color: var(--ink-soft);
+    line-height: 1.5;
+    border-bottom: 1px solid var(--line);
+    padding-left: 30px;
+    position: relative;
+  }
+  .sources li::before {
+    content: "[" counter(src) "]";
+    position: absolute;
+    left: 0;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--ink-muted);
+  }
+  .sources a { color: var(--ink); text-decoration: underline; text-decoration-color: var(--ink-muted); text-underline-offset: 3px; }
+  .sources a:hover { color: var(--accent); text-decoration-color: var(--accent); }
+
+  /* FOOTER */
+  .article-foot {
+    margin: 100px 0 0;
+    background: var(--ink);
+    color: var(--bg);
+    padding: 100px 32px 60px;
+  }
+  .article-foot-inner {
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .article-foot h2 {
+    font-family: 'Newsreader', serif;
+    font-size: clamp(40px, 5vw, 72px);
+    font-weight: 300;
+    line-height: 1.05;
+    letter-spacing: -0.025em;
+    margin-bottom: 36px;
+  }
+  .article-foot h2 em { font-style: italic; color: #F08B6F; }
+  .article-foot p {
+    color: rgba(242,238,230,0.7);
+    line-height: 1.65;
+    max-width: 540px;
+    margin: 0 auto 40px;
+    font-size: 16px;
+  }
+  .article-foot a.cta {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ink);
+    background: var(--bg);
+    padding: 18px 30px;
+    text-decoration: none;
+    border-radius: 100px;
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    transition: gap 0.25s;
+  }
+  .article-foot a.cta:hover { gap: 22px; }
+
+  @media (max-width: 700px) {
+    nav.top { padding: 16px 20px; }
+    .article-head { padding: 60px 20px 40px; }
+    .hero-img { padding: 0 20px; }
+    .article-body, .faq-section, .sources, .article-foot { padding-left: 20px; padding-right: 20px; }
+    .pull-quote { margin-left: -20px; margin-right: -20px; padding: 36px 20px; }
+    .case-card { padding: 24px 22px; }
+    .condition { grid-template-columns: 1fr; gap: 8px; }
+  }
+
+  /* ---- ТЁМНАЯ ТЕМА (общий блок) ---- */
+  :root[data-theme="dark"] {
+    --bg: #0E0D0C;
+    --bg-alt: #181614;
+    --ink: #F2EEE6;
+    --ink-soft: #D8D2C5;
+    --ink-muted: #8E867A;
+    --line: rgba(242,238,230,0.14);
+    --accent: #E5482A;
+    --accent-soft: #F08B6F;
+  }
+  :root[data-theme="dark"] nav.top { background: rgba(14,13,12,0.85); }
+  :root[data-theme="dark"] nav.top .logo img { filter: invert(1); }
+  :root[data-theme="dark"] body::before { mix-blend-mode: screen; opacity: 0.35; }
+  :root[data-theme="dark"] img:not(.logo img):not([data-keep]) { filter: brightness(0.92) contrast(1.02); }
+  .theme-toggle {
+    width: 36px; height: 36px; border-radius: 50%;
+    border: 1px solid var(--line); background: transparent; color: var(--ink);
+    display: inline-flex; align-items: center; justify-content: center;
+    cursor: pointer; padding: 0; transition: background 0.2s, color 0.2s, border-color 0.2s; flex-shrink: 0;
+  }
+  .theme-toggle:hover { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+  .theme-toggle svg { width: 18px; height: 18px; display: block; }
+  .theme-toggle .ic-moon { display: none; }
+  :root[data-theme="dark"] .theme-toggle .ic-sun { display: none; }
+  :root[data-theme="dark"] .theme-toggle .ic-moon { display: block; }
+
+
+  /* Тёмные блоки: в тёмной теме текст должен оставаться светлым */
+  :root[data-theme="dark"] .cta-block,
+  :root[data-theme="dark"] .cta-block * { color: #F2EEE6; }
+  :root[data-theme="dark"] .cta-block { background: #0A0A0A; }
+  :root[data-theme="dark"] .cta,
+  :root[data-theme="dark"] .hero .cta { background: #F2EEE6; color: #131211; }
+  :root[data-theme="dark"] .cta:hover,
+  :root[data-theme="dark"] .hero .cta:hover { background: var(--accent); color: #F2EEE6; }
+  :root[data-theme="dark"] .article-foot,
+  :root[data-theme="dark"] .article-foot * { color: #F2EEE6; }
+  :root[data-theme="dark"] .article-foot { background: #0A0A0A; }
+  :root[data-theme="dark"] .avatar { background: #F2EEE6; color: #131211; }
+  :root[data-theme="dark"] .package-cell { background: var(--bg); }
+  :root[data-theme="dark"] .package-cell:hover { background: var(--bg-alt); }
+</style>
+<link rel="alternate" hreflang="en" href="https://heartestate.ae/heartestate-journal-thesis" />
+<link rel="alternate" hreflang="ru" href="https://heartestate.ae/heartestate-journal-thesis-ru" />
+<link rel="alternate" hreflang="x-default" href="https://heartestate.ae/heartestate-journal-thesis" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://heartestate.ae/heartestate-journal-thesis-ru#article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://heartestate.ae/heartestate-journal-thesis-ru"
+      },
+      "headline": "Когда имя архитектора действительно растёт в цене — а когда нет.",
+      "description": "When does architectural pedigree actually appreciate? Pritzker premium data, four conditions that decide resale value, applied to Dubai.",
+      "inLanguage": "ru",
+      "datePublished": "2026-06-01",
+      "dateModified": "2026-07-26",
+      "image": "https://heartestate.ae/assets/og/heart-of-the-city-og.jpg",
+      "author": {
+        "@type": "Person",
+        "name": "Alexey Alifanov",
+        "jobTitle": "Managing Partner",
+        "url": "https://heartestate.ae/heartestate-about"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Heart of the City",
+        "url": "https://heartestate.ae/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://heartestate.ae/assets/logos/logo-black.png"
+        }
+      },
+      "isPartOf": {
+        "@type": "Blog",
+        "name": "Heart of the City Journal",
+        "url": "https://heartestate.ae/#journal"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://heartestate.ae/heartestate-journal-thesis-ru#faq",
+      "inLanguage": "ru",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Премия 44–47.5% Pritzker — это эффект архитектора или эффект покупателя, который покупает такие здания?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "И то, и другое. Исследование CityRealty фиксирует разницу в рыночной цене, а не каузальный механизм. Разумно допустить, что покупатели, готовые платить архитектурную премию, сами по себе self-selected по типу удержания, поддерживающему премию. Два эффекта складываются — и это часть причины, почему чтение «архитектура как коллекционный актив» держится."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Не опровергает ли 53 West 53 тезис?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Опровергает безусловную версию — ту, что любой лауреат Pritzker гарантирует опережение. Условную версию не опровергает. 53W53 запустился в среду продаж, где предложение, ценовая стратегия и макротайминг работали против проекта. Архитектурный аргумент был верен. Контекст исполнения — нет. Условия имеют значение."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Как брендовые резиденции (Bugatti, Bulgari) ложатся в архитектор-led рамку?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Категории пересекаются, но это не одно и то же. Брендовые резиденции несут подпись fashion-дома или hospitality-бренда; архитектор-led резиденции несут подпись названного ателье. И те, и те могут держать премию. Исторически архитектор-led подписи стареют лучше fashion-подписей, потому что архитекторы не меняют креативных директоров каждые пять лет. По умолчанию мы занимаем архитектор-led позицию, но представляем серьёзные брендовые проекты, когда выполнены те же четыре условия."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Какой горизонт удержания предполагает этот тезис?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Минимум 7–10 лет, идеально 15. Архитектурная премия — это медленный сложный процент, не флип. Покупатели, ожидающие двухлетнего роста, обычно ошибаются в калибровке, и мы говорим это на первом звонке."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Это работает только в Манхэттене и Дубае?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Сильнейшие данные — из Манхэттена, Майами и теперь Дубая. Условия переводятся на любой first-tier рынок: Лондон, Париж, Токио, Сингапур, Мальдивы в нашем активном портфолио. На вторичных рынках, где условие локации не выполняется, переносится хуже или совсем нет."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Зачем вообще это публиковать? Другие агенты продали бы только upside.",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Потому что покупатели, с которыми мы работаем, не вознаграждают продавцов. Они вознаграждают аналитиков. Самый быстрый способ потерять серьёзного клиента — выдать односторонний тезис. Самый быстрый способ удержать — написать ту же статью, которую мы готовы принять под независимым рассмотрением."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Какой следующий data point вы добавите к этому тезису?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Мы отслеживаем когорту Muraba Veil до сдачи (Q4 2028) и три года после. Четырёхусловный читат Veil станет верифицируемым кейсом где-то в 2031–2033. Эту статью мы будем обновлять на каждом значимом data point."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<script src="/js/consent.js?v=1" defer></script>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="canonical" href="https://heartestate.ae/heartestate-journal-thesis-ru" />
+</head>
+<script>
+window.addEventListener('load',function(){
+setTimeout(function(){
+var f=document.getElementById('rec649886123');
+if(!f)return;
+var a=f.querySelectorAll('[class*="tn-elem"]');
+for(var i=0;i<a.length;i++){
+var at=a[i].querySelector('.tn-atom');
+if(at&&at.textContent&&at.textContent.indexOf('Copyright')!==-1){
+if(at.textContent.indexOf('ORN')===-1){
+at.innerHTML=at.innerHTML.replace('Heart of the City','Heart of the City Properties L.L.C.');
+at.innerHTML+='<br>ORN 30550';
+}
+break;
+}
+}
+var lnks=f.querySelectorAll('a');
+var hm=false;
+for(var j=0;j<lnks.length;j++){if(lnks[j].textContent.trim().toLowerCase()==='maldives'){hm=true;break;}}
+if(!hm){
+for(var k=0;k<lnks.length;k++){
+if(lnks[k].textContent.trim()==='Contact us'){
+var wd=lnks[k].closest('[class*="tn-elem"]');
+if(wd){
+var me=document.createElement('div');
+me.className='t396__elem tn-elem';
+var st=wd.getAttribute('style')||'';
+var tm=st.match(/top:\s*([\d.]+)px/);
+var nt=tm?(parseFloat(tm[1])+22):210;
+var lm=st.match(/left:\s*([\d.]+)px/);
+var nl=lm?lm[1]:'318';
+var zm=st.match(/zoom:\s*([\d.]+)/);
+var z=zm?zm[1]:'1.86667';
+me.setAttribute('style','position:absolute;top:'+nt+'px;left:'+nl+'px;zoom:'+z+';');
+me.innerHTML='<a href="https://maldives.heartestate.ae/" target="_blank" style="color:rgb(201,169,110);font-family:TildaSans,Arial,sans-serif;font-size:9px;text-decoration:none;font-weight:400;line-height:1.55;">Maldives</a>';
+wd.parentNode.insertBefore(me,wd.nextSibling);
+}
+break;
+}
+}
+}
+var aa=f.querySelectorAll('.tn-atom');
+for(var m=0;m<aa.length;m++){
+if(aa[m].textContent&&aa[m].textContent.indexOf('One Central, The Offices 4, WeWork')!==-1){
+aa[m].innerHTML=aa[m].innerHTML.replace(/One Central, The Offices 4, WeWork[^<]*/g,'Office 8F-08-115, Offices 4, Building One Central, Building 4, Trade Centre');
+}
+}
+},500);
+});
+</script><body>
+
+<nav class="top">
+  <a href="heartestate-home-draft.html" class="logo">
+    <img src="assets/logos/logo-black.png" alt="Heart of the City" />
+  </a>
+  <div style="display:flex; gap:18px; align-items:center;">
+    <a href="heartestate-journal-thesis.html" style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:var(--ink-muted); text-decoration:none;">EN</a>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme" title="Светлая / тёмная"><svg class="ic-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg><svg class="ic-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/></svg></button>
+    <a href="heartestate-home-draft.html" class="back">← Назад в Журнал</a>
+  </div>
+</nav>
+
+<header class="article-head">
+  <div class="article-meta">
+    <span class="cat">— Длинное чтение</span>
+    <span>Архитектура · Рынок</span>
+    <span>14 мин чтения</span>
+    <span>Июнь 2026</span>
+    <span class="upd">Обновлено 26 июля 2026</span>
+  </div>
+  <h1>Когда имя архитектора <em>действительно</em> растёт в цене — а когда нет.</h1>
+  <p class="standfirst">Кондоминиумы лауреатов Pritzker в Манхэттене продаются на 47.5% выше среднего по району. Другая башня того же архитектора потеряла $167 млн в ценовых скидках. Мы отделяем сигнал от шума и предлагаем четыре условия, которые определяют, на какую сторону линии падает проект.</p>
+  <div class="byline">
+    <div class="avatar">A</div>
+    <div class="author">
+      <span class="name">Алексей Алифанов</span>
+      <span class="role">Управляющий партнёр, Heart of the City</span>
+    </div>
+  </div>
+</header>
+
+<div class="hero-img">
+  <div class="frame"></div>
+  <div class="caption">— 520 West 28th Street, Челси, Нью-Йорк. Zaha Hadid Architects (Pritzker, 2004). 39 резиденций. Главный win-кейс в этой статье: пентхаус +73% за 5 лет.</div>
+</div>
+
+<article class="article-body">
+
+  <p class="lead-graf">В люксовой недвижимости продают удобную историю: что любое здание знаменитого архитектора, просто потому что несёт эту подпись, обойдёт рынок. Эту историю рассказывают брокеры, под неё подписываются девелоперы, в неё хотят верить покупатели. И она правдива только наполовину. Вторая половина — та, которую мы обычно опускаем — это и есть профессиональная дисциплина.</p>
+
+  <p>Heart of the City представляет небольшое портфолио архитектурно значимых резиденций. Мы стоим на стороне аргумента, что архитектура — при правильном определении — действительно создаёт долгосрочную стоимость. Но «при правильном определении» здесь делает всю работу. Эта статья — попытка определить честно: на доступных данных, на задокументированных кейсах и на четырёх условиях, которые мы используем как собственный фильтр.</p>
+
+  <h2><span class="num">— I</span>Аргумент <em>за</em> архитектуру как растущий актив.</h2>
+
+  <p>Эмпирических данных достаточно, чтобы относиться к тезису серьёзно. Четыре цифры, каждая под другим углом:</p>
+
+  <p><strong>Премия манхэттенских кондоминиумов.</strong> Исследование CityRealty по нью-йоркским кондоминиумам, спроектированным лауреатами Pritzker, показало, что в пересчёте на цену за квадратный фут эти здания продаются <strong>на 44% выше окружающего района</strong> и <strong>на 47.5% выше среднего по рынку Манхэттена</strong>. В списке — башни Жана Нувеля, Тадао Андо, Herzog &amp; de Meuron, Zaha Hadid Architects и Рема Колхаса.</p>
+
+  <p><strong>Долгосрочная разница в росте цены.</strong> Долгосрочное исследование Lindsey Architects сравнило дома, спроектированные архитекторами, с обычными домами на том же горизонте удержания: <strong>200.7% роста против 172.6%</strong>. Разница в 28 пунктов в темпе роста — это не шум. Это сложный процент.</p>
+
+  <p><strong>Премия за брендовые резиденции.</strong> Knight Frank в отчёте Residence Report 2025/26, обследовавшем почти 80 люксовых брендов — отельных групп и не-отельных игроков (Bentley, Aston Martin, Bugatti, Bulgari), — нашёл, что брендовые резиденции в среднем держат <strong>премию 20–35%</strong> к сравнимым небрендовым юнитам. На верхушке рынка (Dorchester, Aman, Bugatti) премия достигает <strong>70% и выше</strong>. Bugatti Residences в Дубае, по сообщениям, продавались с премией 237% к локальному бенчмарку.</p>
+
+  <p><strong>Сложный процент на одном активе.</strong> Пентхаус в 520 West 28th Street от Zaha Hadid Architects в Челси был куплен в 2020 году за $20.2 млн. В октябре 2025 он вышел на контракт по аску $35 млн — <strong>примерно 73% роста за пять лет</strong>, при том что манхэттенский рынок за эти пять лет на 73% не вырос.</p>
+
+  <div class="pull-quote">
+    <p>Разница в 28 пунктов — это не шум. <em>Это сложный процент.</em></p>
+  </div>
+
+  <h2><span class="num">— II</span>Аргумент <em>против</em> — три здания, которые не сработали.</h2>
+
+  <p>Если бы тезис был универсальным, этой главы бы не было. Она есть. Те же данные, которые поддерживают аргумент за архитектуру, содержат и провалы — достаточно резкие, чтобы дисциплинировать наш энтузиазм.</p>
+
+  <div class="case-card loss">
+    <div class="label-line"><span class="label">— Кейс 01 · Медленные продажи</span><span class="figure">−<em>$167M</em> в скидках</span></div>
+    <h4>53 West 53 / MoMA Tower — Жан Нувель</h4>
+    <p>Башня Жана Нувеля над MoMA должна была сгенерировать $2.14 млрд продаж. Через четыре года после запуска партнёры суммарно сделали более $167 млн ценовых скидок. Лауреат Pritzker, культовый сайт, пятизвёздочная sales-операция — и всё равно устойчивое отставание от ожиданий запуска.</p>
+  </div>
+
+  <div class="case-card loss">
+    <div class="label-line"><span class="label">— Кейс 02 · Скидка на перепродаже</span><span class="figure">−<em>14%</em> на первой перепродаже</span></div>
+    <h4>152 Elizabeth Street — Тадао Андо</h4>
+    <p>Первый заказ Андо в Нью-Йорке. Пентхаус, изначально выставленный за $35 млн, закрылся в 2018 году за $29.95 млн — скидка 14% от первоначального аска. Объект остаётся символом статуса. Но, по доступным данным, он не показал себя как опережающий финансовый актив.</p>
+  </div>
+
+  <div class="case-card loss">
+    <div class="label-line"><span class="label">— Кейс 03 · Смешанные результаты внутри одного здания</span><span class="figure">+73% / −60%</span></div>
+    <h4>520 West 28th Street — Zaha Hadid Architects</h4>
+    <p>То же здание, что дало +73% роста на пентхаусе, выпустило и триплекс, закрывшийся за $20.2 млн против изначального аска в $50 млн, и квартиру, которую Ариана Гранде продала примерно за $12 млн, купив её за $16 млн. Внутри одной культовой структуры разброс исходов был так же широк, как и на широком рынке.</p>
+  </div>
+
+  <p>Добавьте к этому задокументированные проблемы качества по другим стархитектурным проектам — Vancouver House Бьярке Ингельса, затопленный собственной водной системой; оперу Калатравы в Валенсии с протекающей крышей и осыпающейся мозаикой; библиотеку Захи Хадид в Вене, сбросившую 80-килограммовый блок бетона — и картина ясна: имя архитектора само по себе, без исполнения и контекста, доходом не является.</p>
+
+  <h2><span class="num">— III</span>Четыре условия.</h2>
+
+  <p>Если читать победы и поражения рядом, проступает закономерность. Архитектурный тезис не случаен. Он работает условно. Heart of the City пропускает каждый проект через четыре фильтра, прежде чем согласиться его представлять:</p>
+
+  <div class="conditions">
+    <div class="condition">
+      <div class="c-num">01</div>
+      <div>
+        <h4>Институциональный вес имени архитектора</h4>
+        <p>Не «известный» — институциональный. Лауреат Pritzker, RIBA Gold Medal, монографии в Phaidon или Taschen, музейные ретроспективы. То имя, которое растёт в культурной памяти десятилетиями, а не пресс-циклами.</p>
+      </div>
+    </div>
+    <div class="condition">
+      <div class="c-num">02</div>
+      <div>
+        <h4>Размер серии, создающий реальный дефицит</h4>
+        <p>Менее 200 резиденций всего, идеально до 150. Выше этого порога объект перестаёт вести себя как коллекционный и становится инвентарём. 131 резиденция Muraba Veil комфортно лежит внутри порога.</p>
+      </div>
+    </div>
+    <div class="condition">
+      <div class="c-num">03</div>
+      <div>
+        <h4>Локация, у которой уже есть своя премия</h4>
+        <p>Архитектура умножает стоимость. Она не создаёт её из ничего. Pritzker-здание во второстепенной локации растёт медленнее, чем то же здание на адресе первого ряда. Академическая литература по «эффекту Бильбао» здесь однозначна.</p>
+      </div>
+    </div>
+    <div class="condition">
+      <div class="c-num">04</div>
+      <div>
+        <h4>Исполнение, которое держится через 3–5 лет</h4>
+        <p>Здание должно продолжать работать — и выглядеть — как при сдаче. Здания, которые затопляются, трескаются или сбрасывают материалы, теряют премию быстро — независимо от подписи над дверью. Это самое недообсуждаемое условие и, возможно, самое решающее.</p>
+      </div>
+    </div>
+  </div>
+
+  <p>Когда выполнены все четыре, тезис обычно держится. Когда одного нет, разброс исходов расширяется. Когда нет двух или больше — премия испаряется.</p>
+
+  <h2><span class="num">— IV</span>Как мы читаем <em>Muraba Veil</em> через эту линзу.</h2>
+
+  <p>Объект месяца на обложке этого выпуска — предсказуемо, тот кейс, в который мы верим наиболее ясно. По четырём условиям:</p>
+
+  <ul>
+    <li><strong>Имя архитектора.</strong> RCR Arquitectes — лауреаты Pritzker (2017). Muraba Veil — их первый небоскрёб. Каталонское происхождение, практика монографического уровня.</li>
+    <li><strong>Серия.</strong> 131 резиденция всего. Число не меняется. Каждый этаж — полный юнит, что ещё сильнее сжимает пул покупателей.</li>
+    <li><strong>Локация.</strong> Аль-Васл, прямо на Dubai Water Canal, между Downtown и Jumeirah. Премиальная микро-локация ещё до того, как башня сядет.</li>
+    <li><strong>Исполнение.</strong> Неизвестность — и мы это говорим. Сдача намечена на Q4 2028. Четырёхусловный читaт Veil можно будет верифицировать, а не просто аргументировать, где-то в 2031–2033.</li>
+  </ul>
+
+  <p>Три из четырёх условий держатся. Четвёртое — ставка. В среднем это позиция, которую мы готовы представлять. Но это не позиция, которую мы готовы продавать как уверенность — и мы этого не делаем.</p>
+
+  <div class="pull-quote">
+    <p>Архитектура не устраняет риск. Она меняет его <em>форму</em>.</p>
+  </div>
+
+  <h2><span class="num">— V</span>Что это значит на практике.</h2>
+
+  <p>Причина, по которой мы написали эту статью — и причина, почему она лежит на сайте постоянно, а не как маркетинговый pitch — в том, что покупатели, с которыми мы работаем, читают такие тексты как аналитики читают research. Им нужны кейсы провалов. Им нужны условия, названные ясно. Им нужно знать, что мы готовы защищать под перекрёстным допросом, а не только то, что мы напишем в брошюре.</p>
+
+  <p>Архитектура как коллекционный класс активов — реальный тезис. Он же — условный. Самая ясная услуга, которую мы можем оказать серьёзному покупателю, — держать обе половины этого предложения в одной комнате одновременно.</p>
+
+  <div class="disclaimer">
+    <strong>— Дисклеймер</strong>
+    Прошлая доходность не гарантирует будущего результата. Приведённые цифры и кейсы отражают публично доступную информацию на момент публикации. Стоимость недвижимости может как расти, так и падать. Ничто в этой статье не является инвестиционной рекомендацией. Перед любым решением о покупке необходимо получить независимую финансовую, юридическую и налоговую консультацию.
+  </div>
+
+</article>
+
+<section class="faq-section">
+  <div class="label">— Вопросы читателей</div>
+  <h2>Частые вопросы.</h2>
+
+  <details class="faq-item">
+    <summary>Премия 44–47.5% Pritzker — это эффект архитектора или эффект покупателя, который покупает такие здания? <span class="ico">+</span></summary>
+    <p>И то, и другое. Исследование CityRealty фиксирует разницу в рыночной цене, а не каузальный механизм. Разумно допустить, что покупатели, готовые платить архитектурную премию, сами по себе self-selected по типу удержания, поддерживающему премию. Два эффекта складываются — и это часть причины, почему чтение «архитектура как коллекционный актив» держится.</p>
+  </details>
+
+  <details class="faq-item">
+    <summary>Не опровергает ли 53 West 53 тезис? <span class="ico">+</span></summary>
+    <p>Опровергает безусловную версию — ту, что любой лауреат Pritzker гарантирует опережение. Условную версию не опровергает. 53W53 запустился в среду продаж, где предложение, ценовая стратегия и макротайминг работали против проекта. Архитектурный аргумент был верен. Контекст исполнения — нет. Условия имеют значение.</p>
+  </details>
+
+  <details class="faq-item">
+    <summary>Как брендовые резиденции (Bugatti, Bulgari) ложатся в архитектор-led рамку? <span class="ico">+</span></summary>
+    <p>Категории пересекаются, но это не одно и то же. Брендовые резиденции несут подпись fashion-дома или hospitality-бренда; архитектор-led резиденции несут подпись названного ателье. И те, и те могут держать премию. Исторически архитектор-led подписи стареют лучше fashion-подписей, потому что архитекторы не меняют креативных директоров каждые пять лет. По умолчанию мы занимаем архитектор-led позицию, но представляем серьёзные брендовые проекты, когда выполнены те же четыре условия.</p>
+  </details>
+
+  <details class="faq-item">
+    <summary>Какой горизонт удержания предполагает этот тезис? <span class="ico">+</span></summary>
+    <p>Минимум 7–10 лет, идеально 15. Архитектурная премия — это медленный сложный процент, не флип. Покупатели, ожидающие двухлетнего роста, обычно ошибаются в калибровке, и мы говорим это на первом звонке.</p>
+  </details>
+
+  <details class="faq-item">
+    <summary>Это работает только в Манхэттене и Дубае? <span class="ico">+</span></summary>
+    <p>Сильнейшие данные — из Манхэттена, Майами и теперь Дубая. Условия переводятся на любой first-tier рынок: Лондон, Париж, Токио, Сингапур, Мальдивы в нашем активном портфолио. На вторичных рынках, где условие локации не выполняется, переносится хуже или совсем нет.</p>
+  </details>
+
+  <details class="faq-item">
+    <summary>Зачем вообще это публиковать? Другие агенты продали бы только upside. <span class="ico">+</span></summary>
+    <p>Потому что покупатели, с которыми мы работаем, не вознаграждают продавцов. Они вознаграждают аналитиков. Самый быстрый способ потерять серьёзного клиента — выдать односторонний тезис. Самый быстрый способ удержать — написать ту же статью, которую мы готовы принять под независимым рассмотрением.</p>
+  </details>
+
+  <details class="faq-item">
+    <summary>Какой следующий data point вы добавите к этому тезису? <span class="ico">+</span></summary>
+    <p>Мы отслеживаем когорту Muraba Veil до сдачи (Q4 2028) и три года после. Четырёхусловный читат Veil станет верифицируемым кейсом где-то в 2031–2033. Эту статью мы будем обновлять на каждом значимом data point.</p>
+  </details>
+</section>
+
+<section class="sources">
+  <div class="label">— Источники</div>
+  <ol>
+    <li><a href="https://www.cityrealty.com/nyc/market-insight/features/future-nyc/from-ando-zaha-nyc-condo-buildings-designed-pritzker-prize-winning-architects/20189" target="_blank" rel="noopener">CityRealty — NYC condo buildings designed by Pritzker Prize-winning architects. Per-square-foot premium data.</a></li>
+    <li><a href="https://www.lindseyarchitects.com/architecture-blog/why-architect-designed-homes-have-better-property-value" target="_blank" rel="noopener">Lindsey Architects — Long-run survey on architect-designed home appreciation (200.7% vs 172.6%).</a></li>
+    <li><a href="https://www.knightfrank.com/research/article/2026/4/piri-100-ultimate-prime-residential-property-index" target="_blank" rel="noopener">Knight Frank — Prime Residential Property Index 2026.</a></li>
+    <li><a href="https://www.knightfrank.co.uk/research/article/2025/9/the-global-branded-residence-survey-2025" target="_blank" rel="noopener">Knight Frank — Global Branded Residence Survey 2025.</a></li>
+    <li><a href="https://www.dezeen.com/2018/11/05/520-west-28th-50-million-penthouse-zaha-hadid-architects-chelsea-new-york/" target="_blank" rel="noopener">Dezeen — 520 West 28th by Zaha Hadid Architects, penthouse marketing and resale records.</a></li>
+    <li><a href="https://www.6sqft.com/facing-poor-sales-the-partners-behind-jean-nouvels-53w53-seek-additional-price-chops/" target="_blank" rel="noopener">6sqft — Jean Nouvel's 53W53, cumulative price cuts.</a></li>
+    <li><a href="https://www.cityrealty.com/nyc/market-insight/features/future-nyc/tour-exquisite-penthouse-tadao-ando039s-152-elizabeth-back-market-resale-discount/36141" target="_blank" rel="noopener">CityRealty — 152 Elizabeth by Tadao Ando, resale discount disclosure.</a></li>
+    <li><a href="https://architizer.com/blog/inspiration/stories/why-starchitecture-lost-its-shine/" target="_blank" rel="noopener">Architizer — From Sensationalism to Subtlety: Why Starchitecture Lost Its Shine.</a></li>
+    <li><a href="https://onlinelibrary.wiley.com/doi/full/10.1111/cura.12578" target="_blank" rel="noopener">Curator: The Museum Journal — Academic review of the Bilbao Effect (2024).</a></li>
+    <li><a href="https://www.khaleejtimes.com/business/property/dubai-branded-residences-market-trends-2026" target="_blank" rel="noopener">Khaleej Times — Dubai branded residences market trends 2026.</a></li>
+  </ol>
+</section>
+
+
+<section class="sources related-lots">
+  <div class="label">— Объекты по теме</div>
+  <ol><li><a href="heartestate-all-residences.html#veil">Muraba Veil</a></li><li><a href="heartestate-all-residences.html#alba">The Alba by OMNIYAT</a></li><li><a href="heartestate-all-residences.html#enara">ENARA by OMNIYAT</a></li><li><a href="heartestate-all-residences.html#dia">Muraba Dia</a></li><li><a href="heartestate-all-residences.html">Все 24 объекта портфолио</a></li></ol>
+</section>
+<footer class="article-foot">
+  <div class="article-foot-inner">
+    <h2>Если тезис ложится на ваш<br>горизонт удержания — <em>давайте поговорим</em>.</h2>
+    <p>
+      Каждый запрос ведёт человек, под NDA.
+    </p>
+    <a href="heartestate-home-draft.html#contact" class="cta">Связаться →</a>
+    <p style="margin-top:24px;font-size:12px;opacity:.55;">© 2026 Heart of the City · ORN 12609 · <a href="https://heartestate.ae/privacy" style="color:inherit;">Политика конфиденциальности</a></p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var root=document.documentElement, btn=document.getElementById('themeToggle');
+  if(!btn) return;
+  btn.addEventListener('click',function(){
+    var dark=root.getAttribute('data-theme')==='dark';
+    if(dark){root.removeAttribute('data-theme');}else{root.setAttribute('data-theme','dark');}
+    try{localStorage.setItem('hotc-theme',dark?'light':'dark');}catch(e){}
+  });
+})();
+</script>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"c037cf0d245b4b0d8940fd729d478bc8","r":1}' crossorigin="anonymous"></script>
+</body>
+</html>

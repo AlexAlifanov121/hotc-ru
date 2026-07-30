@@ -483,7 +483,7 @@ try{var t=localStorage.getItem('hotc-theme');if(t==='dark'||(!t&&window.matchMed
 
   /* ---- указатель по разделам ---- */
 
-  section[id^="vs-"] { scroll-margin-top:150px; }
+  section[id^="vs-"] { scroll-margin-top:var(--vs-off,150px); }
   .vsecnav { position:sticky; top:0; z-index:90; background:color-mix(in srgb, var(--bg) 88%, transparent);
     backdrop-filter:blur(18px); border-bottom:1px solid var(--line);
     opacity:0; pointer-events:none; transform:translateY(-6px); transition:opacity .3s, transform .3s; }
@@ -970,20 +970,63 @@ aa[m].innerHTML=aa[m].innerHTML.replace(/One Central, The Offices 4, WeWork[^<]*
 (function(){
   var nav=document.querySelector('.vsecnav'); if(!nav) return;
   var topbar=document.querySelector('nav.top');
-  function place(){ if(topbar) nav.style.top = topbar.offsetHeight + 'px'; }
-  place(); window.addEventListener('resize', place);
   var links=[].slice.call(nav.querySelectorAll('a'));
   var secs=links.map(function(a){ return document.getElementById(a.getAttribute('href').slice(1)); });
   var hero=document.querySelector('.vh');
+
+  function offset(){ return (topbar?topbar.offsetHeight:0) + nav.offsetHeight + 12; }
+  function place(){
+    if(topbar) nav.style.top = topbar.offsetHeight + 'px';
+    document.documentElement.style.setProperty('--vs-off', offset()+'px');
+  }
+
   function onScroll(){
     var past = hero ? (window.scrollY > hero.offsetHeight - 90) : (window.scrollY > 300);
     nav.classList.toggle('on', past);
-    var y=window.scrollY+140, cur=-1;
-    for(var i=0;i<secs.length;i++){ if(secs[i] && secs[i].offsetTop<=y) cur=i; }
+    /* раздел считается текущим, когда его начало вошло в верхнюю треть экрана */
+    var line = offset() + window.innerHeight * 0.3, cur = -1;
+    for (var i=0;i<secs.length;i++){
+      if (!secs[i]) continue;
+      if (secs[i].getBoundingClientRect().top <= line) cur = i;
+    }
+    /* у самого низа страницы всегда подсвечиваем последний раздел */
+    if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 40) cur = secs.length-1;
     links.forEach(function(a,i){ a.classList.toggle('cur', i===cur); });
+    var act = links[cur];
+    if (act && nav.scrollWidth > nav.clientWidth) {
+      var box = nav.querySelector('.vsecnav-in');
+      var l = act.offsetLeft - box.clientWidth/2 + act.offsetWidth/2;
+      if (Math.abs(box.scrollLeft - l) > 40) box.scrollTo({left:l, behavior:'smooth'});
+    }
   }
+
+  /* переход по клику: считаем позицию сами и добиваем после подгрузки */
+  function goTo(t){
+    var want = t.getBoundingClientRect().top + window.scrollY - offset();
+    window.scrollTo(0, want);
+    [120, 400, 900].forEach(function(d){ setTimeout(function(){
+      var w = t.getBoundingClientRect().top + window.scrollY - offset();
+      if (Math.abs(w - window.scrollY) > 24) window.scrollTo(0, w);
+    }, d); });
+  }
+  nav.addEventListener('click', function(e){
+    var a = e.target.closest('a'); if(!a) return;
+    var t = document.getElementById(a.getAttribute('href').slice(1)); if(!t) return;
+    e.preventDefault();
+    var before = window.scrollY;
+    goTo(t);
+    /* подстраховка: если программная прокрутка не сработала — уходим на нативный якорь */
+    setTimeout(function(){
+      if (Math.abs(window.scrollY - before) < 4) { location.hash = a.getAttribute('href'); }
+      onScroll();
+    }, 260);
+    setTimeout(onScroll, 60);
+  });
+
+  place();
+  window.addEventListener('resize', function(){ place(); onScroll(); });
   window.addEventListener('scroll', onScroll, {passive:true});
-  window.addEventListener('resize', onScroll);
+  window.addEventListener('load', function(){ place(); onScroll(); });
   onScroll();
 })();
 </script>

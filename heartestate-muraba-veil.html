@@ -437,6 +437,11 @@ try{var t=localStorage.getItem('hotc-theme');if(t==='dark'||(!t&&window.matchMed
   .vtour-cta:hover { opacity:0.88; }
 
 
+
+  .vform .vnum { display:flex; align-items:center; gap:14px; margin-bottom:26px;
+    font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.16em;
+    text-transform:uppercase; color:var(--ink-muted); }
+  .vform .vnum .ln { flex:1; height:1px; background:var(--line); max-width:180px; }
   .vform { padding:120px 32px 130px; background:var(--bg-alt); }
   .vform-in { max-width:780px; margin:0 auto; }
   .vform h2 { font-family:'Bricolage Grotesque',serif; font-weight:400; font-size:clamp(30px,4.4vw,48px);
@@ -667,8 +672,9 @@ aa[m].innerHTML=aa[m].innerHTML.replace(/One Central, The Offices 4, WeWork[^<]*
 
 <section class="vform" id="materials">
   <div class="vform-in">
-    <h2>We will send exactly <em>what you need</em>.</h2>
-    <p class="vform-lead">Tick what is useful — it comes in one email. No mailing list, and nothing you did not ask for.</p>
+    <div class="vnum"><span class="n">— 09</span><span>Materials</span><span class="ln"></span></div>
+    <h2>Request the project <em>pack</em>.</h2>
+    <p class="vform-lead">Brochure, floor plans, current availability and prices. Tick what you need — it comes in one email, once. No mailing list.</p>
     <form id="cxPageForm" novalidate>
       <div class="cx-group"><span class="cx-label">What to send</span><div class="cx-chips"><label class="cx-chip"><input type="checkbox" name="want" value="Brochure"><span>Brochure</span></label>
 <label class="cx-chip"><input type="checkbox" name="want" value="Floor plans"><span>Floor plans</span></label>

@@ -455,6 +455,10 @@ try{var t=localStorage.getItem('hotc-theme');if(t==='dark'||(!t&&window.matchMed
     text-transform:uppercase; color:var(--ink-soft); }
   .vwhy-items span::after { content:' ·'; margin-left:16px; color:var(--accent-soft); }
   .vwhy-items span:last-child::after { content:''; }
+
+  .vwhy-items a.more { color:var(--accent-soft); text-decoration:none; border-bottom:1px solid var(--accent);
+    padding-bottom:1px; transition:color .16s, border-color .16s; }
+  .vwhy-items a.more:hover { color:var(--ink); border-color:var(--ink); }
   .vwhy-link { font-size:15px; color:var(--ink); text-decoration:none; border-bottom:1px solid var(--accent-soft); }
   .vwhy-link:hover { border-color:var(--ink); }
   @media (max-width:640px){ .vwhy { flex-direction:column; gap:16px; padding:22px 20px; }
@@ -668,7 +672,7 @@ aa[m].innerHTML=aa[m].innerHTML.replace(/One Central, The Offices 4, WeWork[^<]*
 <section class="vsec">
   <div class="vsec-in">
     <div class="vnum"><span class="n">— 08</span><span>Условия</span><span class="ln"></span></div>
-    <div class="vwhy"><div class="vwhy-mark"><img src="assets/logos/logo-black.png" alt="Heart of the City" data-keep></div><div class="vwhy-body"><p class="vwhy-lead">Берём на себя всё при покупке — и заботимся о вас после.</p><div class="vwhy-items"><span>Визы</span><span>Школы</span><span>Консьерж</span><span>Страховки</span><span>Авиабилеты</span></div><a class="vwhy-link" href="heartestate-about-ru.html">Что входит →</a></div></div>
+    <div class="vwhy"><div class="vwhy-mark"><img src="assets/logos/logo-black.png" alt="Heart of the City" data-keep></div><div class="vwhy-body"><p class="vwhy-lead">Берём на себя всё при покупке — и заботимся о вас после.</p><div class="vwhy-items"><span>Визы</span><span>Школы</span><span>Консьерж</span><span>Страховки</span><span>Авиабилеты</span><span><a class="more" href="heartestate-about-ru.html">и многое другое →</a></span></div></div></div>
 
     <h2>Площади и <em>цены</em>.</h2>
     <table class="vprice">

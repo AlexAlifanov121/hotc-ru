@@ -480,6 +480,24 @@ try{var t=localStorage.getItem('hotc-theme');if(t==='dark'||(!t&&window.matchMed
   .vform-ok p { color:var(--ink-soft); font-size:16px; margin:0; }
   @media (max-width:760px){ .vform { padding:80px 22px 90px; } .vform .cx-fields { grid-template-columns:1fr; } }
 
+
+  /* ---- указатель по разделам ---- */
+
+  section[id^="vs-"] { scroll-margin-top:150px; }
+  .vsecnav { position:sticky; top:0; z-index:90; background:color-mix(in srgb, var(--bg) 88%, transparent);
+    backdrop-filter:blur(18px); border-bottom:1px solid var(--line);
+    opacity:0; pointer-events:none; transform:translateY(-6px); transition:opacity .3s, transform .3s; }
+  .vsecnav.on { opacity:1; pointer-events:auto; transform:none; }
+  .vsecnav-in { max-width:1180px; margin:0 auto; padding:0 32px; display:flex; gap:26px;
+    overflow-x:auto; scrollbar-width:none; }
+  .vsecnav-in::-webkit-scrollbar { display:none; }
+  .vsecnav a { flex:0 0 auto; padding:15px 0 13px; text-decoration:none; white-space:nowrap;
+    font-family:'JetBrains Mono',monospace; font-size:10.5px; letter-spacing:.13em; text-transform:uppercase;
+    color:var(--ink-muted); border-bottom:2px solid transparent; transition:color .18s, border-color .18s; }
+  .vsecnav a:hover { color:var(--ink-soft); }
+  .vsecnav a.cur { color:var(--ink); border-bottom-color:var(--accent); }
+  @media (max-width:760px){ .vsecnav-in { padding:0 18px; gap:20px; } .vsecnav a { font-size:10px; padding:13px 0 11px; } }
+
 </style>
 <link rel="alternate" hreflang="en" href="https://heartestate.ae/heartestate-muraba-veil" />
 <link rel="alternate" hreflang="ru" href="https://heartestate.ae/heartestate-muraba-veil-ru" />
@@ -539,7 +557,7 @@ aa[m].innerHTML=aa[m].innerHTML.replace(/One Central, The Offices 4, WeWork[^<]*
 </script><body>
 
 <nav class="top">
-  <a href="heartestate-home-draft.html" class="logo"><img src="assets/logos/logo-black.png" alt="Heart of the City" /></a>
+  <a href="heartestate-home-draft.html" class="logo"><img src="assets/logos/logo-black.png" alt="Heart of the City" width="3524" height="967"></a>
   <div style="display:flex; gap:18px; align-items:center;">
     <a href="heartestate-muraba-veil-ru.html" style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:var(--ink-muted); text-decoration:none;">RU</a>
     <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme" title="Светлая / тёмная"><svg class="ic-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg><svg class="ic-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/></svg></button>
@@ -547,6 +565,7 @@ aa[m].innerHTML=aa[m].innerHTML.replace(/One Central, The Offices 4, WeWork[^<]*
     <a href="#" data-contact class="nav-cta">Get in touch</a>
   </div>
 </nav>
+<div class="vsecnav"><div class="vsecnav-in"><a href="#vs-project">The project</a><a href="#vs-architecture">Architecture</a><a href="#vs-inside">Inside</a><a href="#vs-gallery">Gallery</a><a href="#vs-tour">Tour</a><a href="#vs-film">Film</a><a href="#vs-team">Team</a><a href="#vs-terms">Terms and price</a><a href="#vs-materials">Materials</a></div></div>
 
 <section class="vh">
   <div class="vh-in">
@@ -561,7 +580,7 @@ aa[m].innerHTML=aa[m].innerHTML.replace(/One Central, The Offices 4, WeWork[^<]*
   </div>
 </section>
 
-<section class="vsec">
+<section id="vs-project" class="vsec">
   <div class="vsec-in">
     <div class="vnum"><span class="n">— 01</span><span>The project</span><span class="ln"></span></div>
     <div class="vgrid2">
@@ -573,7 +592,7 @@ aa[m].innerHTML=aa[m].innerHTML.replace(/One Central, The Offices 4, WeWork[^<]*
 </section>
 
 
-<section class="vfeat" id="architecture">
+<section class="vfeat" id="vs-architecture">
   <div class="vfeat-in">
     <div class="vnum"><span class="n">— 02</span><span>Architecture</span><span class="ln"></span></div>
 
@@ -592,7 +611,7 @@ aa[m].innerHTML=aa[m].innerHTML.replace(/One Central, The Offices 4, WeWork[^<]*
         <p>Every residence is dual-aspect, opening onto a courtyard on each side. To the south-west, the canal and sunsets over the Arabian Gulf; to the north-east, Downtown Dubai. Each residence is reached through a private lift lobby — you meet no neighbours on the way home.</p>
         <p>That is rare in a tower: most apartments face one way, and the second view has to be traded against the first. Here you have both — sunrise and sunset.</p><p>The architects call it the transversal space: the residence runs right through the building, and the air moves across it from one façade to the other.</p>
       </div>
-      <div class="vfeat-img"><img src="assets/projects/muraba-veil-page/gallery/g04.jpg" alt="View from the residence" loading="lazy"></div>
+      <div class="vfeat-img"><img src="assets/projects/muraba-veil-page/gallery/g04.jpg" alt="View from the residence" loading="lazy" width="2000" height="1500"></div>
     </div>
 
     <div class="vfeat-row">
@@ -600,14 +619,14 @@ aa[m].innerHTML=aa[m].innerHTML.replace(/One Central, The Offices 4, WeWork[^<]*
         <h3>Why the tower<br><em>is built this way</em>.</h3>
         <p>RCR Arquitectes won the Pritzker Prize — architecture’s highest honour — for buildings that grow out of a place rather than sit on it. Muraba Veil is their first skyscraper; until now the studio built museums, schools and houses in the Catalan foothills.</p>
         <p>The architects describe Veil as a building born of the desert: it rises from the dunes, and inside every floor holds water, shade and planting. Underneath it are old principles of the eastern house — shelter from the climate, closeness to nature in every room.</p><p>Hence decisions unusual for Dubai: open-air gardens on the floors, a veil instead of the usual mirrored glass, and an oasis underground. At the foot of the tower, pools sit among tall palms; beneath them Dune drops away into shade, water and recovery.</p>
-        <a href="#tour" class="more">Curious how the form came about? →</a>
+        <a href="#vs-tour" class="more">Curious how the form came about? →</a>
       </div>
-      <div class="vfeat-img"><img src="assets/projects/muraba-veil-page/gallery/g10.jpg" alt="Dune subterranean spa" loading="lazy"></div>
+      <div class="vfeat-img"><img src="assets/projects/muraba-veil-page/gallery/g10.jpg" alt="Dune subterranean spa" loading="lazy" width="2000" height="2000"></div>
     </div>
   </div>
 </section>
 
-<section class="vsec">
+<section id="vs-inside" class="vsec">
   <div class="vsec-in">
     <div class="vnum"><span class="n">— 03</span><span>Inside</span><span class="ln"></span></div>
     <h2>A private world<br><em>below and above the city</em>.</h2>
@@ -615,20 +634,20 @@ aa[m].innerHTML=aa[m].innerHTML.replace(/One Central, The Offices 4, WeWork[^<]*
   </div>
 </section>
 
-<section class="vsec">
+<section id="vs-gallery" class="vsec">
   <div class="vsec-in">
     <div class="vnum"><span class="n">— 04</span><span>Gallery</span><span class="ln"></span></div>
     <h2>How it <em>looks</em>.</h2>
     <p class="vlead">Scroll sideways. Click a frame to open it larger.</p>
     <div class="vgal">
-      <div class="vtrack" id="vtrack"><div class="vslide" data-full="assets/projects/muraba-veil-page/gallery/g01.jpg"><img src="assets/projects/muraba-veil-page/gallery/t01.jpg" alt="The tower · Sheikh Zayed Road" loading="lazy" decoding="async"><div class="cap">The tower · Sheikh Zayed Road</div></div><div class="vslide" data-full="assets/projects/muraba-veil-page/gallery/g02.jpg"><img src="assets/projects/muraba-veil-page/gallery/t02.jpg" alt="View over the Dubai Water Canal" loading="lazy" decoding="async"><div class="cap">View over the Dubai Water Canal</div></div><div class="vslide" data-full="assets/projects/muraba-veil-page/gallery/g03.jpg"><img src="assets/projects/muraba-veil-page/gallery/t03.jpg" alt="Living room · water garden" loading="lazy" decoding="async"><div class="cap">Living room · water garden</div></div><div class="vslide" data-full="assets/projects/muraba-veil-page/gallery/g04.jpg"><img src="assets/projects/muraba-veil-page/gallery/t04.jpg" alt="Bedroom · panorama" loading="lazy" decoding="async"><div class="cap">Bedroom · panorama</div></div><div class="vslide" data-full="assets/projects/muraba-veil-page/gallery/g05.jpg"><img src="assets/projects/muraba-veil-page/gallery/t05.jpg" alt="Living room · vertical garden" loading="lazy" decoding="async"><div class="cap">Living room · vertical garden</div></div><div class="vslide" data-full="assets/projects/muraba-veil-page/gallery/g06.jpg"><img src="assets/projects/muraba-veil-page/gallery/t06.jpg" alt="Living room · sunset" loading="lazy" decoding="async"><div class="cap">Living room · sunset</div></div><div class="vslide" data-full="assets/projects/muraba-veil-page/gallery/g07.jpg?v=2"><img src="assets/projects/muraba-veil-page/gallery/t07.jpg?v=2" alt="Terrace · pool and city" loading="lazy" decoding="async"><div class="cap">Terrace · pool and city</div></div><div class="vslide" data-full="assets/projects/muraba-veil-page/gallery/g08.jpg"><img src="assets/projects/muraba-veil-page/gallery/t08.jpg" alt="Garden on the façade" loading="lazy" decoding="async"><div class="cap">Garden on the façade</div></div><div class="vslide" data-full="assets/projects/muraba-veil-page/gallery/g09.jpg"><img src="assets/projects/muraba-veil-page/gallery/t09.jpg" alt="Rooftop restaurant" loading="lazy" decoding="async"><div class="cap">Rooftop restaurant</div></div><div class="vslide" data-full="assets/projects/muraba-veil-page/gallery/g10.jpg"><img src="assets/projects/muraba-veil-page/gallery/t10.jpg" alt="Dune · subterranean spa" loading="lazy" decoding="async"><div class="cap">Dune · subterranean spa</div></div><div class="vslide" data-full="assets/projects/muraba-veil-page/gallery/g11.jpg"><img src="assets/projects/muraba-veil-page/gallery/t11.jpg" alt="Living room · sunset" loading="lazy" decoding="async"><div class="cap">Living room · sunset</div></div><div class="vslide" data-full="assets/projects/muraba-veil-page/gallery/g12.jpg"><img src="assets/projects/muraba-veil-page/gallery/t12.jpg" alt="Master bathroom · bathtub" loading="lazy" decoding="async"><div class="cap">Master bathroom · bathtub</div></div></div>
+      <div class="vtrack" id="vtrack"><div class="vslide" data-full="assets/projects/muraba-veil-page/gallery/g01.jpg"><img src="assets/projects/muraba-veil-page/gallery/t01.jpg" alt="The tower · Sheikh Zayed Road" loading="lazy" decoding="async" width="720" height="720"><div class="cap">The tower · Sheikh Zayed Road</div></div><div class="vslide" data-full="assets/projects/muraba-veil-page/gallery/g02.jpg"><img src="assets/projects/muraba-veil-page/gallery/t02.jpg" alt="View over the Dubai Water Canal" loading="lazy" decoding="async" width="720" height="965"><div class="cap">View over the Dubai Water Canal</div></div><div class="vslide" data-full="assets/projects/muraba-veil-page/gallery/g03.jpg"><img src="assets/projects/muraba-veil-page/gallery/t03.jpg" alt="Living room · water garden" loading="lazy" decoding="async" width="720" height="405"><div class="cap">Living room · water garden</div></div><div class="vslide" data-full="assets/projects/muraba-veil-page/gallery/g04.jpg"><img src="assets/projects/muraba-veil-page/gallery/t04.jpg" alt="Bedroom · panorama" loading="lazy" decoding="async" width="720" height="540"><div class="cap">Bedroom · panorama</div></div><div class="vslide" data-full="assets/projects/muraba-veil-page/gallery/g05.jpg"><img src="assets/projects/muraba-veil-page/gallery/t05.jpg" alt="Living room · vertical garden" loading="lazy" decoding="async" width="720" height="540"><div class="cap">Living room · vertical garden</div></div><div class="vslide" data-full="assets/projects/muraba-veil-page/gallery/g06.jpg"><img src="assets/projects/muraba-veil-page/gallery/t06.jpg" alt="Living room · sunset" loading="lazy" decoding="async" width="720" height="405"><div class="cap">Living room · sunset</div></div><div class="vslide" data-full="assets/projects/muraba-veil-page/gallery/g07.jpg?v=2"><img src="assets/projects/muraba-veil-page/gallery/t07.jpg?v=2" alt="Terrace · pool and city" loading="lazy" decoding="async" width="720" height="405"><div class="cap">Terrace · pool and city</div></div><div class="vslide" data-full="assets/projects/muraba-veil-page/gallery/g08.jpg"><img src="assets/projects/muraba-veil-page/gallery/t08.jpg" alt="Garden on the façade" loading="lazy" decoding="async" width="720" height="592"><div class="cap">Garden on the façade</div></div><div class="vslide" data-full="assets/projects/muraba-veil-page/gallery/g09.jpg"><img src="assets/projects/muraba-veil-page/gallery/t09.jpg" alt="Rooftop restaurant" loading="lazy" decoding="async" width="720" height="405"><div class="cap">Rooftop restaurant</div></div><div class="vslide" data-full="assets/projects/muraba-veil-page/gallery/g10.jpg"><img src="assets/projects/muraba-veil-page/gallery/t10.jpg" alt="Dune · subterranean spa" loading="lazy" decoding="async" width="720" height="720"><div class="cap">Dune · subterranean spa</div></div><div class="vslide" data-full="assets/projects/muraba-veil-page/gallery/g11.jpg"><img src="assets/projects/muraba-veil-page/gallery/t11.jpg" alt="Living room · sunset" loading="lazy" decoding="async" width="720" height="405"><div class="cap">Living room · sunset</div></div><div class="vslide" data-full="assets/projects/muraba-veil-page/gallery/g12.jpg"><img src="assets/projects/muraba-veil-page/gallery/t12.jpg" alt="Master bathroom · bathtub" loading="lazy" decoding="async" width="720" height="405"><div class="cap">Master bathroom · bathtub</div></div></div>
       <div class="vnav"><button type="button" data-gal="-1" aria-label="prev">←</button><button type="button" data-gal="1" aria-label="next">→</button></div>
     </div>
   </div>
 </section>
 
 
-<section class="vtour" id="tour">
+<section class="vtour" id="vs-tour">
   <div class="vtour-in">
     <div>
       <div class="vnum"><span class="n">— 05</span><span>Viewing</span><span class="ln"></span></div>
@@ -646,7 +665,7 @@ aa[m].innerHTML=aa[m].innerHTML.replace(/One Central, The Offices 4, WeWork[^<]*
   </div>
 </section>
 
-<section class="vsec">
+<section id="vs-film" class="vsec">
   <div class="vsec-in">
     <div class="vnum"><span class="n">— 06</span><span>Film</span><span class="ln"></span></div>
     <h2>Seen and <em>not seen</em>.</h2>
@@ -661,7 +680,7 @@ aa[m].innerHTML=aa[m].innerHTML.replace(/One Central, The Offices 4, WeWork[^<]*
   </div>
 </section>
 
-<section class="vsec">
+<section id="vs-team" class="vsec">
   <div class="vsec-in">
     <div class="vnum"><span class="n">— 07</span><span>The team</span><span class="ln"></span></div>
     <h2>Who stands behind<br>this <em>masterpiece</em>.</h2>
@@ -669,10 +688,10 @@ aa[m].innerHTML=aa[m].innerHTML.replace(/One Central, The Offices 4, WeWork[^<]*
   </div>
 </section>
 
-<section class="vsec">
+<section id="vs-terms" class="vsec">
   <div class="vsec-in">
-    <div class="vnum"><span class="n">— 08</span><span>Terms</span><span class="ln"></span></div>
-    <div class="vwhy"><div class="vwhy-mark"><img src="assets/logos/logo-black.png" alt="Heart of the City" data-keep></div><div class="vwhy-body"><p class="vwhy-lead">We handle everything the purchase involves — and look after you long after it's done.</p><div class="vwhy-items"><span>Visas</span><span>Schools</span><span>Concierge</span><span>Insurance</span><span>Flights</span><span><a class="more" href="heartestate-about.html">and more →</a></span></div></div></div>
+    <div class="vnum"><span class="n">— 08</span><span>Terms and price</span><span class="ln"></span></div>
+    <div class="vwhy"><div class="vwhy-mark"><img src="assets/logos/logo-black.png" alt="Heart of the City" data-keep width="3524" height="967"></div><div class="vwhy-body"><p class="vwhy-lead">We handle everything the purchase involves — and look after you long after it's done.</p><div class="vwhy-items"><span>Visas</span><span>Schools</span><span>Concierge</span><span>Insurance</span><span>Flights</span><span><a class="more" href="heartestate-about.html">and more →</a></span></div></div></div>
 
     <h2>Sizes and <em>prices</em>.</h2>
     <table class="vprice">
@@ -690,7 +709,7 @@ aa[m].innerHTML=aa[m].innerHTML.replace(/One Central, The Offices 4, WeWork[^<]*
   </div>
 </section>
 
-<section class="vform" id="materials">
+<section class="vform" id="vs-materials">
   <div class="vform-in">
     <div class="vnum"><span class="n">— 09</span><span>Materials</span><span class="ln"></span></div>
     <h2>Request <em>additional information</em>.</h2>
@@ -945,6 +964,27 @@ aa[m].innerHTML=aa[m].innerHTML.replace(/One Central, The Offices 4, WeWork[^<]*
       note:'Заявка на показ · Формат: '+ft.format.value+' · Когда: '+((ft.when.value||'').trim()||'—'),
       ts:new Date().toISOString()},b,old);
   });
+})();
+</script>
+<script>
+(function(){
+  var nav=document.querySelector('.vsecnav'); if(!nav) return;
+  var topbar=document.querySelector('nav.top');
+  function place(){ if(topbar) nav.style.top = topbar.offsetHeight + 'px'; }
+  place(); window.addEventListener('resize', place);
+  var links=[].slice.call(nav.querySelectorAll('a'));
+  var secs=links.map(function(a){ return document.getElementById(a.getAttribute('href').slice(1)); });
+  var hero=document.querySelector('.vh');
+  function onScroll(){
+    var past = hero ? (window.scrollY > hero.offsetHeight - 90) : (window.scrollY > 300);
+    nav.classList.toggle('on', past);
+    var y=window.scrollY+140, cur=-1;
+    for(var i=0;i<secs.length;i++){ if(secs[i] && secs[i].offsetTop<=y) cur=i; }
+    links.forEach(function(a,i){ a.classList.toggle('cur', i===cur); });
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  window.addEventListener('resize', onScroll);
+  onScroll();
 })();
 </script>
 </body>

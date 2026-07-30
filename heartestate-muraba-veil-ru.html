@@ -443,12 +443,22 @@ try{var t=localStorage.getItem('hotc-theme');if(t==='dark'||(!t&&window.matchMed
     text-transform:uppercase; color:var(--ink-muted); }
   .vform .vnum .ln { flex:1; height:1px; background:var(--line); max-width:180px; }
 
-  .vwhy { margin:0 0 30px; padding:18px 22px; border-left:2px solid var(--accent);
-    background:rgba(156,122,70,0.07); font-size:16px; line-height:1.65; color:var(--ink-soft); }
-  .vwhy strong { color:var(--ink); font-weight:500; }
-  .vwhy a { color:var(--ink); text-decoration:none; border-bottom:1px solid var(--accent-soft); white-space:nowrap; }
-  .vwhy a:hover { border-color:var(--ink); }
-  @media (max-width:640px){ .vwhy { font-size:15px; padding:16px 18px; } }
+  .vwhy { margin:0 0 34px; padding:26px 30px; border:1px solid var(--line); border-left:2px solid var(--accent);
+    border-radius:4px; background:rgba(156,122,70,0.06); display:flex; gap:26px; align-items:flex-start; }
+  .vwhy-mark { flex:0 0 auto; padding-top:2px; }
+  .vwhy-mark img { height:44px; width:auto; display:block; }
+  :root[data-theme="dark"] .vwhy-mark img { filter:invert(1) !important; }
+  .vwhy-body { flex:1; }
+  .vwhy-lead { font-size:17px; line-height:1.55; color:var(--ink); margin:0 0 12px; }
+  .vwhy-items { display:flex; flex-wrap:wrap; gap:8px 18px; margin:0 0 14px;
+    font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.1em;
+    text-transform:uppercase; color:var(--ink-muted); }
+  .vwhy-items span::after { content:' ·'; margin-left:16px; color:var(--accent-soft); }
+  .vwhy-items span:last-child::after { content:''; }
+  .vwhy-link { font-size:14px; color:var(--ink); text-decoration:none; border-bottom:1px solid var(--accent-soft); }
+  .vwhy-link:hover { border-color:var(--ink); }
+  @media (max-width:640px){ .vwhy { flex-direction:column; gap:16px; padding:22px 20px; }
+    .vwhy-mark img { height:36px; } .vwhy-lead { font-size:16px; } }
   .vform { padding:120px 32px 130px; background:var(--bg-alt); }
   .vform-in { max-width:780px; margin:0 auto; }
   .vform h2 { font-family:'Bricolage Grotesque',serif; font-weight:400; font-size:clamp(30px,4.4vw,48px);
@@ -658,7 +668,7 @@ aa[m].innerHTML=aa[m].innerHTML.replace(/One Central, The Offices 4, WeWork[^<]*
 <section class="vsec">
   <div class="vsec-in">
     <div class="vnum"><span class="n">— 08</span><span>Условия</span><span class="ln"></span></div>
-    <p class="vwhy"><strong>Heart of the City</strong> — бутиковая практика в Дубае. Берём на себя всё при покупке и заботимся о вас после: визы, школы, консьерж, страховки, авиабилеты. <a href="heartestate-about-ru.html">Что входит →</a></p>
+    <div class="vwhy"><div class="vwhy-mark"><img src="assets/logos/logo-black.png" alt="Heart of the City" data-keep></div><div class="vwhy-body"><p class="vwhy-lead">Берём на себя всё при покупке — и заботимся о вас после.</p><div class="vwhy-items"><span>Визы</span><span>Школы</span><span>Консьерж</span><span>Страховки</span><span>Авиабилеты</span></div><a class="vwhy-link" href="heartestate-about-ru.html">Что входит →</a></div></div>
 
     <h2>Площади и <em>цены</em>.</h2>
     <table class="vprice">

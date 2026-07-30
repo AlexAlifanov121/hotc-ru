@@ -1,300 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Our Office — Heart of the City</title>
-<link href="css/fonts-tildasans.css" rel="stylesheet">
-<style>
-@font-face{font-family:'Garet';src:url('https://static.tildacdn.com/tild3833-3634-4430-b730-616433653338/Garet-Book_1.woff') format('woff');font-weight:300;font-style:normal}
-@font-face{font-family:'Garet';src:url('https://static.tildacdn.com/tild3833-3634-4430-b730-616433653338/Garet-Book_1.woff') format('woff');font-weight:400;font-style:normal}
-
-*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-
-body {
-  background: #0a0a0a;
-  color: #fff;
-  font-family: TildaSans, Arial, sans-serif;
-  line-height: 1.6;
-}
-
-/* ===== BREADCRUMB ===== */
-.breadcrumb {
-  padding: 20px 60px;
-  font-size: 14px;
-  color: #888;
-  font-weight: 300;
-}
-.breadcrumb a { color: #888; text-decoration: none; }
-.breadcrumb a:hover { color: #c9a96e; }
-.breadcrumb span { margin: 0 8px; color: #555; }
-
-/* ===== HERO ===== */
-.hero {
-  position: relative;
-  width: 100%;
-  height: 70vh;
-  overflow: hidden;
-}
-.hero img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.hero .overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 250px;
-  background: linear-gradient(transparent, rgba(10,10,10,0.95));
-}
-.hero-text {
-  position: absolute;
-  bottom: 50px;
-  left: 60px;
-  z-index: 2;
-}
-.hero-text h1 {
-  font-family: TildaSans, Arial, sans-serif;
-  font-size: 52px;
-  font-weight: 400;
-  letter-spacing: 1.5px;
-  margin-bottom: 12px;
-}
-.hero-text .location {
-  font-size: 14px;
-  color: #c9a96e;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  font-weight: 400;
-}
-
-/* ===== CONTENT ===== */
-.content-section {
-  padding: 60px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.section-title {
-  font-family: TildaSans, Arial, sans-serif;
-  font-size: 32px;
-  font-weight: 300;
-  letter-spacing: 1px;
-  margin-bottom: 30px;
-  color: #fff;
-}
-
-.section-title::after {
-  content: '';
-  display: block;
-  width: 50px;
-  height: 2px;
-  background: #c9a96e;
-  margin-top: 15px;
-}
-
-.about-text {
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 1.9;
-  color: #bbb;
-  max-width: 800px;
-  margin-bottom: 50px;
-}
-
-/* ===== VIDEO SECTION ===== */
-.video-section {
-  padding: 0 60px 60px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.video-wrapper {
-  position: relative;
-  width: 100%;
-  max-width: 500px;
-  margin: 0 auto;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
-}
-
-.video-wrapper video {
-  width: 100%;
-  display: block;
-  border-radius: 12px;
-}
-
-/* ===== PHOTO GALLERY ===== */
-.gallery-section {
-  padding: 0 60px 60px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-}
-
-.gallery-grid img {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-  border-radius: 8px;
-  transition: transform 0.3s, opacity 0.3s;
-}
-
-.gallery-grid img:hover {
-  transform: scale(1.03);
-  opacity: 0.9;
-}
-
-/* ===== INFO BAR ===== */
-.info-bar {
-  display: flex;
-  padding: 40px 60px;
-  border-top: 1px solid rgba(255,255,255,0.08);
-  border-bottom: 1px solid rgba(255,255,255,0.08);
-  gap: 0;
-  max-width: 1200px;
-  margin: 0 auto 60px;
-}
-
-.info-item {
-  flex: 1;
-  text-align: center;
-  position: relative;
-}
-.info-item:not(:last-child)::after {
-  content: '';
-  position: absolute;
-  right: 0;
-  top: 0;
-  height: 100%;
-  width: 1px;
-  background: rgba(255,255,255,0.08);
-}
-.info-label {
-  font-size: 10px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: #777;
-  margin-bottom: 8px;
-}
-.info-value {
-  font-size: 18px;
-  font-weight: 300;
-  letter-spacing: 0.5px;
-}
-.info-value.highlight {
-  color: #c9a96e;
-}
-
-/* ===== MAP ===== */
-.map-section {
-  padding: 0 60px 60px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.map-section iframe {
-  width: 100%;
-  height: 350px;
-  border: none;
-  border-radius: 8px;
-  filter: grayscale(0.8) invert(0.92) contrast(0.9);
-}
-
-/* ===== CONTACT SECTION ===== */
-.contact-section {
-  text-align: center;
-  padding: 80px 60px;
-  background: linear-gradient(180deg, #0a0a0a 0%, #111 100%);
-}
-.contact-section h2 {
-  font-size: 32px;
-  font-weight: 300;
-  margin-bottom: 15px;
-}
-.contact-section .subtitle {
-  color: #888;
-  font-size: 14px;
-  font-weight: 300;
-  margin-bottom: 40px;
-}
-.contact-form {
-  max-width: 500px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-.form-group label {
-  font-size: 11px;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  color: #777;
-  display: block;
-  margin-bottom: 6px;
-}
-.form-group input {
-  width: 100%;
-  padding: 14px 20px;
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.1);
-  color: #fff;
-  font-size: 14px;
-  font-family: TildaSans, Arial, sans-serif;
-}
-.form-group input::placeholder { color: #555; }
-.btn-submit {
-  padding: 16px 36px;
-  background: #c9a96e;
-  color: #0a0a0a;
-  border: none;
-  font-size: 14px;
-  font-family: TildaSans, Arial, sans-serif;
-  font-weight: 400;
-  cursor: pointer;
-  transition: all 0.3s;
-  letter-spacing: 1px;
-  margin-top: 10px;
-}
-.btn-submit:hover { background: #b8944f; }
-
-/* ===== BACK LINK ===== */
-.back-link {
-  display: inline-block;
-  padding: 30px 60px;
-  color: #888;
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: 300;
-  transition: color 0.3s;
-}
-.back-link:hover { color: #c9a96e; }
-
-/* ===== RESPONSIVE ===== */
-@media (max-width: 768px) {
-  .hero { height: 50vh; }
-  .hero-text { left: 20px; bottom: 30px; }
-  .hero-text h1 { font-size: 32px; }
-  .breadcrumb, .content-section, .video-section, .gallery-section, .map-section { padding-left: 20px; padding-right: 20px; }
-  .info-bar { flex-direction: column; gap: 25px; padding: 30px 20px; }
-  .info-item:not(:last-child)::after { display: none; }
-  .gallery-grid { grid-template-columns: 1fr; }
-  .video-wrapper { max-width: 100%; }
-  .contact-section { padding: 50px 20px; }
-  .back-link { padding: 20px; }
-}
-</style>
-<script src="/js/consent.js?v=1" defer></script>
 <meta name="robots" content="noindex, nofollow" />
 <link rel="canonical" href="https://heartestate.ae/our-office" />
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Real Estate Broker in World Trade Centre, Dubai — Heart of the City</title>
+<meta name="description" content="Licensed Dubai real estate brokerage based at One Central, Dubai World Trade Centre. Buy-side advisory, off-market lots and seller representation. ORN 12609. Visit us on the 8th and 9th floor, Sun–Thu 9:00–18:00." />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Heart of the City" />
+<meta property="og:title" content="Real Estate Broker in World Trade Centre, Dubai — Heart of the City" />
+<meta property="og:description" content="Licensed Dubai real estate brokerage based at One Central, Dubai World Trade Centre. Buy-side advisory, off-market lots and seller representation. ORN 12609. Visit us on the 8th and 9th floor, Sun–Thu 9:00–18:00." />
+<meta property="og:url" content="https://heartestate.ae/our-office" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="color-scheme" content="light dark" />
+<link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+<script>try{var t=localStorage.getItem('hotc-theme');if(t==='dark'||(!t&&window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.setAttribute('data-theme','dark');}}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..500;1,9..144,300..400&family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"RealEstateAgent",
+ "@id":"https://heartestate.ae/our-office",
+ "name":"Heart of the City — Qalb AlMadinah Real Estate Broker",
+ "url":"https://heartestate.ae/our-office",
+ "description":"Licensed real estate brokerage at One Central, Dubai World Trade Centre.",
+ "telephone":"+971562188006",
+ "email":"info@heartestate.ae",
+ "image":"https://heartestate.ae/assets/og/heart-of-the-city-og.jpg",
+ "address":{"@type":"PostalAddress","streetAddress":"One Central, The Offices 4, 8th floor","addressLocality":"Dubai World Trade Centre","addressRegion":"Dubai","addressCountry":"AE"},
+ "geo":{"@type":"GeoCoordinates","latitude":25.2246,"longitude":55.2882},
+ "openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Sunday","Monday","Tuesday","Wednesday","Thursday"],"opens":"09:00","closes":"18:00"}],
+ "areaServed":[{"@type":"Place","name":"Dubai"},{"@type":"Place","name":"Abu Dhabi"},{"@type":"Place","name":"Maldives"}],
+ "knowsLanguage":["en","ru"],
+ "identifier":"ORN 12609",
+ "parentOrganization":{"@type":"Organization","name":"Heart of the City","url":"https://heartestate.ae/"}
+}
+</script>
+<style>
+  :root{color-scheme:light dark;--bg:#F2EEE6;--bg-alt:#E8E2D3;--ink:#131211;--ink-soft:#1E1C1A;--ink-muted:#5E5A52;--line:rgba(19,18,17,.12);--accent:#E5482A}
+  :root[data-theme="dark"]{--bg:#0E0D0C;--bg-alt:#181614;--ink:#F2EEE6;--ink-soft:#D8D2C5;--ink-muted:#8E867A;--line:rgba(242,238,230,.14)}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font-family:'Bricolage Grotesque',system-ui,sans-serif;font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+  img{max-width:100%;display:block}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+  .mono{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase}
+  nav.top{display:flex;justify-content:space-between;align-items:center;padding:20px 28px;border-bottom:1px solid var(--line);gap:18px;flex-wrap:wrap}
+  nav.top a,nav.top a:visited{color:var(--ink);text-decoration:none}
+  a{color:var(--accent)}
+  nav.top .brand{font-family:'Fraunces',serif;font-size:17px}
+  nav.top .r{display:flex;gap:18px;align-items:center}
+  .hero{position:relative;min-height:62vh;display:flex;align-items:flex-end;background:var(--bg-alt) center/cover no-repeat}
+  .hero::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.28) 0%,rgba(0,0,0,.18) 35%,rgba(0,0,0,.55) 72%,rgba(0,0,0,.86) 100%)}
+  .hero .in{position:relative;z-index:2;padding:48px 28px;color:#F7F3EC;max-width:1080px;margin:0 auto;width:100%;text-shadow:0 2px 18px rgba(0,0,0,.55)}
+  .hero .mono{color:rgba(247,243,236,.72);margin-bottom:12px}
+  h1{font-family:'Fraunces',serif;font-weight:400;font-size:clamp(32px,5vw,62px);line-height:1.02;letter-spacing:-.02em}
+  .hero .tag{font-family:'Fraunces',serif;font-style:italic;font-size:clamp(17px,2vw,23px);margin-top:10px;opacity:.9}
+  .hero .arch{margin-top:16px;font-size:14px;opacity:.8}
+  section{padding:52px 0;border-bottom:1px solid var(--line)}
+  h2{font-family:'Fraunces',serif;font-weight:400;font-size:clamp(22px,2.6vw,32px);margin-bottom:18px}
+  p{color:var(--ink-soft);margin-bottom:14px;max-width:74ch}
+  .lede{font-size:18px}
+  .grid2{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+  .card{background:var(--bg-alt);border-radius:10px;padding:22px 24px}
+  .card h3{font-family:'Fraunces',serif;font-weight:400;font-size:19px;margin-bottom:8px}
+  .card p{margin:0;font-size:15px}
+  dl .row{display:flex;gap:18px;padding:11px 0;border-bottom:1px solid var(--line)}
+  dl dt{flex:0 0 190px;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-muted);padding-top:3px}
+  dl dd{flex:1;color:var(--ink-soft)}
+  table{width:100%;border-collapse:collapse;font-size:15px}
+  th,td{text-align:left;padding:12px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+  td.b{font-family:'Fraunces',serif;font-size:17px}
+  td.p{white-space:nowrap;font-family:'JetBrains Mono',monospace;font-size:13px}
+  ul.amen{list-style:none;display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+  ul.amen li{padding-left:22px;position:relative;color:var(--ink-soft)}
+  ul.amen li::before{content:'—';position:absolute;left:0;color:var(--accent)}
+  .gal{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+  .gal img{border-radius:8px;width:100%;height:100%;object-fit:cover;aspect-ratio:4/3}
+  details.faq{border-bottom:1px solid var(--line);padding:16px 0}
+  details.faq summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px;font-family:'Fraunces',serif;font-size:18px}
+  details.faq summary::-webkit-details-marker{display:none}
+  details.faq .ico{color:var(--accent)}
+  details.faq[open] .ico{transform:rotate(45deg)}
+  details.faq p{margin:12px 0 0;font-size:15px}
+  .cta{text-align:center;padding:64px 0}
+  .cta h2{margin-bottom:14px}
+  .cta p{margin:0 auto 24px;max-width:56ch}
+  .btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+  .btn{display:inline-block;padding:14px 26px;border-radius:100px;text-decoration:none;font-size:15px}
+  .btn.primary{background:var(--accent);color:#fff}
+  .btn.ghost{border:1px solid var(--line);color:var(--ink)}
+  footer{padding:34px 0 56px;color:var(--ink-muted);font-size:13px}
+  footer a{color:inherit}
+  @media(max-width:640px){.wrap,nav.top,.hero .in{padding-left:18px;padding-right:18px}dl dt{flex-basis:130px}}
+</style>
+<script src="/js/consent.js?v=1" defer></script>
+<link rel="icon" type="image/png" sizes="96x96" href="/images/favicon-96.png" /><link rel="icon" type="image/png" sizes="192x192" href="/images/favicon-192.png" />
 </head>
 <script>
 window.addEventListener('load',function(){
@@ -340,7 +144,7 @@ break;
 var aa=f.querySelectorAll('.tn-atom');
 for(var m=0;m<aa.length;m++){
 if(aa[m].textContent&&aa[m].textContent.indexOf('One Central, The Offices 4, WeWork')!==-1){
-aa[m].innerHTML=aa[m].innerHTML.replace(/One Central, The Offices 4, WeWork[^<]*/g,'Office 8F-08-115, Offices 4, Building One Central, Building 4, Trade Centre');
+aa[m].innerHTML=aa[m].innerHTML.replace(/One Central, The Offices 4, WeWork[^<]*/g,'One Central, The Offices 4, 8th floor, Dubai World Trade Centre');
 }
 }
 },500);
@@ -389,7 +193,7 @@ break;
 var aa=f.querySelectorAll('.tn-atom');
 for(var m=0;m<aa.length;m++){
 if(aa[m].textContent&&aa[m].textContent.indexOf('One Central, The Offices 4, WeWork')!==-1){
-aa[m].innerHTML=aa[m].innerHTML.replace(/One Central, The Offices 4, WeWork[^<]*/g,'Office 8F-08-115, Offices 4, Building One Central, Building 4, Trade Centre');
+aa[m].innerHTML=aa[m].innerHTML.replace(/One Central, The Offices 4, WeWork[^<]*/g,'One Central, The Offices 4, 8th floor, Dubai World Trade Centre');
 }
 }
 },500);
@@ -438,162 +242,79 @@ break;
 var aa=f.querySelectorAll('.tn-atom');
 for(var m=0;m<aa.length;m++){
 if(aa[m].textContent&&aa[m].textContent.indexOf('One Central, The Offices 4, WeWork')!==-1){
-aa[m].innerHTML=aa[m].innerHTML.replace(/One Central, The Offices 4, WeWork[^<]*/g,'Office 8F-08-115, Offices 4, Building One Central, Building 4, Trade Centre');
-}
-}
-},500);
-});
-</script><script>
-window.addEventListener('load',function(){
-setTimeout(function(){
-var f=document.getElementById('rec649886123');
-if(!f)return;
-var a=f.querySelectorAll('[class*="tn-elem"]');
-for(var i=0;i<a.length;i++){
-var at=a[i].querySelector('.tn-atom');
-if(at&&at.textContent&&at.textContent.indexOf('Copyright')!==-1){
-if(at.textContent.indexOf('ORN')===-1){
-at.innerHTML=at.innerHTML.replace('Heart of the City','Heart of the City Properties L.L.C.');
-at.innerHTML+='<br>ORN 30550';
-}
-break;
-}
-}
-var lnks=f.querySelectorAll('a');
-var hm=false;
-for(var j=0;j<lnks.length;j++){if(lnks[j].textContent.trim().toLowerCase()==='maldives'){hm=true;break;}}
-if(!hm){
-for(var k=0;k<lnks.length;k++){
-if(lnks[k].textContent.trim()==='Contact us'){
-var wd=lnks[k].closest('[class*="tn-elem"]');
-if(wd){
-var me=document.createElement('div');
-me.className='t396__elem tn-elem';
-var st=wd.getAttribute('style')||'';
-var tm=st.match(/top:\s*([\d.]+)px/);
-var nt=tm?(parseFloat(tm[1])+22):210;
-var lm=st.match(/left:\s*([\d.]+)px/);
-var nl=lm?lm[1]:'318';
-var zm=st.match(/zoom:\s*([\d.]+)/);
-var z=zm?zm[1]:'1.86667';
-me.setAttribute('style','position:absolute;top:'+nt+'px;left:'+nl+'px;zoom:'+z+';');
-me.innerHTML='<a href="https://maldives.heartestate.ae/" target="_blank" style="color:rgb(201,169,110);font-family:TildaSans,Arial,sans-serif;font-size:9px;text-decoration:none;font-weight:400;line-height:1.55;">Maldives</a>';
-wd.parentNode.insertBefore(me,wd.nextSibling);
-}
-break;
-}
-}
-}
-var aa=f.querySelectorAll('.tn-atom');
-for(var m=0;m<aa.length;m++){
-if(aa[m].textContent&&aa[m].textContent.indexOf('One Central, The Offices 4, WeWork')!==-1){
-aa[m].innerHTML=aa[m].innerHTML.replace(/One Central, The Offices 4, WeWork[^<]*/g,'Office 8F-08-115, Offices 4, Building One Central, Building 4, Trade Centre');
+aa[m].innerHTML=aa[m].innerHTML.replace(/One Central, The Offices 4, WeWork[^<]*/g,'One Central, The Offices 4, 8th floor, Dubai World Trade Centre');
 }
 }
 },500);
 });
 </script><body>
 
-<div class="breadcrumb">
-  <a href="index.html">Home</a><span>›</span>Our Office
+<nav class="top">
+  <a class="brand" href="/">Heart of the City</a>
+  <div class="r">
+    <a class="mono" href="/heartestate-all-residences">← All residences</a>
+    <a class="mono" href="/heartestate-about">About</a>
+  </div>
+</nav>
+
+<header class="hero" style="background-image:url('/assets/hero/about-hero.jpg')">
+  <div class="in">
+    <div class="mono">One Central · Dubai World Trade Centre</div>
+    <h1>Real estate broker in World Trade Centre</h1>
+    <div class="tag">Come up to the 8th floor. Coffee is on us.</div>
+    <div class="arch mono">Qalb AlMadinah Real Estate Broker · ORN 12609 · Licensed by DLD</div>
+  </div>
+</header>
+
+<div class="wrap">
+
+<section>
+  <h2>Who works here</h2>
+  <p class="lede">Heart of the City is a boutique brokerage based at One Central, inside the Dubai World Trade Centre district. We work buy-side for private buyers and represent owners on the sell side. The practice has been in real estate since 2017 and holds a DLD licence under ORN 12609.</p>
+  <p>We are a small team by choice. Every enquiry is handled by the person who will actually run your deal, not by a call centre. Conversations happen in English and Russian.</p>
+  <div class="mono" style="color:var(--ink-muted)">Updated 27 July 2026</div>
+</section>
+
+<section>
+  <div class="grid2">
+    <div class="card"><h3>What people come to us for</h3>
+      <p>Selecting a residence and negotiating it — mostly off-plan from developers, plus resale and off-market lots that never reach the portals. Selling a property discreetly, with an architectural film and an editorial brief instead of a portal listing. Settlement in crypto through licensed VARA channels. Golden Visa on the basis of the property. Handover representation and snagging when you are not in the country.</p></div>
+    <div class="card"><h3>What it costs to talk to us</h3>
+      <p>Nothing. On off-plan the developer pays the commission, so a buyer pays us zero. On buy-side advisory for resale and on selling mandates, terms are agreed openly on the first call — before any commitment. We sign a mutual NDA on every meaningful engagement and publish no client names or deal sizes.</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>Finding us</h2>
+  <dl>
+    <div class="row"><dt>Address</dt><dd>One Central, The Offices 4, 8th floor, Dubai World Trade Centre, Dubai, UAE</dd></div>
+    <div class="row"><dt>Nearest metro</dt><dd>World Trade Centre, red line — five minutes on foot</dd></div>
+    <div class="row"><dt>Hours</dt><dd>Sunday to Thursday, 9:00 – 18:00 Gulf time</dd></div>
+    <div class="row"><dt>Phone and WhatsApp</dt><dd><a href="https://wa.me/971562188006">+971 56 218 8006</a></dd></div>
+    <div class="row"><dt>Email</dt><dd><a href="/cdn-cgi/l/email-protection#41282f272e0129242033352432352035246f2024"><span class="__cf_email__" data-cfemail="e881868e87a8808d899a9c8d9b9c899c8dc6898d">[email&#160;protected]</span></a></dd></div>
+    <div class="row"><dt>Licence</dt><dd>Qalb AlMadinah Real Estate Broker · ORN 12609 · Dubai Land Department</dd></div>
+  </dl>
+  <p style="margin-top:14px">Visits are by appointment — it keeps the meeting yours rather than shared with a waiting room. <a href="https://cal.eu/heartofthecity/consultation">Book a slot</a> or simply send a message on WhatsApp.</p>
+</section>
+
+<section>
+  <h2>Why this address</h2>
+  <p>One Central sits between DIFC and Downtown, which is where most of what we sell is transacted and where the family offices, funds and legal counsel our clients rely on already have desks. Being here means a viewing, a signing and a lawyer's opinion can happen on the same afternoon rather than across three days and three neighbourhoods.</p>
+</section>
+
+<section>
+  <h2>Where to go next</h2>
+  <ul class="amen">
+    <li><a href="/heartestate-all-residences">The current collection — 24 residences in Dubai and Abu Dhabi</a></li>
+    <li><a href="/heartestate-about">How we work and who we are</a></li>
+    <li><a href="/heartestate-sell-draft">Selling a property with us</a></li>
+    <li><a href="/heartestate-crypto-escrow">Settling a purchase in crypto</a></li>
+  </ul>
+</section>
+
 </div>
 
-<!-- HERO IMAGE -->
-<div class="hero">
-  <img src="images/office-1.jpg" alt="WeWork One Central — Our Office">
-  <div class="overlay"></div>
-  <div class="hero-text">
-    <h1>Our Office</h1>
-    <div class="location">WeWork One Central — Dubai World Trade Center</div>
-  </div>
-</div>
-
-<!-- INFO BAR -->
-<div class="info-bar">
-  <div class="info-item">
-    <div class="info-label">Location</div>
-    <div class="info-value highlight">One Central, DWTC</div>
-  </div>
-  <div class="info-item">
-    <div class="info-label">Workspace</div>
-    <div class="info-value">WeWork</div>
-  </div>
-  <div class="info-item">
-    <div class="info-label">Hours</div>
-    <div class="info-value">Sun — Thu, 9:00 — 18:00</div>
-  </div>
-  <div class="info-item">
-    <div class="info-label">Floor</div>
-    <div class="info-value">8th & 9th Floor</div>
-  </div>
-</div>
-
-<!-- ABOUT TEXT -->
-<div class="content-section">
-  <h2 class="section-title">Welcome to Heart of the City</h2>
-  <p class="about-text">
-    Our team operates from the iconic WeWork One Central, situated at the Dubai World Trade Center — one of Dubai's most prestigious business addresses. This strategic location places us at the crossroads of the city's financial and commercial districts, giving us direct access to the key players in Dubai's thriving real estate market.
-  </p>
-  <p class="about-text">
-    From our modern workspace, we provide personalized consultancy on the finest off-plan and ready properties across the UAE — from exclusive beachfront residences to landmark towers designed by world-renowned architects.
-  </p>
-</div>
-
-<!-- VIDEO -->
-<div class="video-section">
-  <h2 class="section-title">Inside Our Office</h2>
-  <div class="video-wrapper">
-    <video controls playsinline preload="metadata" poster="images/office-2.jpg">
-      <source src="videos/wework-office.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-  </div>
-</div>
-
-<!-- GALLERY -->
-<div class="gallery-section">
-  <h2 class="section-title">Our Workspace</h2>
-  <div class="gallery-grid">
-    <img src="images/office-2.jpg" alt="WeWork One Central — Common Area">
-    <img src="images/office-3.jpg" alt="WeWork One Central — Common Area">
-    <img src="images/office-4.jpg" alt="WeWork One Central — Hot Desk Area">
-    <img src="images/office-5.jpg" alt="WeWork One Central — Hot Desk Area">
-    <img src="images/office-6.jpg" alt="WeWork One Central — Kitchen">
-    <img src="images/office-7.jpg" alt="WeWork One Central — Conference Room">
-  </div>
-</div>
-
-<!-- MAP -->
-<div class="map-section">
-  <h2 class="section-title">Find Us</h2>
-  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3610.1!2d55.2876!3d25.2245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f42e4b7e6a4c7%3A0x315e3b4cdf4efaad!2sWeWork%20One%20Central!5e0!3m2!1sen!2sae!4v1" allowfullscreen loading="lazy"></iframe>
-</div>
-
-<!-- CONTACT -->
-<div class="contact-section">
-  <h2>Get in Touch</h2>
-  <p class="subtitle">Schedule a meeting at our office or request a consultation</p>
-  <div class="contact-form">
-    <div class="form-group">
-      <label>Name</label>
-      <input type="text" placeholder="Your name">
-    </div>
-    <div class="form-group">
-      <label>Phone</label>
-      <input type="tel" placeholder="+971 00-000-00000">
-    </div>
-    <div class="form-group">
-      <label>Email</label>
-      <input type="email" placeholder="your@email.com">
-    </div>
-    <button class="btn-submit">Book a Meeting</button>
-  </div>
-</div>
-
-<a href="index.html" class="back-link">← Back to Home</a>
-
-<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"c037cf0d245b4b0d8940fd729d478bc8","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
-<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"c037cf0d245b4b0d8940fd729d478bc8","r":1}' crossorigin="anonymous"></script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"c037cf0d245b4b0d8940fd729d478bc8","r":1}' crossorigin="anonymous"></script>
 <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"c037cf0d245b4b0d8940fd729d478bc8","r":1}' crossorigin="anonymous"></script>
 <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"c037cf0d245b4b0d8940fd729d478bc8","r":1}' crossorigin="anonymous"></script>
 </body>

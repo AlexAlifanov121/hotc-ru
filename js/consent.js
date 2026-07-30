@@ -143,9 +143,6 @@
   }
 
   function init() {
-    /* RU-zerkalo: Yandex.Metrica starts immediately - required for Yandex Direct.
-       Google Analytics still waits for consent. */
-    loadYandex();
     var consent = readConsent();
     if (consent && consent.analytics) { fireAnalytics(); return; }
     if (consent && consent.analytics === false) { return; }

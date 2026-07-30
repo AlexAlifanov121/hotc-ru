@@ -399,6 +399,43 @@ try{var t=localStorage.getItem('hotc-theme');if(t==='dark'||(!t&&window.matchMed
   .vh .vh-top h1, .vh .vh-top .kicker { color:#171310; text-shadow:0 1px 2px rgba(255,255,255,0.42), 0 0 34px rgba(255,255,255,0.30); }
   .vh .vh-top h1 em { opacity:0.86; }
   @media (max-width:760px){ .vh-in { padding-top:15vh !important; } }
+
+  .cstep { display:none; }
+  .cstep[data-active] { display:block; }
+  .cx-lead { font-size:14.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 22px; max-width:52ch; }
+  .cx-group { margin-bottom:22px; }
+  .cx-group > span.cx-label { display:block; font-family:'JetBrains Mono',monospace; font-size:10px;
+    letter-spacing:0.12em; text-transform:uppercase; color:var(--ink-muted); margin-bottom:11px; }
+  .cx-chips { display:flex; flex-wrap:wrap; gap:8px; }
+  .cx-chip { position:relative; }
+  .cx-chip input { position:absolute; opacity:0; width:0; height:0; }
+  .cx-chip span { display:inline-block; padding:9px 15px; border:1px solid var(--line); border-radius:100px;
+    font-size:13.5px; color:var(--ink-soft); cursor:pointer; transition:all .16s; user-select:none; }
+  .cx-chip input:checked + span { background:var(--ink); color:var(--bg); border-color:var(--ink); }
+  .cx-chip input:focus-visible + span { outline:2px solid var(--ink); outline-offset:2px; }
+  .cx-fields { display:grid; gap:14px; }
+  .cx-fields label { display:block; font-family:'JetBrains Mono',monospace; font-size:10px;
+    letter-spacing:0.12em; text-transform:uppercase; color:var(--ink-muted); margin-bottom:7px; }
+  .cx-fields input, .cx-fields select { width:100%; padding:12px 14px; border:1px solid var(--line);
+    border-radius:10px; background:transparent; color:var(--ink); font-family:inherit; font-size:15px; }
+  .cx-fields input:focus, .cx-fields select:focus { outline:none; border-color:var(--ink); }
+  .cx-submit { margin-top:20px; width:100%; padding:15px 22px; border:none; border-radius:100px;
+    background:var(--ink); color:var(--bg); font-family:inherit; font-size:15px; cursor:pointer; transition:opacity .16s; }
+  .cx-submit:hover { opacity:0.88; }
+  .cx-submit[disabled] { opacity:0.5; cursor:default; }
+  .cx-err { margin-top:12px; font-size:13.5px; color:#B4432A; }
+  .cx-back { margin-top:16px; background:none; border:none; color:var(--ink-muted);
+    font-family:inherit; font-size:13.5px; cursor:pointer; padding:6px 0; }
+  .cx-back:hover { color:var(--ink); }
+  .vcta-row { display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin-top:6px; }
+  .vvalue { margin-top:22px; padding-top:20px; border-top:1px solid var(--line);
+    font-size:14px; line-height:1.7; color:var(--ink-soft); }
+  .vvalue a { color:var(--ink); text-decoration:none; border-bottom:1px solid var(--line); }
+  .vvalue a:hover { border-color:var(--ink); }
+  .vtour-cta { display:inline-block; margin-top:22px; padding:14px 26px; border-radius:100px;
+    background:var(--ink); color:var(--bg); text-decoration:none; font-size:15px; transition:opacity .16s; }
+  .vtour-cta:hover { opacity:0.88; }
+
 </style>
 <link rel="alternate" hreflang="en" href="https://heartestate.ae/heartestate-muraba-veil" />
 <link rel="alternate" hreflang="ru" href="https://heartestate.ae/heartestate-muraba-veil-ru" />
@@ -475,7 +512,7 @@ aa[m].innerHTML=aa[m].innerHTML.replace(/One Central, The Offices 4, WeWork[^<]*
     </div>
 <div class="vh-bottom">
       <p class="sub">131 резиденция в башне высотой 380 метров. Первый небоскрёб RCR Arquitectes — студии, получившей Притцкеровскую премию. У каждого типа резиденций собственный двор под открытым небом с обеих сторон — на северо-востоке и юго-западе.</p>
-      <a href="#tour" class="vhero-cta">Записаться на показ →</a>
+      <a href="#" data-contact="info" class="vhero-cta">Запросить материалы →</a>
     </div>
   </div>
 </section>
@@ -553,6 +590,8 @@ aa[m].innerHTML=aa[m].innerHTML.replace(/One Central, The Offices 4, WeWork[^<]*
       <div class="vnum"><span class="n">— 05</span><span>Показ</span><span class="ln"></span></div>
       <h2>Побывать в резиденции<br><em>до того, как её построят</em>.</h2>
       <p class="vlead">Muraba создала галерею — так девелопер называет пространство, задуманное, чтобы передать атмосферу и философию Muraba Veil и дать первое, глубокое знакомство с проектом. Она расположена в башне Sheikh Rashid Tower. Организуем визит или проведём тур удалённо, если вы не в Дубае.</p>
+<a href="#" data-contact="tour" class="vtour-cta">Записаться на показ →</a>
+
     </div>
     <div class="vtour-opts">
       <a href="#" data-contact data-contact-intent="veil-tour-offline" class="vtour-opt"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 21V9l9-6 9 6v12"/><path d="M9 21v-7h6v7"/></svg></div>
@@ -592,13 +631,15 @@ aa[m].innerHTML=aa[m].innerHTML.replace(/One Central, The Offices 4, WeWork[^<]*
     <h2>Площади и <em>цены</em>.</h2>
     <table class="vprice">
       <tr><th>Резиденция</th><th>Общая площадь</th><th>Цена</th></tr>
-      <tr><td>2 спальни</td><td>3 838 ft²</td><td>от 12 млн AED</td></tr>
-      <tr><td>3 спальни</td><td>4 940 ft²</td><td>от 15 млн AED</td></tr>
-      <tr><td>3 спальни · бассейн</td><td>4 940 ft²</td><td>от 30 млн AED</td></tr>
-      <tr><td>4 спальни · бассейн</td><td>9 903 ft²</td><td>от 56 млн AED</td></tr>
+      <tr><td>2 спальни</td><td>3 838 ft²</td><td>По запросу</td></tr>
+      <tr><td>3 спальни</td><td>4 940 ft²</td><td>По запросу</td></tr>
+      <tr><td>3 спальни · бассейн</td><td>4 940 ft²</td><td>По запросу</td></tr>
+      <tr><td>4 спальни · бассейн</td><td>9 903 ft²</td><td>По запросу</td></tr>
       <tr><td>4 спальни XL · дуплексы</td><td>14 746–15 333 ft²</td><td>По запросу</td></tr>
     </table>
-    <p class="vprice-note">От 13,5 млн AED · 3 523–9 032 AED за ft² · freehold<br>Площади указаны с террасой-садом. Цены ориентировочные, актуальные подтверждаем при обращении.</p>
+    <p class="vprice-note">От 13,5 млн AED · freehold<br>Площади указаны с террасой-садом. Цену по каждой резиденции подтверждаем при обращении — запросите актуальный список наличия.</p>
+
+    <p class="vvalue">Ведём сделку от брони до передачи ключей — резерв, договор, платежи и регистрация. ORN 30550. <a href="heartestate-about-ru.html">Как мы отбираем объекты →</a></p>
 
     <h2 style="margin-top:56px">План <em>оплаты</em>.</h2>
     <ul class="vlist"><li>10% — при бронировании</li><li>10% + 4% сбор Земельного департамента + 5 000 AED административный сбор — при подписании SPA, через 30 дней после брони</li><li>7,5% — декабрь 2026</li><li>7,5% — июнь 2027</li><li>7,5% — март 2028</li><li>7,5% — март 2029</li><li>50% — декабрь 2029, при сдаче</li></ul>
@@ -609,7 +650,7 @@ aa[m].innerHTML=aa[m].innerHTML.replace(/One Central, The Offices 4, WeWork[^<]*
 <section class="vcta">
   <h2>Хотите посмотреть<br><em>вживую</em>?</h2>
   <p>Планировки, доступные резиденции и условия — по запросу. Организуем показ и сопроводим сделку от брони до передачи ключей.</p>
-  <a href="#" data-contact class="btn-primary">Связаться →</a>
+  <div class="vcta-row"><a href="#" data-contact="info" class="btn-primary">Запросить материалы →</a><a href="#" data-contact="tour" class="btn-primary">Записаться на показ →</a></div>
 </section>
 
 <div class="vlb" id="vlb" role="dialog" aria-modal="true">
@@ -644,6 +685,56 @@ aa[m].innerHTML=aa[m].innerHTML.replace(/One Central, The Offices 4, WeWork[^<]*
         </a>
       </div>
       <div class="cx-email-row"><span data-en="Or reach us directly: " data-ru="Или напрямую: ">Or reach us directly: </span><a class="cx-email" href="tel:+971562188006">+971 56 218 8006</a><span class="cx-sep">·</span><a class="cx-email" href="/cdn-cgi/l/email-protection#4e272028210e262b2f3c3a2b3d3a2f3a2b602f2b"><span class="__cf_email__" data-cfemail="224b4c444d624a474350564751564356470c4347">[email&#160;protected]</span></a></div>
+    </div>
+
+    
+    <div class="contact-step cstep" id="contactStepInfo">
+      <div class="contact-eyebrow">— Материалы по проекту</div>
+      <h3 style="font-family:'Bricolage Grotesque',serif; font-weight:400; font-size:28px; margin:0 0 14px;">Что вам прислать?</h3>
+      <p class="cx-lead">Отметьте нужное. Пришлём один раз — без рассылки и без того, о чём вы не просили.</p>
+      <form id="cxInfoForm" novalidate>
+        <div class="cx-group"><span class="cx-label">ЧТО ПРИСЛАТЬ</span><div class="cx-chips"><label class="cx-chip"><input type="checkbox" name="want" value="Брошюра"><span>Брошюра</span></label>
+<label class="cx-chip"><input type="checkbox" name="want" value="Планировки"><span>Планировки</span></label>
+<label class="cx-chip"><input type="checkbox" name="want" value="Наличие и цены"><span>Наличие и цены</span></label>
+<label class="cx-chip"><input type="checkbox" name="want" value="План оплаты"><span>План оплаты</span></label></div></div>
+        <div class="cx-group"><span class="cx-label">Какие планировки интересны?</span><div class="cx-chips"><label class="cx-chip"><input type="checkbox" name="beds" value="2 спальни"><span>2 спальни</span></label>
+<label class="cx-chip"><input type="checkbox" name="beds" value="3 спальни"><span>3 спальни</span></label>
+<label class="cx-chip"><input type="checkbox" name="beds" value="3 спальни · бассейн"><span>3 спальни · бассейн</span></label>
+<label class="cx-chip"><input type="checkbox" name="beds" value="4 спальни · бассейн"><span>4 спальни · бассейн</span></label>
+<label class="cx-chip"><input type="checkbox" name="beds" value="4 спальни XL"><span>4 спальни XL</span></label>
+<label class="cx-chip"><input type="checkbox" name="beds" value="Пока не знаю"><span>Пока не знаю</span></label></div></div>
+        <div class="cx-fields">
+          <div><label>Ваше имя</label><input type="text" name="name" required></div>
+          <div><label>Телефон или WhatsApp</label><input type="tel" name="phone" required placeholder="+971 50 000 0000"></div>
+          <div><label>Email</label><input type="email" name="email"></div>
+        </div>
+        <button type="submit" class="cx-submit">Прислать материалы →</button>
+      </form>
+      <button class="cx-back" type="button" data-cx-back>← Назад</button>
+    </div>
+
+    <div class="contact-step cstep" id="contactStepTour">
+      <div class="contact-eyebrow">— Частный показ</div>
+      <h3 style="font-family:'Bricolage Grotesque',serif; font-weight:400; font-size:28px; margin:0 0 14px;">Увидеть до того, как построят.</h3>
+      <p class="cx-lead">Muraba сделала галерею в Sheikh Rashid Tower, которая передаёт атмосферу здания. Организуем визит — или проведём показ удалённо, если вы не в Дубае.</p>
+      <form id="cxTourForm" novalidate>
+        <div class="cx-fields">
+          <div><label>Формат</label><select name="format"><option>В Дубае, лично</option><option>Онлайн, удалённо</option></select></div>
+          <div><label>Ваше имя</label><input type="text" name="name" required></div>
+          <div><label>Телефон или WhatsApp</label><input type="tel" name="phone" required placeholder="+971 50 000 0000"></div>
+          <div><label>Когда удобно</label><input type="text" name="when" placeholder="На следующей неделе, после обеда"></div>
+        </div>
+        <button type="submit" class="cx-submit">Записаться на показ →</button>
+      </form>
+      <button class="cx-back" type="button" data-cx-back>← Назад</button>
+    </div>
+
+    <div class="contact-step cstep" id="contactStepOk">
+      <div class="contact-thanks" style="text-align:center; padding:30px 0;">
+        <h4 style="font-family:'Bricolage Grotesque',serif; font-weight:400; font-size:26px; margin:0 0 10px;">Получили.</h4>
+        <p style="color:var(--ink-soft); font-size:15px; line-height:1.6; margin:0;">Старший консультант свяжется с вами в рабочее время.</p>
+      </div>
+      <div style="text-align:center;"><button class="cx-back" type="button" data-contact-close>Закрыть</button></div>
     </div>
 
     <!-- legacy multi-step UI kept but hidden (single-contact Option A is above) -->
@@ -736,15 +827,63 @@ aa[m].innerHTML=aa[m].innerHTML.replace(/One Central, The Offices 4, WeWork[^<]*
     big.addEventListener('ended',function(){ pl.hidden=false; });
   }
 
-  var modal=document.getElementById('contactModal');
-  if(modal){
-    document.addEventListener('click',function(e){
-      if(e.target.closest('[data-contact]')){ e.preventDefault(); modal.hidden=false; document.body.style.overflow='hidden'; }
-      if(e.target.closest('[data-contact-close]')){ e.preventDefault(); modal.hidden=true; document.body.style.overflow=''; }
-    });
-  }
-})();
+  })();
 </script>
 <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"c037cf0d245b4b0d8940fd729d478bc8","r":1}' crossorigin="anonymous"></script>
+<script>
+(function(){
+  var modal=document.getElementById('contactModal');
+  if(!modal) return;
+  var choose=document.getElementById('contactStepChoose');
+  var steps={info:document.getElementById('contactStepInfo'),
+             tour:document.getElementById('contactStepTour'),
+             ok:document.getElementById('contactStepOk')};
+  function show(which){
+    Object.keys(steps).forEach(function(k){ if(steps[k]) steps[k].removeAttribute('data-active'); });
+    if(which && steps[which]){ if(choose) choose.style.display='none'; steps[which].setAttribute('data-active',''); }
+    else { if(choose) choose.style.display=''; }
+  }
+  document.addEventListener('click',function(e){
+    var t=e.target.closest('[data-contact]');
+    if(t){ e.preventDefault(); show(t.getAttribute('data-contact')||null);
+           modal.hidden=false; document.body.style.overflow='hidden'; return; }
+    if(e.target.closest('[data-cx-back]')){ e.preventDefault(); show(null); return; }
+  });
+  function post(form,payload,btn,old){
+    return fetch('https://hotc-api.a821ka.workers.dev/lead',{method:'POST',
+      headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)})
+      .then(function(r){ if(!r.ok) throw new Error('bad'); show('ok'); })
+      .catch(function(){ btn.disabled=false; btn.textContent=old;
+        var w=form.querySelector('.cx-err');
+        if(!w){ w=document.createElement('p'); w.className='cx-err'; form.appendChild(w); }
+        w.textContent="Не удалось отправить. Напишите нам в WhatsApp: +971 56 218 8006"; });
+  }
+  function vals(form,name){ return [].map.call(form.querySelectorAll('input[name="'+name+'"]:checked'),
+    function(el){ return el.value; }).join(', '); }
+  var fi=document.getElementById('cxInfoForm');
+  if(fi) fi.addEventListener('submit',function(e){
+    e.preventDefault();
+    var b=fi.querySelector('.cx-submit'), old=b.textContent;
+    var want=vals(fi,'want')||'—', beds=vals(fi,'beds')||'—';
+    if(!fi.name.value.trim()||!fi.phone.value.trim()) return;
+    b.disabled=true; b.textContent='…';
+    post(fi,{name:fi.name.value.trim(),phone:fi.phone.value.trim(),email:(fi.email.value||'').trim(),
+      project:'Muraba Veil',lang:"ru",page:location.pathname,type:'materials',
+      note:'Запрос материалов · Что прислать: '+want+' · Планировки: '+beds,
+      ts:new Date().toISOString()},b,old);
+  });
+  var ft=document.getElementById('cxTourForm');
+  if(ft) ft.addEventListener('submit',function(e){
+    e.preventDefault();
+    var b=ft.querySelector('.cx-submit'), old=b.textContent;
+    if(!ft.name.value.trim()||!ft.phone.value.trim()) return;
+    b.disabled=true; b.textContent='…';
+    post(ft,{name:ft.name.value.trim(),phone:ft.phone.value.trim(),email:'',
+      project:'Muraba Veil',lang:"ru",page:location.pathname,type:'tour',
+      note:'Заявка на показ · Формат: '+ft.format.value+' · Когда: '+((ft.when.value||'').trim()||'—'),
+      ts:new Date().toISOString()},b,old);
+  });
+})();
+</script>
 </body>
 </html>

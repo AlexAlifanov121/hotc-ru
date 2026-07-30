@@ -5558,7 +5558,7 @@ aa[m].innerHTML=aa[m].innerHTML.replace(/One Central, The Offices 4, WeWork[^<]*
 <a class="hero-cta" data-contact="" data-en='Get in touch &lt;span class="arr"&gt;→&lt;/span&gt;' data-ru='Связаться &lt;span class="arr"&gt;→&lt;/span&gt;' href="#apply">Get in touch <span class="arr">→</span></a>
 </div>
 </div>
-<div class="hero-cover">
+<div class="hero-cover" role="link" tabindex="0" data-goto-veil style="cursor:pointer">
 <div class="cover-label">
 <span data-en="Cover Object" data-ru="Объект обложки">Cover Object</span>
 <span data-en="Al Wasl · Dubai" data-ru="Аль-Васл · Дубай">Al Wasl · Dubai</span>
@@ -6620,6 +6620,12 @@ aa[m].innerHTML=aa[m].innerHTML.replace(/One Central, The Offices 4, WeWork[^<]*
         if (cat) {
           renderProjectsForCategory(cat);
         } else if (proj) {
+          var _map = { veil: '/heartestate-muraba-veil' };
+          if (_map[proj]) {
+            var _ru = (window.HOTC_LOCALE && window.HOTC_LOCALE() === 'ru');
+            location.href = _map[proj] + (_ru ? '-ru' : '');
+            return;
+          }
           openArtModal(proj);
         }
       });
@@ -7707,5 +7713,18 @@ document.addEventListener('click',function(e){
 <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"c037cf0d245b4b0d8940fd729d478bc8","r":1}' crossorigin="anonymous"></script>
 <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"c037cf0d245b4b0d8940fd729d478bc8","r":1}' crossorigin="anonymous"></script>
 <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"c037cf0d245b4b0d8940fd729d478bc8","r":1}' crossorigin="anonymous"></script>
+
+<script>(function(){
+  function veilUrl(){ var ru=(window.HOTC_LOCALE && window.HOTC_LOCALE()==='ru'); return '/heartestate-muraba-veil'+(ru?'-ru':''); }
+  document.addEventListener('click',function(e){
+    var t=e.target.closest('[data-goto-veil]');
+    if(t){ e.preventDefault(); location.href=veilUrl(); }
+  });
+  document.addEventListener('keydown',function(e){
+    if((e.key==='Enter'||e.key===' ')&&document.activeElement&&document.activeElement.hasAttribute&&document.activeElement.hasAttribute('data-goto-veil')){
+      e.preventDefault(); location.href=veilUrl();
+    }
+  });
+})();</script>
 </body>
 </html>

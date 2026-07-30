@@ -436,6 +436,24 @@ try{var t=localStorage.getItem('hotc-theme');if(t==='dark'||(!t&&window.matchMed
     background:var(--ink); color:var(--bg); text-decoration:none; font-size:15px; transition:opacity .16s; }
   .vtour-cta:hover { opacity:0.88; }
 
+
+  .vform { padding:120px 32px 130px; background:var(--bg-alt); }
+  .vform-in { max-width:780px; margin:0 auto; }
+  .vform h2 { font-family:'Bricolage Grotesque',serif; font-weight:400; font-size:clamp(30px,4.4vw,48px);
+    line-height:1.12; margin:0 0 16px; color:var(--ink); }
+  .vform h2 em { font-style:italic; color:var(--accent); }
+  .vform .vform-lead { font-size:15.5px; line-height:1.7; color:var(--ink-soft); margin:0 0 38px; max-width:56ch; }
+  .vform .cx-group { margin-bottom:26px; }
+  .vform .cx-fields { grid-template-columns:repeat(3,1fr); }
+  .vform .cx-submit { width:auto; padding:16px 34px; }
+  .vform-or { margin-top:22px; font-size:14px; color:var(--ink-muted); }
+  .vform-or a { color:var(--ink); border-bottom:1px solid var(--line); text-decoration:none; }
+  .vform-or a:hover { border-color:var(--ink); }
+  .vform-ok { text-align:center; padding:40px 0; }
+  .vform-ok h3 { font-family:'Bricolage Grotesque',serif; font-weight:400; font-size:30px; margin:0 0 12px; color:var(--ink); }
+  .vform-ok p { color:var(--ink-soft); font-size:16px; margin:0; }
+  @media (max-width:760px){ .vform { padding:80px 22px 90px; } .vform .cx-fields { grid-template-columns:1fr; } }
+
 </style>
 <link rel="alternate" hreflang="en" href="https://heartestate.ae/heartestate-muraba-veil" />
 <link rel="alternate" hreflang="ru" href="https://heartestate.ae/heartestate-muraba-veil-ru" />
@@ -512,7 +530,7 @@ aa[m].innerHTML=aa[m].innerHTML.replace(/One Central, The Offices 4, WeWork[^<]*
     </div>
 <div class="vh-bottom">
       <p class="sub">131 residences in a 380-metre tower. The first skyscraper by RCR Arquitectes, winners of the Pritzker Prize. Every residence type has its own open-air courtyard on both sides — north-east and south-west.</p>
-      <a href="#" data-contact="info" class="vhero-cta">Request project details →</a>
+      <a href="#" data-contact="tour" class="vhero-cta">Book a viewing →</a>
     </div>
   </div>
 </section>
@@ -590,7 +608,7 @@ aa[m].innerHTML=aa[m].innerHTML.replace(/One Central, The Offices 4, WeWork[^<]*
       <div class="vnum"><span class="n">— 05</span><span>Viewing</span><span class="ln"></span></div>
       <h2>Step inside the residence<br><em>before it is built</em>.</h2>
       <p class="vlead">Muraba has created a gallery — the developer’s own word for it — to convey the atmosphere and philosophy of Muraba Veil and give you a first, immersive introduction to the project. It is located in Sheikh Rashid Tower. We arrange the visit, or run the tour remotely if you are not in Dubai.</p>
-<a href="#" data-contact="tour" class="vtour-cta">Book a tour →</a>
+<a href="#" data-contact="tour" class="vtour-cta">Book a viewing →</a>
 
     </div>
     <div class="vtour-opts">
@@ -631,13 +649,13 @@ aa[m].innerHTML=aa[m].innerHTML.replace(/One Central, The Offices 4, WeWork[^<]*
     <h2>Sizes and <em>prices</em>.</h2>
     <table class="vprice">
       <tr><th>Residence</th><th>Total area</th><th>Price</th></tr>
-      <tr><td>2 bedrooms</td><td>3,838 ft²</td><td>On request</td></tr>
-      <tr><td>3 bedrooms</td><td>4,940 ft²</td><td>On request</td></tr>
+      <tr><td>2 bedrooms</td><td>3,838 ft²</td><td>from AED 13.5 M</td></tr>
+      <tr><td>3 bedrooms</td><td>4,940 ft²</td><td>from AED 23.3 M</td></tr>
       <tr><td>3 bedrooms · pool</td><td>4,940 ft²</td><td>On request</td></tr>
-      <tr><td>4 bedrooms · pool</td><td>9,903 ft²</td><td>On request</td></tr>
+      <tr><td>4 bedrooms · pool</td><td>9,903 ft²</td><td>from AED 48.7 M</td></tr>
       <tr><td>4 bedrooms XL · duplexes</td><td>14,746–15,333 ft²</td><td>On request</td></tr>
     </table>
-    <p class="vprice-note">From AED 13.5 M · freehold<br>Areas include the garden terrace. Prices per residence are confirmed on enquiry — ask for the current availability list.</p>
+    <p class="vprice-note">From AED 13.5 M · freehold<br>Areas include the garden terrace. Figures shown are the current entry point for each layout; the exact price per residence is confirmed on enquiry.</p>
 
     <p class="vvalue">We run the deal from booking to handover — reservation, contract, payments and registration. ORN 30550. <a href="heartestate-about.html">How we choose what we sell →</a></p>
 
@@ -647,10 +665,31 @@ aa[m].innerHTML=aa[m].innerHTML.replace(/One Central, The Offices 4, WeWork[^<]*
   </div>
 </section>
 
-<section class="vcta">
-  <h2>Would you like to see it<br><em>in person</em>?</h2>
-  <p>Floor plans, availability and terms on request. We arrange the viewing and run the deal from booking to handover.</p>
-  <div class="vcta-row"><a href="#" data-contact="info" class="btn-primary">Request project details →</a><a href="#" data-contact="tour" class="btn-primary">Book a tour →</a></div>
+<section class="vform" id="materials">
+  <div class="vform-in">
+    <h2>We will send exactly <em>what you need</em>.</h2>
+    <p class="vform-lead">Tick what is useful — it comes in one email. No mailing list, and nothing you did not ask for.</p>
+    <form id="cxPageForm" novalidate>
+      <div class="cx-group"><span class="cx-label">What to send</span><div class="cx-chips"><label class="cx-chip"><input type="checkbox" name="want" value="Brochure"><span>Brochure</span></label>
+<label class="cx-chip"><input type="checkbox" name="want" value="Floor plans"><span>Floor plans</span></label>
+<label class="cx-chip"><input type="checkbox" name="want" value="Availability and prices"><span>Availability and prices</span></label>
+<label class="cx-chip"><input type="checkbox" name="want" value="Payment plan"><span>Payment plan</span></label></div></div>
+      <div class="cx-group"><span class="cx-label">Which layouts interest you?</span><div class="cx-chips"><label class="cx-chip"><input type="checkbox" name="beds" value="2 bed"><span>2 bed</span></label>
+<label class="cx-chip"><input type="checkbox" name="beds" value="3 bed"><span>3 bed</span></label>
+<label class="cx-chip"><input type="checkbox" name="beds" value="3 bed · pool"><span>3 bed · pool</span></label>
+<label class="cx-chip"><input type="checkbox" name="beds" value="4 bed · pool"><span>4 bed · pool</span></label>
+<label class="cx-chip"><input type="checkbox" name="beds" value="4 bed XL"><span>4 bed XL</span></label>
+<label class="cx-chip"><input type="checkbox" name="beds" value="Not sure yet"><span>Not sure yet</span></label></div></div>
+      <div class="cx-fields">
+        <div><label>Your name</label><input type="text" name="name" required></div>
+        <div><label>Phone or WhatsApp</label><input type="tel" name="phone" required placeholder="+971 50 000 0000"></div>
+        <div><label>Email (optional)</label><input type="email" name="email"></div>
+      </div>
+      <button type="submit" class="cx-submit">Send me the materials →</button>
+    </form>
+    <div class="vform-ok" id="cxPageOk" hidden><h3>Got it.</h3><p>A Senior Advisor will come back to you within working hours.</p></div>
+    <p class="vform-or">Or see it in person — <a href="#" data-contact="tour">book a viewing →</a></p>
+  </div>
 </section>
 
 <div class="vlb" id="vlb" role="dialog" aria-modal="true">
@@ -688,33 +727,8 @@ aa[m].innerHTML=aa[m].innerHTML.replace(/One Central, The Offices 4, WeWork[^<]*
     </div>
 
     
-    <div class="contact-step cstep" id="contactStepInfo">
-      <div class="contact-eyebrow">— Project materials</div>
-      <h3 style="font-family:'Bricolage Grotesque',serif; font-weight:400; font-size:28px; margin:0 0 14px;">What should we send you?</h3>
-      <p class="cx-lead">Tick what is useful. We send it once — no mailing list, and nothing you did not ask for.</p>
-      <form id="cxInfoForm" novalidate>
-        <div class="cx-group"><span class="cx-label">WHAT TO SEND</span><div class="cx-chips"><label class="cx-chip"><input type="checkbox" name="want" value="Brochure"><span>Brochure</span></label>
-<label class="cx-chip"><input type="checkbox" name="want" value="Floor plans"><span>Floor plans</span></label>
-<label class="cx-chip"><input type="checkbox" name="want" value="Availability and prices"><span>Availability and prices</span></label>
-<label class="cx-chip"><input type="checkbox" name="want" value="Payment plan"><span>Payment plan</span></label></div></div>
-        <div class="cx-group"><span class="cx-label">Which layouts interest you?</span><div class="cx-chips"><label class="cx-chip"><input type="checkbox" name="beds" value="2 bed"><span>2 bed</span></label>
-<label class="cx-chip"><input type="checkbox" name="beds" value="3 bed"><span>3 bed</span></label>
-<label class="cx-chip"><input type="checkbox" name="beds" value="3 bed · pool"><span>3 bed · pool</span></label>
-<label class="cx-chip"><input type="checkbox" name="beds" value="4 bed · pool"><span>4 bed · pool</span></label>
-<label class="cx-chip"><input type="checkbox" name="beds" value="4 bed XL"><span>4 bed XL</span></label>
-<label class="cx-chip"><input type="checkbox" name="beds" value="Not sure yet"><span>Not sure yet</span></label></div></div>
-        <div class="cx-fields">
-          <div><label>Your name</label><input type="text" name="name" required></div>
-          <div><label>Phone or WhatsApp</label><input type="tel" name="phone" required placeholder="+971 50 000 0000"></div>
-          <div><label>Email</label><input type="email" name="email"></div>
-        </div>
-        <button type="submit" class="cx-submit">Send me the materials →</button>
-      </form>
-      <button class="cx-back" type="button" data-cx-back>← Back</button>
-    </div>
-
     <div class="contact-step cstep" id="contactStepTour">
-      <div class="contact-eyebrow">— Private tour</div>
+      <div class="contact-eyebrow">— Private viewing</div>
       <h3 style="font-family:'Bricolage Grotesque',serif; font-weight:400; font-size:28px; margin:0 0 14px;">See it before it is built.</h3>
       <p class="cx-lead">Muraba has built a gallery in Sheikh Rashid Tower that conveys the atmosphere of the building. We arrange the visit — or run the tour remotely if you are not in Dubai.</p>
       <form id="cxTourForm" novalidate>
@@ -724,7 +738,7 @@ aa[m].innerHTML=aa[m].innerHTML.replace(/One Central, The Offices 4, WeWork[^<]*
           <div><label>Phone or WhatsApp</label><input type="tel" name="phone" required placeholder="+971 50 000 0000"></div>
           <div><label>When suits you</label><input type="text" name="when" placeholder="Next week, afternoons"></div>
         </div>
-        <button type="submit" class="cx-submit">Request a tour →</button>
+        <button type="submit" class="cx-submit">Book a viewing →</button>
       </form>
       <button class="cx-back" type="button" data-cx-back>← Back</button>
     </div>
@@ -848,6 +862,8 @@ aa[m].innerHTML=aa[m].innerHTML.replace(/One Central, The Offices 4, WeWork[^<]*
     if(t){ e.preventDefault(); show(t.getAttribute('data-contact')||null);
            modal.hidden=false; document.body.style.overflow='hidden'; return; }
     if(e.target.closest('[data-cx-back]')){ e.preventDefault(); show(null); return; }
+    if(e.target.closest('[data-contact-close]')){ e.preventDefault(); modal.hidden=true;
+      document.body.style.overflow=''; show(null); return; }
   });
   function post(form,payload,btn,old){
     return fetch('https://hotc-api.a821ka.workers.dev/lead',{method:'POST',
@@ -860,6 +876,26 @@ aa[m].innerHTML=aa[m].innerHTML.replace(/One Central, The Offices 4, WeWork[^<]*
   }
   function vals(form,name){ return [].map.call(form.querySelectorAll('input[name="'+name+'"]:checked'),
     function(el){ return el.value; }).join(', '); }
+
+  var fp=document.getElementById('cxPageForm');
+  if(fp) fp.addEventListener('submit',function(e){
+    e.preventDefault();
+    var b=fp.querySelector('.cx-submit'), old=b.textContent;
+    if(!fp.name.value.trim()||!fp.phone.value.trim()) return;
+    var want=vals(fp,'want')||'—', beds=vals(fp,'beds')||'—';
+    b.disabled=true; b.textContent='…';
+    fetch('https://hotc-api.a821ka.workers.dev/lead',{method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({name:fp.name.value.trim(),phone:fp.phone.value.trim(),email:(fp.email.value||'').trim(),
+        project:'Muraba Veil',lang:"en",page:location.pathname,type:'materials',
+        note:'Запрос материалов · Что прислать: '+want+' · Планировки: '+beds,ts:new Date().toISOString()})})
+      .then(function(r){ if(!r.ok) throw new Error('bad');
+        fp.hidden=true; document.getElementById('cxPageOk').hidden=false; })
+      .catch(function(){ b.disabled=false; b.textContent=old;
+        var w=fp.querySelector('.cx-err');
+        if(!w){ w=document.createElement('p'); w.className='cx-err'; fp.appendChild(w); }
+        w.textContent="Could not send. Please write to us on WhatsApp: +971 56 218 8006"; });
+  });
+
   var fi=document.getElementById('cxInfoForm');
   if(fi) fi.addEventListener('submit',function(e){
     e.preventDefault();

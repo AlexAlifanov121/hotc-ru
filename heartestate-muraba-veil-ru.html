@@ -436,6 +436,24 @@ try{var t=localStorage.getItem('hotc-theme');if(t==='dark'||(!t&&window.matchMed
     background:var(--ink); color:var(--bg); text-decoration:none; font-size:15px; transition:opacity .16s; }
   .vtour-cta:hover { opacity:0.88; }
 
+
+  .vform { padding:120px 32px 130px; background:var(--bg-alt); }
+  .vform-in { max-width:780px; margin:0 auto; }
+  .vform h2 { font-family:'Bricolage Grotesque',serif; font-weight:400; font-size:clamp(30px,4.4vw,48px);
+    line-height:1.12; margin:0 0 16px; color:var(--ink); }
+  .vform h2 em { font-style:italic; color:var(--accent); }
+  .vform .vform-lead { font-size:15.5px; line-height:1.7; color:var(--ink-soft); margin:0 0 38px; max-width:56ch; }
+  .vform .cx-group { margin-bottom:26px; }
+  .vform .cx-fields { grid-template-columns:repeat(3,1fr); }
+  .vform .cx-submit { width:auto; padding:16px 34px; }
+  .vform-or { margin-top:22px; font-size:14px; color:var(--ink-muted); }
+  .vform-or a { color:var(--ink); border-bottom:1px solid var(--line); text-decoration:none; }
+  .vform-or a:hover { border-color:var(--ink); }
+  .vform-ok { text-align:center; padding:40px 0; }
+  .vform-ok h3 { font-family:'Bricolage Grotesque',serif; font-weight:400; font-size:30px; margin:0 0 12px; color:var(--ink); }
+  .vform-ok p { color:var(--ink-soft); font-size:16px; margin:0; }
+  @media (max-width:760px){ .vform { padding:80px 22px 90px; } .vform .cx-fields { grid-template-columns:1fr; } }
+
 </style>
 <link rel="alternate" hreflang="en" href="https://heartestate.ae/heartestate-muraba-veil" />
 <link rel="alternate" hreflang="ru" href="https://heartestate.ae/heartestate-muraba-veil-ru" />
@@ -512,7 +530,7 @@ aa[m].innerHTML=aa[m].innerHTML.replace(/One Central, The Offices 4, WeWork[^<]*
     </div>
 <div class="vh-bottom">
       <p class="sub">131 резиденция в башне высотой 380 метров. Первый небоскрёб RCR Arquitectes — студии, получившей Притцкеровскую премию. У каждого типа резиденций собственный двор под открытым небом с обеих сторон — на северо-востоке и юго-западе.</p>
-      <a href="#" data-contact="info" class="vhero-cta">Запросить материалы →</a>
+      <a href="#" data-contact="tour" class="vhero-cta">Записаться на показ →</a>
     </div>
   </div>
 </section>
@@ -631,13 +649,13 @@ aa[m].innerHTML=aa[m].innerHTML.replace(/One Central, The Offices 4, WeWork[^<]*
     <h2>Площади и <em>цены</em>.</h2>
     <table class="vprice">
       <tr><th>Резиденция</th><th>Общая площадь</th><th>Цена</th></tr>
-      <tr><td>2 спальни</td><td>3 838 ft²</td><td>По запросу</td></tr>
-      <tr><td>3 спальни</td><td>4 940 ft²</td><td>По запросу</td></tr>
+      <tr><td>2 спальни</td><td>3 838 ft²</td><td>от 13,5 млн AED</td></tr>
+      <tr><td>3 спальни</td><td>4 940 ft²</td><td>от 23,3 млн AED</td></tr>
       <tr><td>3 спальни · бассейн</td><td>4 940 ft²</td><td>По запросу</td></tr>
-      <tr><td>4 спальни · бассейн</td><td>9 903 ft²</td><td>По запросу</td></tr>
+      <tr><td>4 спальни · бассейн</td><td>9 903 ft²</td><td>от 48,7 млн AED</td></tr>
       <tr><td>4 спальни XL · дуплексы</td><td>14 746–15 333 ft²</td><td>По запросу</td></tr>
     </table>
-    <p class="vprice-note">От 13,5 млн AED · freehold<br>Площади указаны с террасой-садом. Цену по каждой резиденции подтверждаем при обращении — запросите актуальный список наличия.</p>
+    <p class="vprice-note">От 13,5 млн AED · freehold<br>Площади указаны с террасой-садом. Указан текущий порог входа по каждой планировке; точную цену резиденции подтверждаем при обращении.</p>
 
     <p class="vvalue">Ведём сделку от брони до передачи ключей — резерв, договор, платежи и регистрация. ORN 30550. <a href="heartestate-about-ru.html">Как мы отбираем объекты →</a></p>
 
@@ -647,10 +665,31 @@ aa[m].innerHTML=aa[m].innerHTML.replace(/One Central, The Offices 4, WeWork[^<]*
   </div>
 </section>
 
-<section class="vcta">
-  <h2>Хотите посмотреть<br><em>вживую</em>?</h2>
-  <p>Планировки, доступные резиденции и условия — по запросу. Организуем показ и сопроводим сделку от брони до передачи ключей.</p>
-  <div class="vcta-row"><a href="#" data-contact="info" class="btn-primary">Запросить материалы →</a><a href="#" data-contact="tour" class="btn-primary">Записаться на показ →</a></div>
+<section class="vform" id="materials">
+  <div class="vform-in">
+    <h2>Пришлём ровно то, <em>что нужно вам</em>.</h2>
+    <p class="vform-lead">Отметьте нужное — соберём в одно письмо. Без рассылки и без того, о чём вы не просили.</p>
+    <form id="cxPageForm" novalidate>
+      <div class="cx-group"><span class="cx-label">Что прислать</span><div class="cx-chips"><label class="cx-chip"><input type="checkbox" name="want" value="Брошюра"><span>Брошюра</span></label>
+<label class="cx-chip"><input type="checkbox" name="want" value="Планировки"><span>Планировки</span></label>
+<label class="cx-chip"><input type="checkbox" name="want" value="Наличие и цены"><span>Наличие и цены</span></label>
+<label class="cx-chip"><input type="checkbox" name="want" value="План оплаты"><span>План оплаты</span></label></div></div>
+      <div class="cx-group"><span class="cx-label">Какие планировки интересны?</span><div class="cx-chips"><label class="cx-chip"><input type="checkbox" name="beds" value="2 спальни"><span>2 спальни</span></label>
+<label class="cx-chip"><input type="checkbox" name="beds" value="3 спальни"><span>3 спальни</span></label>
+<label class="cx-chip"><input type="checkbox" name="beds" value="3 спальни · бассейн"><span>3 спальни · бассейн</span></label>
+<label class="cx-chip"><input type="checkbox" name="beds" value="4 спальни · бассейн"><span>4 спальни · бассейн</span></label>
+<label class="cx-chip"><input type="checkbox" name="beds" value="4 спальни XL"><span>4 спальни XL</span></label>
+<label class="cx-chip"><input type="checkbox" name="beds" value="Пока не знаю"><span>Пока не знаю</span></label></div></div>
+      <div class="cx-fields">
+        <div><label>Ваше имя</label><input type="text" name="name" required></div>
+        <div><label>Телефон или WhatsApp</label><input type="tel" name="phone" required placeholder="+971 50 000 0000"></div>
+        <div><label>Email (необязательно)</label><input type="email" name="email"></div>
+      </div>
+      <button type="submit" class="cx-submit">Прислать материалы →</button>
+    </form>
+    <div class="vform-ok" id="cxPageOk" hidden><h3>Получили.</h3><p>Старший консультант свяжется с вами в рабочее время.</p></div>
+    <p class="vform-or">Или посмотреть вживую — <a href="#" data-contact="tour">записаться на показ →</a></p>
+  </div>
 </section>
 
 <div class="vlb" id="vlb" role="dialog" aria-modal="true">
@@ -688,31 +727,6 @@ aa[m].innerHTML=aa[m].innerHTML.replace(/One Central, The Offices 4, WeWork[^<]*
     </div>
 
     
-    <div class="contact-step cstep" id="contactStepInfo">
-      <div class="contact-eyebrow">— Материалы по проекту</div>
-      <h3 style="font-family:'Bricolage Grotesque',serif; font-weight:400; font-size:28px; margin:0 0 14px;">Что вам прислать?</h3>
-      <p class="cx-lead">Отметьте нужное. Пришлём один раз — без рассылки и без того, о чём вы не просили.</p>
-      <form id="cxInfoForm" novalidate>
-        <div class="cx-group"><span class="cx-label">ЧТО ПРИСЛАТЬ</span><div class="cx-chips"><label class="cx-chip"><input type="checkbox" name="want" value="Брошюра"><span>Брошюра</span></label>
-<label class="cx-chip"><input type="checkbox" name="want" value="Планировки"><span>Планировки</span></label>
-<label class="cx-chip"><input type="checkbox" name="want" value="Наличие и цены"><span>Наличие и цены</span></label>
-<label class="cx-chip"><input type="checkbox" name="want" value="План оплаты"><span>План оплаты</span></label></div></div>
-        <div class="cx-group"><span class="cx-label">Какие планировки интересны?</span><div class="cx-chips"><label class="cx-chip"><input type="checkbox" name="beds" value="2 спальни"><span>2 спальни</span></label>
-<label class="cx-chip"><input type="checkbox" name="beds" value="3 спальни"><span>3 спальни</span></label>
-<label class="cx-chip"><input type="checkbox" name="beds" value="3 спальни · бассейн"><span>3 спальни · бассейн</span></label>
-<label class="cx-chip"><input type="checkbox" name="beds" value="4 спальни · бассейн"><span>4 спальни · бассейн</span></label>
-<label class="cx-chip"><input type="checkbox" name="beds" value="4 спальни XL"><span>4 спальни XL</span></label>
-<label class="cx-chip"><input type="checkbox" name="beds" value="Пока не знаю"><span>Пока не знаю</span></label></div></div>
-        <div class="cx-fields">
-          <div><label>Ваше имя</label><input type="text" name="name" required></div>
-          <div><label>Телефон или WhatsApp</label><input type="tel" name="phone" required placeholder="+971 50 000 0000"></div>
-          <div><label>Email</label><input type="email" name="email"></div>
-        </div>
-        <button type="submit" class="cx-submit">Прислать материалы →</button>
-      </form>
-      <button class="cx-back" type="button" data-cx-back>← Назад</button>
-    </div>
-
     <div class="contact-step cstep" id="contactStepTour">
       <div class="contact-eyebrow">— Частный показ</div>
       <h3 style="font-family:'Bricolage Grotesque',serif; font-weight:400; font-size:28px; margin:0 0 14px;">Увидеть до того, как построят.</h3>
@@ -848,6 +862,8 @@ aa[m].innerHTML=aa[m].innerHTML.replace(/One Central, The Offices 4, WeWork[^<]*
     if(t){ e.preventDefault(); show(t.getAttribute('data-contact')||null);
            modal.hidden=false; document.body.style.overflow='hidden'; return; }
     if(e.target.closest('[data-cx-back]')){ e.preventDefault(); show(null); return; }
+    if(e.target.closest('[data-contact-close]')){ e.preventDefault(); modal.hidden=true;
+      document.body.style.overflow=''; show(null); return; }
   });
   function post(form,payload,btn,old){
     return fetch('https://hotc-api.a821ka.workers.dev/lead',{method:'POST',
@@ -860,6 +876,26 @@ aa[m].innerHTML=aa[m].innerHTML.replace(/One Central, The Offices 4, WeWork[^<]*
   }
   function vals(form,name){ return [].map.call(form.querySelectorAll('input[name="'+name+'"]:checked'),
     function(el){ return el.value; }).join(', '); }
+
+  var fp=document.getElementById('cxPageForm');
+  if(fp) fp.addEventListener('submit',function(e){
+    e.preventDefault();
+    var b=fp.querySelector('.cx-submit'), old=b.textContent;
+    if(!fp.name.value.trim()||!fp.phone.value.trim()) return;
+    var want=vals(fp,'want')||'—', beds=vals(fp,'beds')||'—';
+    b.disabled=true; b.textContent='…';
+    fetch('https://hotc-api.a821ka.workers.dev/lead',{method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({name:fp.name.value.trim(),phone:fp.phone.value.trim(),email:(fp.email.value||'').trim(),
+        project:'Muraba Veil',lang:"ru",page:location.pathname,type:'materials',
+        note:'Запрос материалов · Что прислать: '+want+' · Планировки: '+beds,ts:new Date().toISOString()})})
+      .then(function(r){ if(!r.ok) throw new Error('bad');
+        fp.hidden=true; document.getElementById('cxPageOk').hidden=false; })
+      .catch(function(){ b.disabled=false; b.textContent=old;
+        var w=fp.querySelector('.cx-err');
+        if(!w){ w=document.createElement('p'); w.className='cx-err'; fp.appendChild(w); }
+        w.textContent="Не удалось отправить. Напишите нам в WhatsApp: +971 56 218 8006"; });
+  });
+
   var fi=document.getElementById('cxInfoForm');
   if(fi) fi.addEventListener('submit',function(e){
     e.preventDefault();

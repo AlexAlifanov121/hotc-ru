@@ -442,6 +442,12 @@ try{var t=localStorage.getItem('hotc-theme');if(t==='dark'||(!t&&window.matchMed
     font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.16em;
     text-transform:uppercase; color:var(--ink-muted); }
   .vform .vnum .ln { flex:1; height:1px; background:var(--line); max-width:180px; }
+
+  .vwhy { margin:0 0 30px; padding:18px 22px; border-left:2px solid var(--accent);
+    background:rgba(156,122,70,0.07); font-size:16px; line-height:1.65; color:var(--ink-soft); }
+  .vwhy a { color:var(--ink); text-decoration:none; border-bottom:1px solid var(--accent-soft); white-space:nowrap; }
+  .vwhy a:hover { border-color:var(--ink); }
+  @media (max-width:640px){ .vwhy { font-size:15px; padding:16px 18px; } }
   .vform { padding:120px 32px 130px; background:var(--bg-alt); }
   .vform-in { max-width:780px; margin:0 auto; }
   .vform h2 { font-family:'Bricolage Grotesque',serif; font-weight:400; font-size:clamp(30px,4.4vw,48px);
@@ -651,6 +657,8 @@ aa[m].innerHTML=aa[m].innerHTML.replace(/One Central, The Offices 4, WeWork[^<]*
 <section class="vsec">
   <div class="vsec-in">
     <div class="vnum"><span class="n">— 08</span><span>Terms</span><span class="ln"></span></div>
+    <p class="vwhy">We run the deal from booking to handover — reservation, contract, payments and registration. ORN 30550. <a href="heartestate-about.html">How we choose what we sell →</a></p>
+
     <h2>Sizes and <em>prices</em>.</h2>
     <table class="vprice">
       <tr><th>Residence</th><th>Total area</th><th>Price</th></tr>
@@ -660,9 +668,6 @@ aa[m].innerHTML=aa[m].innerHTML.replace(/One Central, The Offices 4, WeWork[^<]*
       <tr><td>4 bedrooms · pool</td><td>9,903 ft²</td><td>from AED 48.7 M</td></tr>
       <tr><td>4 bedrooms XL · duplexes</td><td>14,746–15,333 ft²</td><td>On request</td></tr>
     </table>
-    <p class="vprice-note">From AED 13.5 M · freehold<br>Areas include the garden terrace. Figures shown are the current entry point for each layout; the exact price per residence is confirmed on enquiry.</p>
-
-    <p class="vvalue">We run the deal from booking to handover — reservation, contract, payments and registration. ORN 30550. <a href="heartestate-about.html">How we choose what we sell →</a></p>
 
     <h2 style="margin-top:56px">Payment <em>plan</em>.</h2>
     <ul class="vlist"><li>10% — on booking</li><li>10% + 4% Dubai Land Department fee + AED 5,000 admin fee — on signing the SPA, 30 days after booking</li><li>7.5% — December 2026</li><li>7.5% — June 2027</li><li>7.5% — March 2028</li><li>7.5% — March 2029</li><li>50% — December 2029, on completion</li></ul>

@@ -216,6 +216,14 @@
   footer{padding:34px 0 56px;color:var(--ink-muted);font-size:13px}
   footer a{color:inherit}
   @media(max-width:640px){.wrap,nav.top,.hero .in{padding-left:18px;padding-right:18px}dl dt{flex-basis:130px}}
+
+  .rmap { margin:0 0 0; border-radius:8px; overflow:hidden; border:1px solid var(--line,rgba(255,255,255,.14)); }
+  .rmap iframe { width:100%; height:340px; border:none; display:block; filter:grayscale(.5) contrast(1.05) invert(.9) hue-rotate(180deg); }
+  .rmap-loc { padding:16px 20px; font-size:14px; line-height:1.6; background:rgba(255,255,255,.03); }
+  .rmap-area { display:block; font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.14em;
+    text-transform:uppercase; opacity:.6; margin-bottom:5px; }
+  @media (max-width:760px){ .rmap iframe { height:260px; } }
+
 </style>
 <script src="/js/consent.js?v=1" defer></script>
 <link rel="icon" type="image/png" sizes="96x96" href="/images/favicon-96.png" /><link rel="icon" type="image/png" sizes="192x192" href="/images/favicon-192.png" />
@@ -479,6 +487,7 @@ aa[m].innerHTML=aa[m].innerHTML.replace(/One Central, The Offices 4, WeWork[^<]*
   <details class="faq"><summary>How much does The Row Saadiyat cost?<span class="ico">+</span></summary><p>1 Bed — POA (89 m²); 2 Bed — From AED 5.8 M (~140 m²); 2 Bed + Maid — From AED 7.8 M (~160 m²); 2 Bed + Maid + Study — From AED 8.5 M (~180 m²); 3 Bed + Maid + Study — From AED 11.5 M (~250 m²); 3 Bed Large + Maid + Study — From AED 16.0 M (~446 m²). Payment plan: 10% + 2% admin + AED 3,150 on booking · 10% Jan 2027 · 5% Aug 2027 · 5% Apr 2028 · 10% Nov 2028 · 60% on handover Q1 2030 · No post-handover.</p></details><details class="faq"><summary>When is The Row Saadiyat handed over?<span class="ico">+</span></summary><p>Q1 2030</p></details><details class="faq"><summary>Where is The Row Saadiyat located?<span class="ico">+</span></summary><p>Saadiyat Cultural District · next to Louvre — Saadiyat Island, Abu Dhabi.</p></details><details class="faq"><summary>Who is behind The Row Saadiyat?<span class="ico">+</span></summary><p>Aldar · Saadiyat Cultural District · Architect-led</p></details><details class="faq"><summary>What should a buyer keep in mind?<span class="ico">+</span></summary><p>Long horizon and Saadiyat resale liquidity. Best held 5+ years.</p></details><details class="faq"><summary>Can a non-resident buy, and is crypto settlement possible?<span class="ico">+</span></summary><p>Yes. Foreign nationals buy freehold in Dubai without restrictions and presence is not required — the deal can be closed under power of attorney. Crypto settlement is possible through escrow; we run those transactions as a separate service.</p></details>
 </section>
 
+<section id="location"><div class="wrap"><h2>Location</h2><div class="rmap"><iframe src="https://maps.google.com/maps?q=24.5410,54.4290&t=&z=15&ie=UTF8&iwloc=&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Location"></iframe><div class="rmap-loc"><span class="rmap-area">Saadiyat Island, Abu Dhabi</span>Saadiyat Cultural District · next to Louvre</div></div></div></section>
 <section class="cta">
   <h2>Interested in this residence?</h2>
   <p>Every enquiry is handled personally. Book a call or write on WhatsApp — we will send the full layout set, the payment plan and the current availability.</p>

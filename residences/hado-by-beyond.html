@@ -208,6 +208,14 @@
   footer{padding:34px 0 56px;color:var(--ink-muted);font-size:13px}
   footer a{color:inherit}
   @media(max-width:640px){.wrap,nav.top,.hero .in{padding-left:18px;padding-right:18px}dl dt{flex-basis:130px}}
+
+  .rmap { margin:0 0 0; border-radius:8px; overflow:hidden; border:1px solid var(--line,rgba(255,255,255,.14)); }
+  .rmap iframe { width:100%; height:340px; border:none; display:block; filter:grayscale(.5) contrast(1.05) invert(.9) hue-rotate(180deg); }
+  .rmap-loc { padding:16px 20px; font-size:14px; line-height:1.6; background:rgba(255,255,255,.03); }
+  .rmap-area { display:block; font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.14em;
+    text-transform:uppercase; opacity:.6; margin-bottom:5px; }
+  @media (max-width:760px){ .rmap iframe { height:260px; } }
+
 </style>
 <script src="/js/consent.js?v=1" defer></script>
 <link rel="icon" type="image/png" sizes="96x96" href="/images/favicon-96.png" /><link rel="icon" type="image/png" sizes="192x192" href="/images/favicon-192.png" />
@@ -471,6 +479,7 @@ aa[m].innerHTML=aa[m].innerHTML.replace(/One Central, The Offices 4, WeWork[^<]*
   <details class="faq"><summary>How much does Hado by Beyond cost?<span class="ico">+</span></summary><p>Residences — POA (Multiple types). Payment plan: 10% + 4% DLD + AED 1,040 fees on booking · 10% Jul 2026 · 5% Jan 2027 · 5% May 2027 · 5% Oct 2027 · 5% Mar 2028 · 5% Jul 2028 · 5% Nov 2028 · 50% on completion Q3 2029.</p></details><details class="faq"><summary>Where is Hado by Beyond located?<span class="ico">+</span></summary><p>Three towers A/B/C · B+G+21 — Dubai Islands.</p></details><details class="faq"><summary>Who is behind Hado by Beyond?<span class="ico">+</span></summary><p>Beyond / Omniyat · Three towers A/B/C · Dubai Islands</p></details><details class="faq"><summary>What should a buyer keep in mind?<span class="ico">+</span></summary><p>Less prime than PASSO West Crescent — pricing should reflect that.</p></details><details class="faq"><summary>Can a non-resident buy, and is crypto settlement possible?<span class="ico">+</span></summary><p>Yes. Foreign nationals buy freehold in Dubai without restrictions and presence is not required — the deal can be closed under power of attorney. Crypto settlement is possible through escrow; we run those transactions as a separate service.</p></details>
 </section>
 
+<section id="location"><div class="wrap"><h2>Location</h2><div class="rmap"><iframe src="https://maps.google.com/maps?q=25.2790,55.3320&t=&z=15&ie=UTF8&iwloc=&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Location"></iframe><div class="rmap-loc"><span class="rmap-area">Dubai Islands</span>Three towers A/B/C · B+G+21</div></div></div></section>
 <section class="cta">
   <h2>Interested in this residence?</h2>
   <p>Every enquiry is handled personally. Book a call or write on WhatsApp — we will send the full layout set, the payment plan and the current availability.</p>

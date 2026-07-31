@@ -208,6 +208,14 @@
   footer{padding:34px 0 56px;color:var(--ink-muted);font-size:13px}
   footer a{color:inherit}
   @media(max-width:640px){.wrap,nav.top,.hero .in{padding-left:18px;padding-right:18px}dl dt{flex-basis:130px}}
+
+  .rmap { margin:0 0 0; border-radius:8px; overflow:hidden; border:1px solid var(--line,rgba(255,255,255,.14)); }
+  .rmap iframe { width:100%; height:340px; border:none; display:block; filter:grayscale(.5) contrast(1.05) invert(.9) hue-rotate(180deg); }
+  .rmap-loc { padding:16px 20px; font-size:14px; line-height:1.6; background:rgba(255,255,255,.03); }
+  .rmap-area { display:block; font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.14em;
+    text-transform:uppercase; opacity:.6; margin-bottom:5px; }
+  @media (max-width:760px){ .rmap iframe { height:260px; } }
+
 </style>
 <script src="/js/consent.js?v=1" defer></script>
 <link rel="icon" type="image/png" sizes="96x96" href="/images/favicon-96.png" /><link rel="icon" type="image/png" sizes="192x192" href="/images/favicon-192.png" />
@@ -471,6 +479,7 @@ aa[m].innerHTML=aa[m].innerHTML.replace(/One Central, The Offices 4, WeWork[^<]*
   <details class="faq"><summary>How much does Akala Hotel &amp; Residences cost?<span class="ico">+</span></summary><p>Wellness apartments — POA (Multiple types); Penthouses — POA (Top floors). Payment plan: 4% DLD Waiver · 10% + AED 3,000 admin on booking · 10% +180d · 5% +360d · 5% +540d · 5% +720d · 5% +900d · 60% on completion · No post-handover.</p></details><details class="faq"><summary>Where is Akala Hotel &amp; Residences located?<span class="ico">+</span></summary><p>Za&#x27;abeel 2 · next to DIFC — Za&#x27;abeel 2, Dubai.</p></details><details class="faq"><summary>Who is behind Akala Hotel &amp; Residences?<span class="ico">+</span></summary><p>Arada Properties · DIFC · Precision Wellness · 48 floors</p></details><details class="faq"><summary>What should a buyer keep in mind?<span class="ico">+</span></summary><p>Wellness category is still being defined — execution will determine value. Branded-residence premium depends on the operator holding its standard.</p></details><details class="faq"><summary>Can a non-resident buy, and is crypto settlement possible?<span class="ico">+</span></summary><p>Yes. Foreign nationals buy freehold in Dubai without restrictions and presence is not required — the deal can be closed under power of attorney. Crypto settlement is possible through escrow; we run those transactions as a separate service.</p></details>
 </section>
 
+<section id="location"><div class="wrap"><h2>Location</h2><div class="rmap"><iframe src="https://maps.google.com/maps?q=25.2213,55.2867&t=&z=15&ie=UTF8&iwloc=&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Location"></iframe><div class="rmap-loc"><span class="rmap-area"></span></div></div></div></section>
 <section class="cta">
   <h2>Interested in this residence?</h2>
   <p>Every enquiry is handled personally. Book a call or write on WhatsApp — we will send the full layout set, the payment plan and the current availability.</p>

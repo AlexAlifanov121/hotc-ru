@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="canonical" href="https://heartestate.ae/5sec" />
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Пятисекундный тест</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#17110A;--panel:#1F1810;--ink:#ECE1CE;--soft:#CDBFA6;--muted:#9C8A70;--line:rgba(236,225,206,.16);--accent:#C49A5B}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:'Bricolage Grotesque',system-ui,-apple-system,sans-serif;-webkit-font-smoothing:antialiased}
+.wrap{max-width:640px;margin:0 auto;padding:40px 22px 70px}
+.kick{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin:0 0 14px}
+h1{font-weight:400;font-size:clamp(26px,6vw,36px);line-height:1.2;margin:0 0 16px}
+p.lead{font-size:16px;line-height:1.65;color:var(--soft);margin:0 0 26px}
+ol.rules{margin:0 0 30px;padding-left:20px;color:var(--soft);font-size:15px;line-height:1.75}
+ol.rules b{color:var(--ink);font-weight:500}
+button{font-family:inherit;cursor:pointer}
+.btn{display:inline-block;padding:15px 30px;border:none;border-radius:100px;background:var(--ink);color:var(--bg);font-size:15px;transition:opacity .16s}
+.btn:hover{opacity:.88}
+.btn:disabled{opacity:.45;cursor:default}
+.btn-ghost{background:none;border:1px solid var(--line);color:var(--soft);padding:13px 24px;border-radius:100px;font-size:14px}
+.step{display:none}
+.step.on{display:block}
+
+/* --- показ --- */
+#stage{position:fixed;inset:0;background:#000;z-index:50;display:none}
+#stage.on{display:block}
+#frameBox{position:absolute;inset:0;overflow:hidden}
+#site{width:100%;height:100%;border:0;pointer-events:none}
+#timer{position:fixed;top:0;left:0;height:3px;background:var(--accent);width:100%;z-index:60;transition:width .1s linear}
+#shield{position:fixed;inset:0;z-index:55}
+
+/* --- вопросы --- */
+.q{margin:0 0 28px;padding:0 0 26px;border-bottom:1px solid var(--line)}
+.q:last-of-type{border-bottom:none}
+.q label.t{display:block;font-size:17px;line-height:1.45;margin:0 0 12px}
+.q .hint{font-size:13.5px;color:var(--muted);margin:0 0 12px;line-height:1.5}
+textarea,input[type=text]{width:100%;padding:14px;border:1px solid var(--line);border-radius:10px;background:transparent;color:var(--ink);font-family:inherit;font-size:16px;line-height:1.5;resize:vertical}
+textarea:focus,input[type=text]:focus{outline:none;border-color:var(--accent)}
+.opts{display:flex;flex-direction:column;gap:9px}
+.opt{position:relative}
+.opt input{position:absolute;opacity:0;width:0;height:0}
+.opt span{display:block;padding:13px 16px;border:1px solid var(--line);border-radius:10px;font-size:15px;color:var(--soft);transition:all .15s}
+.opt input:checked+span{border-color:var(--accent);background:rgba(196,154,91,.1);color:var(--ink)}
+.foot{margin-top:8px;font-size:13px;color:var(--muted);line-height:1.6}
+.done h2{font-weight:400;font-size:26px;margin:0 0 12px}
+</style>
+</head>
+<body>
+
+<div id="timer" style="width:0"></div>
+<div id="stage">
+  <div id="frameBox"><iframe id="site" title="Сайт" src="about:blank" scrolling="no"></iframe></div>
+  <div id="shield"></div>
+</div>
+
+<div class="wrap">
+
+  <!-- 1. интро -->
+  <section class="step on" id="s1">
+    <p class="kick">Пятисекундный тест</p>
+    <h1>Посмотрите на экран пять секунд и скажите, что поняли.</h1>
+    <p class="lead">Это займёт минуту. Правильных ответов нет — важно именно первое впечатление, даже если оно «ничего не понял».</p>
+    <ol class="rules">
+      <li>Нажимаете «Показать» — на <b>5 секунд</b> открывается страница.</li>
+      <li>Ничего не нажимаете и не листаете — просто смотрите.</li>
+      <li>Экран закрывается, дальше три коротких вопроса.</li>
+    </ol>
+    <button class="btn" id="go">Показать →</button>
+    <p class="foot">Совет: не листайте вниз заранее и не открывайте сайт до теста — иначе результат уже не первое впечатление.</p>
+  </section>
+
+  <!-- 2. вопросы -->
+  <section class="step" id="s2">
+    <p class="kick">Три вопроса</p>
+
+    <div class="q">
+      <label class="t" for="q1">1. Чем занимается эта компания?</label>
+      <p class="hint">Своими словами, одной фразой. «Не понял» — нормальный ответ.</p>
+      <textarea id="q1" rows="2" placeholder="…"></textarea>
+    </div>
+
+    <div class="q">
+      <label class="t" for="q2">2. Что вы можете здесь сделать?</label>
+      <p class="hint">Зачем сюда заходить, что тут для вас.</p>
+      <textarea id="q2" rows="2" placeholder="…"></textarea>
+    </div>
+
+    <div class="q">
+      <label class="t">3. На что это больше похоже?</label>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="q3" value="Интернет-журнал об архитектуре"><span>Интернет-журнал об архитектуре</span></label>
+        <label class="opt"><input type="radio" name="q3" value="Агентство недвижимости"><span>Агентство недвижимости</span></label>
+        <label class="opt"><input type="radio" name="q3" value="Застройщик"><span>Застройщик</span></label>
+        <label class="opt"><input type="radio" name="q3" value="Архитектурное бюро"><span>Архитектурное бюро</span></label>
+        <label class="opt"><input type="radio" name="q3" value="Дизайн-студия"><span>Дизайн-студия</span></label>
+        <label class="opt"><input type="radio" name="q3" value="Не понял"><span>Не понял</span></label>
+      </div>
+    </div>
+
+    <div class="q">
+      <label class="t" for="who">Как вас записать?</label>
+      <p class="hint">Имя — чтобы понимать, чей это ответ. Необязательно.</p>
+      <input type="text" id="who" placeholder="Имя">
+    </div>
+
+    <button class="btn" id="send">Отправить ответ →</button>
+    <p class="foot">Ответ откроется готовым сообщением в WhatsApp — останется нажать «отправить».</p>
+  </section>
+
+  <!-- 3. финал -->
+  <section class="step done" id="s3">
+    <p class="kick">Готово</p>
+    <h2>Спасибо — это правда помогает.</h2>
+    <p class="lead">Если WhatsApp не открылся, скопируйте ответ и пришлите любым способом.</p>
+    <textarea id="fallback" rows="9" readonly></textarea>
+    <p style="margin-top:16px"><button class="btn-ghost" id="copy">Скопировать ответ</button></p>
+  </section>
+
+</div>
+
+<script>
+(function(){
+  var URL_TESTED = 'https://heartestate.ae/ru?5sec=1';
+  var WA = '971585905974';
+  var SECONDS = 5;
+
+  var stage=document.getElementById('stage'), site=document.getElementById('site'),
+      timer=document.getElementById('timer'), go=document.getElementById('go'),
+      s1=document.getElementById('s1'), s2=document.getElementById('s2'), s3=document.getElementById('s3');
+
+  function show(el){ [s1,s2,s3].forEach(function(x){ x.classList.remove('on'); }); el.classList.add('on'); window.scrollTo(0,0); }
+
+  go.addEventListener('click', function(){
+    go.disabled = true; go.textContent = 'Загружаю…';
+    var loaded = false;
+    site.addEventListener('load', function(){ if(!loaded){ loaded = true; start(); } });
+    site.src = URL_TESTED;
+    /* если iframe почему-то не отдаёт событие — стартуем через 4 с */
+    setTimeout(function(){ if(!loaded){ loaded = true; start(); } }, 4000);
+  });
+
+  function start(){
+    stage.classList.add('on');
+    document.body.style.overflow='hidden';
+    var t0 = Date.now();
+    timer.style.width = '100%';
+    var iv = setInterval(function(){
+      var left = 1 - (Date.now()-t0)/(SECONDS*1000);
+      timer.style.width = Math.max(0,left)*100 + '%';
+      if (left <= 0){
+        clearInterval(iv);
+        stage.classList.remove('on');
+        site.src = 'about:blank';
+        document.body.style.overflow='';
+        timer.style.width='0';
+        show(s2);
+      }
+    }, 60);
+  }
+
+  document.getElementById('send').addEventListener('click', function(){
+    var q1=(document.getElementById('q1').value||'').trim();
+    var q2=(document.getElementById('q2').value||'').trim();
+    var r=document.querySelector('input[name=q3]:checked');
+    var q3=r?r.value:'—';
+    var who=(document.getElementById('who').value||'').trim()||'без имени';
+    var txt = '5-секундный тест · heartestate.ae\n' +
+              'Кто: ' + who + '\n\n' +
+              '1. Чем занимается компания:\n' + (q1||'—') + '\n\n' +
+              '2. Что здесь можно сделать:\n' + (q2||'—') + '\n\n' +
+              '3. На что похоже: ' + q3;
+    document.getElementById('fallback').value = txt;
+    show(s3);
+    window.open('https://wa.me/' + WA + '?text=' + encodeURIComponent(txt), '_blank');
+  });
+
+  document.getElementById('copy').addEventListener('click', function(){
+    var f=document.getElementById('fallback');
+    f.select(); f.setSelectionRange(0,99999);
+    try { document.execCommand('copy'); this.textContent='Скопировано'; } catch(e){}
+  });
+})();
+</script>
+</body>
+</html>

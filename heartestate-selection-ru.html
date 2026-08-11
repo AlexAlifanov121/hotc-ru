@@ -921,5 +921,47 @@ aa[m].innerHTML=aa[m].innerHTML.replace(/One Central, The Offices 4, WeWork[^<]*
   window.addEventListener('load', function(){ go(); setTimeout(go, 120); });
 })();
 </script>
+<script id="lead-form">
+(function(){
+  var f = document.getElementById('contactPhoneForm');
+  if (!f || f.dataset.wired) return;
+  f.dataset.wired = '1';
+  var RU = (document.documentElement.lang || 'en').slice(0,2) === 'ru';
+  f.addEventListener('submit', function(e){
+    e.preventDefault();
+    var btn = f.querySelector('button[type=submit], button:not([type]), input[type=submit]');
+    var old = btn ? btn.textContent : '';
+    if (btn) { btn.disabled = true; btn.textContent = RU ? 'Отправляем…' : 'Sending…'; }
+    var g = function(n){ var el = f.querySelector('[name="'+n+'"]'); return el ? (el.value||'').trim() : ''; };
+    var payload = {
+      type: 'phone-callback',
+      project: (document.title || '').split('·')[0].trim(),
+      name: g('name'), phone: g('phone'),
+      message: (g('when') ? (RU ? 'Удобное время: ' : 'Best time to call: ') + g('when') : ''),
+      lang: g('lang') || (RU ? 'ru' : 'en'),
+      page: location.pathname, source: location.hostname,
+      ts: new Date().toISOString()
+    };
+    fetch('https://hotc-api.a821ka.workers.dev/lead', {
+      method: 'POST', headers: {'Content-Type':'application/json'},
+      body: JSON.stringify(payload)
+    }).then(function(r){
+      if (!r.ok) throw new Error('bad status');
+      var done = document.getElementById('contactStepThanks');
+      if (done) {
+        f.closest('.contact-step').hidden = true;
+        done.hidden = false;
+      } else {
+        f.innerHTML = '<p style="text-align:center;padding:40px 8px;font-size:17px;line-height:1.5;">'
+          + (RU ? 'Спасибо, получили. Скоро свяжемся.' : 'Thank you — we have it. We will be in touch shortly.')
+          + '</p>';
+      }
+    }).catch(function(){
+      if (btn) { btn.disabled = false; btn.textContent = old; }
+      alert(RU ? 'Не удалось отправить. Напишите нам в WhatsApp.' : 'Could not send. Please message us on WhatsApp.');
+    });
+  });
+})();
+</script>
 </body>
 </html>

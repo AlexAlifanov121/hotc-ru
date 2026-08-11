@@ -257,6 +257,7 @@ try{var t=localStorage.getItem('hotc-theme');if(t==='dark'||(!t&&window.matchMed
   .vh h1 { font-family:'Bricolage Grotesque',system-ui,sans-serif; font-weight:300; font-size:clamp(30px,3.6vw,52px); line-height:1.05; letter-spacing:0.02em; margin:0; display:flex; flex-direction:column; }
   .vh h1 em { font-style:normal; color:inherit; opacity:0.94; }
   .vh-bottom { max-width:600px; }
+.vh-in{padding-left:calc(40px + clamp(0px,9vw,190px))}
   .vh .sub { font-family:'Bricolage Grotesque',system-ui,sans-serif; font-weight:300; font-size:clamp(15px,1.4vw,19px); line-height:1.55; max-width:600px; opacity:0.95; margin:0 0 22px; }
   @media (max-width:600px){
     .vsec, .vfeat { padding-top:56px !important; padding-bottom:56px !important; }
@@ -557,11 +558,11 @@ aa[m].innerHTML=aa[m].innerHTML.replace(/One Central, The Offices 4, WeWork[^<]*
 </script><body>
 
 <nav class="top">
-  <a href="heartestate-home-draft.html" class="logo"><img src="assets/logos/logo-black.png" alt="Heart of the City" width="3524" height="967"></a>
+  <a href="/" class="logo"><img src="assets/logos/logo-black.svg" alt="Heart of the City" width="3524" height="967"></a>
   <div style="display:flex; gap:18px; align-items:center;">
     <a href="heartestate-muraba-veil-ru.html" style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:var(--ink-muted); text-decoration:none;">RU</a>
     <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme" title="Светлая / тёмная"><svg class="ic-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg><svg class="ic-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/></svg></button>
-    <a href="heartestate-home-draft.html" class="back">← Home</a>
+    <a href="/" class="back">← Home</a>
     <a href="#" data-contact class="nav-cta">Get in touch</a>
   </div>
 </nav>
@@ -587,7 +588,7 @@ aa[m].innerHTML=aa[m].innerHTML.replace(/One Central, The Offices 4, WeWork[^<]*
       <h2>Between the beach<br>and <em>business</em>.</h2>
       <p class="vlead">The tower stands at Dubai’s geographic focal point, where the Dubai Water Canal meets Sheikh Zayed Road. Downtown lies across the highway; Jumeirah Beach is a ten-minute bike ride or a thirty-minute walk along the canal.</p>
     </div>
-    <div class="vfacts"><div class="vfact"><div class="v">380 m</div><div class="k">Tower height</div></div><div class="vfact"><div class="v">73</div><div class="k">Floors</div></div><div class="vfact"><div class="v">131</div><div class="k">Residences</div></div><div class="vfact"><div class="v">Dec 2029</div><div class="k">Completion</div></div></div>
+    <div class="vfacts"><div class="vfact"><div class="v">380 m</div><div class="k">Tower height</div></div><div class="vfact"><div class="v">73</div><div class="k">Floors</div></div><div class="vfact"><div class="v">131</div><div class="k">Residences</div></div><div class="vfact"><div class="v">Q4 2029</div><div class="k">Completion</div></div></div>
   </div>
 </section>
 
@@ -691,7 +692,7 @@ aa[m].innerHTML=aa[m].innerHTML.replace(/One Central, The Offices 4, WeWork[^<]*
 <section id="vs-terms" class="vsec">
   <div class="vsec-in">
     <div class="vnum"><span class="n">— 08</span><span>Terms and price</span><span class="ln"></span></div>
-    <div class="vwhy"><div class="vwhy-mark"><img src="assets/logos/logo-black.png" alt="Heart of the City" data-keep width="3524" height="967"></div><div class="vwhy-body"><p class="vwhy-lead">We handle everything the purchase involves — and look after you long after it's done.</p><div class="vwhy-items"><span>Visas</span><span>Schools</span><span>Concierge</span><span>Insurance</span><span>Flights</span><span><a class="more" href="heartestate-about.html">and more →</a></span></div></div></div>
+    <div class="vwhy"><div class="vwhy-mark"><img src="assets/logos/logo-black.svg" alt="Heart of the City" data-keep width="3524" height="967"></div><div class="vwhy-body"><p class="vwhy-lead">We handle everything the purchase involves — and look after you long after it's done.</p><div class="vwhy-items"><span>Visas</span><span>Schools</span><span>Concierge</span><span>Insurance</span><span>Flights</span><span><a class="more" href="heartestate-about.html">and more →</a></span></div></div></div>
 
     <h2>Sizes and <em>prices</em>.</h2>
     <table class="vprice">
@@ -727,7 +728,7 @@ aa[m].innerHTML=aa[m].innerHTML.replace(/One Central, The Offices 4, WeWork[^<]*
       </div>
       <button type="submit" class="cx-submit">Send me the materials →</button>
     </form>
-    <div class="vform-ok" id="cxPageOk" hidden><h3>Got it.</h3><p>A Senior Advisor will come back to you within working hours.</p></div>
+    <div class="vform-ok" id="cxPageOk" hidden><h3>Got it.</h3><p>A Senior Advisor will come back to you shortly.</p></div>
     <p class="vform-or">Or see it in person — <a href="#" data-contact="tour">book a tour →</a></p>
   </div>
 </section>
@@ -750,8 +751,8 @@ aa[m].innerHTML=aa[m].innerHTML.replace(/One Central, The Offices 4, WeWork[^<]*
           <div class="contact-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="14" height="12" rx="2"/><path d="M16 10l6-3v10l-6-3z"/></svg>
           </div>
-          <h4 data-en="Book a Zoom call" data-ru="Записаться на Zoom">Book a Zoom call</h4>
-          <p data-en="Pick a time and we'll walk you through options on screen. Camera optional — voice-only is completely fine." data-ru="Выберем время и покажем объекты на экране. Камера по желанию — можно быть просто на голосе.">Pick a time and we'll walk you through options on screen. Camera optional — voice-only is completely fine.</p>
+          <h4 data-en="Book an online call" data-ru="Онлайн-звонок">Book an online call</h4>
+          <p data-en="Pick a time and we'll walk you through options on screen. Camera optional — voice-only is completely fine." data-ru="Выберем время и покажем объекты на экране. Камера по желанию — можно только голосом.">Pick a time and we'll walk you through options on screen. Camera optional — voice-only is completely fine.</p>
           <span class="contact-cta" data-en="Arrange a time →" data-ru="Выбрать время →">Arrange a time →</span>
         </a>
         <a class="contact-option" href="https://wa.me/971585905974?text=Hello%20Heart%20of%20the%20City%2C%20I%27d%20like%20to%20talk." target="_blank" rel="noopener">
@@ -759,11 +760,11 @@ aa[m].innerHTML=aa[m].innerHTML.replace(/One Central, The Offices 4, WeWork[^<]*
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
           </div>
           <h4 data-en="WhatsApp message" data-ru="Сообщение в WhatsApp">WhatsApp message</h4>
-          <p data-en="Quick questions, any hour. You reach a person who knows the portfolio — not a bot." data-ru="Короткие вопросы, в любое время. Вы попадёте на человека, который знает портфолио, — не на бота.">Quick questions, any hour. You reach a person who knows the portfolio — not a bot.</p>
+          <p data-en="Quick questions, any hour. You reach a person who knows the portfolio — not a bot." data-ru="Короткие вопросы. Отвечает человек, который знает портфолио, — не бот.">Quick questions, any hour. You reach a person who knows the portfolio — not a bot.</p>
           <span class="contact-cta" data-en="Open WhatsApp ↗" data-ru="Открыть WhatsApp ↗">Open WhatsApp ↗</span>
         </a>
       </div>
-      <div class="cx-email-row"><span data-en="Or reach us directly: " data-ru="Или напрямую: ">Or reach us directly: </span><a class="cx-email" href="tel:+971585905974">+971 58 590 5974</a><span class="cx-sep">·</span><a class="cx-email" href="/cdn-cgi/l/email-protection#a7cec9c1c8e7cfc2c6d5d3c2d4d3c6d3c289c6c2"><span class="__cf_email__" data-cfemail="422b2c242d022a272330362731362336276c2327">[email&#160;protected]</span></a></div>
+      <div class="cx-email-row"><span data-en="Or reach us directly: " data-ru="Или напрямую: ">Or reach us directly: </span><a class="cx-email" href="tel:+971585905974">+971 58 590 5974</a><span class="cx-sep">·</span><a class="cx-email" href="mailto:info@heartestate.ae">info@heartestate.ae</a></div>
     </div>
 
     
@@ -786,7 +787,7 @@ aa[m].innerHTML=aa[m].innerHTML.replace(/One Central, The Offices 4, WeWork[^<]*
     <div class="contact-step cstep" id="contactStepOk">
       <div class="contact-thanks" style="text-align:center; padding:30px 0;">
         <h4 style="font-family:'Bricolage Grotesque',serif; font-weight:400; font-size:26px; margin:0 0 10px;">Got it.</h4>
-        <p style="color:var(--ink-soft); font-size:15px; line-height:1.6; margin:0;">A Senior Advisor will come back to you within working hours.</p>
+        <p style="color:var(--ink-soft); font-size:15px; line-height:1.6; margin:0;">A Senior Advisor will come back to you shortly.</p>
       </div>
       <div style="text-align:center;"><button class="cx-back" type="button" data-contact-close>Close</button></div>
     </div>
@@ -802,7 +803,7 @@ aa[m].innerHTML=aa[m].innerHTML.replace(/One Central, The Offices 4, WeWork[^<]*
         <p data-en="Prefer a set time? Message us and we'll confirm a 30-minute video call." data-ru="Хотите назначить время? Напишите — подтвердим 30-минутную видеовстречу.">Prefer a set time? Message us and we'll confirm a 30-minute video call.</p>
         <p style="margin-top:16px; display:flex; gap:12px; flex-wrap:wrap;">
           <a href="https://wa.me/971585905974?text=Hello%20Heart%20of%20the%20City%2C%20I%27d%20like%20to%20book%20a%2030-minute%20video%20consultation." target="_blank" rel="noopener" style="display:inline-block; padding:12px 20px; background:var(--accent); color:#fff; border-radius:100px; text-decoration:none; font-weight:500;" data-en="Book via WhatsApp →" data-ru="Записаться в WhatsApp →">Book via WhatsApp →</a>
-          <a href="/cdn-cgi/l/email-protection#41282f272e0129242033352432352035246f20247e3234232b2422357c172825242e647371222e2f32342d352035282e2f64737133243034243235" style="display:inline-block; padding:12px 20px; border:1px solid var(--line); color:var(--ink); border-radius:100px; text-decoration:none;" data-en="Or email us" data-ru="Или на почту">Or email us</a>
+          <a href="mailto:info@heartestate.ae?subject=Video%20consultation%20request" style="display:inline-block; padding:12px 20px; border:1px solid var(--line); color:var(--ink); border-radius:100px; text-decoration:none;" data-en="Or email us" data-ru="Или на почту">Or email us</a>
         </p>
       </div>
       <button class="contact-back" type="button" data-contact-back data-en="← Back" data-ru="← Назад">← Back</button>
@@ -829,7 +830,6 @@ aa[m].innerHTML=aa[m].innerHTML.replace(/One Central, The Offices 4, WeWork[^<]*
           <select name="lang" id="contactLangSelect">
             <option value="en" data-en="English" data-ru="Английский">English</option>
             <option value="ru" data-en="Russian" data-ru="Русский">Russian</option>
-            <option value="ar" data-en="Arabic" data-ru="Арабский">Arabic</option>
           </select>
         </div>
         <button type="submit" class="contact-submit" data-en="Request callback →" data-ru="Запросить звонок →">Request callback →</button>
@@ -840,7 +840,7 @@ aa[m].innerHTML=aa[m].innerHTML.replace(/One Central, The Offices 4, WeWork[^<]*
     <div class="contact-step" id="contactStepThanks" hidden>
       <div class="contact-thanks">
         <h4 data-en="Got it — we'll be in touch." data-ru="Спасибо, получили. Скоро свяжемся.">Got it — we'll be in touch.</h4>
-        <p data-en="A Senior Advisor will reach out within working hours." data-ru="Старший консультант свяжется с вами в рабочее время.">A Senior Advisor will reach out within working hours.</p>
+        <p data-en="A Senior Advisor will be in touch shortly." data-ru="Старший консультант скоро свяжется с вами.">A Senior Advisor will be in touch shortly.</p>
       </div>
       <div style="text-align:center; margin-top:18px;">
         <button class="contact-back" type="button" data-contact-close data-en="Close" data-ru="Закрыть">Close</button>
@@ -976,7 +976,7 @@ aa[m].innerHTML=aa[m].innerHTML.replace(/One Central, The Offices 4, WeWork[^<]*
   }
 
   function onScroll(){
-    var past = hero ? (window.scrollY > hero.offsetHeight - 90) : (window.scrollY > 300);
+    var past = hero ? (window.scrollY > hero.offsetHeight * 0.45) : (window.scrollY > 200);
     nav.classList.toggle('on', past);
     /* раздел считается текущим, когда его начало вошло в верхнюю треть экрана */
     var line = offset() + window.innerHeight * 0.3, cur = -1;
@@ -1023,6 +1023,48 @@ aa[m].innerHTML=aa[m].innerHTML.replace(/One Central, The Offices 4, WeWork[^<]*
   window.addEventListener('scroll', onScroll, {passive:true});
   window.addEventListener('load', function(){ place(); onScroll(); });
   onScroll();
+})();
+</script>
+<script id="lead-form">
+(function(){
+  var f = document.getElementById('contactPhoneForm');
+  if (!f || f.dataset.wired) return;
+  f.dataset.wired = '1';
+  var RU = (document.documentElement.lang || 'en').slice(0,2) === 'ru';
+  f.addEventListener('submit', function(e){
+    e.preventDefault();
+    var btn = f.querySelector('button[type=submit], button:not([type]), input[type=submit]');
+    var old = btn ? btn.textContent : '';
+    if (btn) { btn.disabled = true; btn.textContent = RU ? 'Отправляем…' : 'Sending…'; }
+    var g = function(n){ var el = f.querySelector('[name="'+n+'"]'); return el ? (el.value||'').trim() : ''; };
+    var payload = {
+      type: 'phone-callback',
+      project: (document.title || '').split('·')[0].trim(),
+      name: g('name'), phone: g('phone'),
+      message: (g('when') ? (RU ? 'Удобное время: ' : 'Best time to call: ') + g('when') : ''),
+      lang: g('lang') || (RU ? 'ru' : 'en'),
+      page: location.pathname, source: location.hostname,
+      ts: new Date().toISOString()
+    };
+    fetch('https://hotc-api.a821ka.workers.dev/lead', {
+      method: 'POST', headers: {'Content-Type':'application/json'},
+      body: JSON.stringify(payload)
+    }).then(function(r){
+      if (!r.ok) throw new Error('bad status');
+      var done = document.getElementById('contactStepThanks');
+      if (done) {
+        f.closest('.contact-step').hidden = true;
+        done.hidden = false;
+      } else {
+        f.innerHTML = '<p style="text-align:center;padding:40px 8px;font-size:17px;line-height:1.5;">'
+          + (RU ? 'Спасибо, получили. Скоро свяжемся.' : 'Thank you — we have it. We will be in touch shortly.')
+          + '</p>';
+      }
+    }).catch(function(){
+      if (btn) { btn.disabled = false; btn.textContent = old; }
+      alert(RU ? 'Не удалось отправить. Напишите нам в WhatsApp.' : 'Could not send. Please message us on WhatsApp.');
+    });
+  });
 })();
 </script>
 </body>

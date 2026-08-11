@@ -9,14 +9,14 @@ try{var t=localStorage.getItem('hotc-theme');if(t==='dark'||(!t&&window.matchMed
 </script>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Крипто и эскроу · Heart of the City</title>
+<title>Крипто и эскроу · Heart of the City</title>
 <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
 <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png" />
-<meta name="description" content="Как купить недвижимость в Дубае и на Мальдивах за криптовалюту — лицензированный OTC-обмен, прохождение KYC/AML и отдельный эскроу-счёт для оплаты застройщику или вторичной сделки. Координирует Heart of the City." />
+<meta name="description" content="Как купить недвижимость в Дубае и на Мальдивах за криптовалюту — лицензированный OTC-обмен, прохождение KYC/AML и отдельный эскроу-счёт для оплаты застройщику или вторичной сделки. Координирует Heart of the City." />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Heart of the City" />
-<meta property="og:title" content="Крипто и эскроу · Heart of the City" />
-<meta property="og:description" content="Покупка за крипту — чисто: лицензированный обмен, KYC/AML и эскроу для расчёта с застройщиком или продавцом." />
+<meta property="og:title" content="Крипто и эскроу · Heart of the City" />
+<meta property="og:description" content="Покупка за криптовалюту — чисто: лицензированный обмен, KYC/AML и эскроу для расчёта с застройщиком или продавцом." />
 <meta property="og:url" content="https://heartestate.ae/crypto-escrow-ru" />
 <meta property="og:image" content="https://heartestate.ae/assets/og/heart-of-the-city-og.jpg" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -242,6 +242,15 @@ try{var t=localStorage.getItem('hotc-theme');if(t==='dark'||(!t&&window.matchMed
 <link rel="alternate" hreflang="x-default" href="https://heartestate.ae/heartestate-crypto-escrow" />
 <script src="/js/consent.js?v=1" defer></script>
 <link rel="icon" type="image/png" sizes="96x96" href="/images/favicon-96.png" /><link rel="icon" type="image/png" sizes="192x192" href="/images/favicon-192.png" />
+<style id="hnav-css">
+nav.top{flex-wrap:wrap;gap:14px}
+.hnav{display:flex;gap:20px;list-style:none;margin:0;padding:0;flex-wrap:wrap;align-items:center;flex:1 1 auto;justify-content:center}
+.hnav li{margin:0}
+.hnav a{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-muted);text-decoration:none;white-space:nowrap;transition:color .18s}
+.hnav a:hover{color:var(--accent)}
+.hnav a[aria-current="page"]{color:var(--ink)}
+@media(max-width:820px){nav.top{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;row-gap:8px;column-gap:12px}nav.top>:first-child{grid-row:1;grid-column:1}nav.top>:last-child{grid-row:1;grid-column:2}.hnav{grid-row:2;grid-column:1/-1;justify-content:flex-start;gap:18px;padding-top:2px;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}.hnav::-webkit-scrollbar{display:none}}
+</style>
 </head>
 <script>
 window.addEventListener('load',function(){
@@ -442,21 +451,22 @@ aa[m].innerHTML=aa[m].innerHTML.replace(/One Central, The Offices 4, WeWork[^<]*
 </script><body>
 
 <nav class="top">
-  <a href="heartestate-home-draft.html" class="logo">
-    <img src="assets/logos/logo-black.png" alt="Heart of the City" />
+  <a href="/" class="logo">
+    <img src="assets/logos/logo-black.svg" alt="Heart of the City" />
   </a>
+<ul class="hnav"><li><a href="/heartestate-all-residences-ru" data-href-en="/heartestate-all-residences" data-href-ru="/heartestate-all-residences-ru" data-en="Residences" data-ru="Резиденции">Резиденции</a></li><li><a href="/heartestate-selection-ru" data-href-en="/heartestate-selection" data-href-ru="/heartestate-selection-ru" data-en="Selection" data-ru="Подбор">Подбор</a></li><li><a href="/heartestate-sell-ru" data-href-en="/heartestate-sell" data-href-ru="/heartestate-sell-ru" data-en="Sell" data-ru="Продать">Продать</a></li><li><a href="/heartestate-about-ru" data-href-en="/heartestate-about" data-href-ru="/heartestate-about-ru" data-en="About" data-ru="О нас">О нас</a></li><li><a href="/ru#journal" data-href-en="/#journal" data-href-ru="/ru#journal" data-en="Journal" data-ru="Журнал">Журнал</a></li><li><a href="/ru#contact" data-href-en="/#contact" data-href-ru="/ru#contact" data-en="Contact" data-ru="Контакты">Контакты</a></li></ul>
   <div class="nav-r">
     <a href="heartestate-crypto-escrow.html">EN</a>
     <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme" title="Светлая / тёмная"><svg class="ic-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg><svg class="ic-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/></svg></button>
-    <a href="heartestate-home-draft.html" class="back">← На главную</a>
+    <a href="/" class="back">← На главную</a>
   </div>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
-  <div class="mono">— Крипто и эскроу · Для зарубежных покупателей</div>
-  <h1>Покупка за крипту.<br>Прозрачно и <em>в правовом поле</em>, через регулируемый эскроу.<span class="soon-badge" id="crypto-soon">Скоро</span></h1>
-  <p class="standfirst">Если капитал в цифровых активах, резиденцию в Дубае или на Мальдивах можно купить правильно — через лицензированный обмен, полный KYC/AML и отдельный эскроу-счёт, с которого оплата идёт застройщику или продавцу по вторичке. Ключевое отличие от частных обменников: каждый дирхам проходит проверку у лицензированного контрагента и имеет подтверждённое происхождение. Такие деньги банк и застройщик принимают без вопросов, а у вас остаются документы на всю цепочку.</p>
+  <div class="mono">— Крипто и эскроу · Для зарубежных покупателей</div>
+  <h1>Покупка за криптовалюту.<br>Прозрачно и <em>в правовом поле</em>, через регулируемый эскроу.<span class="soon-badge" id="crypto-soon">Скоро</span></h1>
+  <p class="standfirst">Если капитал в цифровых активах, резиденцию в Дубае или на Мальдивах можно купить правильно — через лицензированный обмен, полный KYC/AML и отдельный эскроу-счёт, с которого оплата идёт застройщику или продавцу по вторичке. Ключевое отличие от частных обменников: каждый дирхам проходит проверку у лицензированного контрагента и имеет подтверждённое происхождение. Такие деньги банк и застройщик принимают без вопросов, а у вас остаются документы на всю цепочку.</p>
   <a href="#" data-contact class="cta">Обсудить →</a>
 </section>
 
@@ -472,7 +482,7 @@ aa[m].innerHTML=aa[m].innerHTML.replace(/One Central, The Offices 4, WeWork[^<]*
 </svg>
 </div>
 
-  <p>Мы не биржа и не храним ваши средства. <em>Мы выстраиваем процесс.</em> Обмен и все проверки ведут лицензированные OTC-партнёры; деньги до расчёта с застройщиком или продавцом лежат на регулируемом эскроу-счёте.</p>
+  <p>Мы не биржа и не храним ваши средства. <em>Мы ведём процесс.</em> Обмен и все проверки ведут лицензированные OTC-партнёры; деньги до расчёта с застройщиком или продавцом лежат на регулируемом эскроу-счёте.</p>
 </section>
 
 <!-- КАК ЭТО РАБОТАЕТ -->
@@ -480,28 +490,28 @@ aa[m].innerHTML=aa[m].innerHTML.replace(/One Central, The Offices 4, WeWork[^<]*
   <div class="section-inner">
     <div class="section-num"><span class="num">— 01</span><span>Как это работает</span><span class="line"></span></div>
     <h2>От кошелька до <em>title deed</em> — четыре шага.</h2>
-    <p class="lede">Понятный и законный путь от криптовалюты до зарегистрированной недвижимости — каждый шаг ведёт лицензированная сторона, а мы координируем.</p>
+    <p class="lede">Понятный и законный путь от криптовалюты до оформленной недвижимости: каждый шаг делает лицензированная компания, а мы ведём весь процесс.</p>
 
     <div class="steps">
       <div class="step">
         <div class="s-num">ШАГ 01</div>
         <h3>Лицензированный OTC-партнёр</h3>
-        <p>Знакомим вас с лицензированным OTC-деском или регулируемой местной биржей, которые меняют основные криптовалюты на AED или USD. Без серых каналов — только регулируемые контрагенты.</p>
+        <p>Знакомим вас с лицензированным OTC-деском или местной биржей под надзором регулятора — там основные криптовалюты меняют на дирхамы или доллары. Без серых каналов — только регулируемые контрагенты.</p>
       </div>
       <div class="step">
         <div class="s-num">ШАГ 02</div>
         <h3>Регистрация · KYC / AML</h3>
-        <p>Помогаем зарегистрироваться у партнёра и пройти KYC и AML, включая подтверждение источника средств. Именно это делает деньги «чистыми» для банка и застройщика.</p>
+        <p>Помогаем зарегистрироваться у партнёра и пройти KYC и AML, включая подтверждение источника средств. После этого у банка и застройщика не будет вопросов к происхождению денег.</p>
       </div>
       <div class="step">
         <div class="s-num">ШАГ 03</div>
         <h3>Обмен на обычные деньги</h3>
-        <p>Криптовалюта меняется на обычные деньги по согласованному курсу. Средства поступают либо на ваш счёт в ОАЭ, либо сразу на отдельный эскроу-счёт под покупку.</p>
+        <p>Криптовалюта меняется на обычные деньги по согласованному курсу. Средства поступают либо на ваш счёт в ОАЭ, либо сразу на отдельный эскроу-счёт под покупку.</p>
       </div>
       <div class="step">
         <div class="s-num">ШАГ 04</div>
-        <h3>Эскроу и расчёт</h3>
-        <p>С отдельного эскроу-счёта идёт расчёт с застройщиком (off-plan — через регулируемый трастовый счёт проекта) или закрывается вторичная сделка — деньги раскрываются по заранее оговорённым этапам.</p>
+        <h3>Эскроу и расчёт</h3>
+        <p>С отдельного эскроу-счёта идёт расчёт с застройщиком (off-plan — через регулируемый трастовый счёт проекта) или закрывается вторичная сделка — деньги уходят по заранее оговорённым этапам.</p>
       </div>
     </div>
   </div>
@@ -516,21 +526,21 @@ aa[m].innerHTML=aa[m].innerHTML.replace(/One Central, The Offices 4, WeWork[^<]*
       <div class="card">
         <h4>Что делает Heart of the City</h4>
         <ul>
-          <li>Знакомит с проверенными лицензированными OTC- и биржевыми партнёрами</li>
-          <li>Координирует прохождение KYC / AML и документы по источнику средств</li>
-          <li>Помогает открыть эскроу-счёт под сделку и сопровождает расчёт</li>
+          <li>Знакомит с проверенными лицензированными OTC- и биржевыми партнёрами</li>
+          <li>Помогает пройти KYC и AML и собрать документы о происхождении денег</li>
+          <li>Помогает открыть эскроу-счёт под сделку и сопровождает расчёт</li>
           <li>Ведёт сделку по недвижимости целиком: бронь, SPA, DLD, передача</li>
-          <li>Ведёт документы по всей цепочке — любой шаг можно проверить</li>
+          <li>Хранит документы по всей цепочке — любой шаг можно проверить</li>
         </ul>
       </div>
       <div class="card">
         <h4>Что делают лицензированные партнёры</h4>
         <ul>
-          <li>OTC-деск / биржа выполняют сам обмен крипты на фиат</li>
-          <li>Они проводят регулируемый KYC / AML и держат нужные лицензии</li>
-          <li>Банк открывает и ведёт эскроу-счёт; трастовый счёт проекта — регулируемая третья сторона</li>
+          <li>OTC-деск или биржа сами меняют криптовалюту на обычные деньги</li>
+          <li>Они проводят регулируемый KYC / AML и держат нужные лицензии</li>
+          <li>Эскроу-счёт открывает и ведёт банк, а трастовый счёт проекта — независимая компания под надзором регулятора</li>
           <li>Платежи застройщику по off-plan идут на трастовые счета проекта (RERA)</li>
-          <li>Мы никогда не получаем доступ к вашим активам и средствам</li>
+          <li>Мы никогда не получаем доступ к вашим деньгам и активам</li>
         </ul>
       </div>
     </div>
@@ -542,33 +552,33 @@ aa[m].innerHTML=aa[m].innerHTML.replace(/One Central, The Offices 4, WeWork[^<]*
 <section class="section">
   <div class="section-inner">
     <div class="section-num"><span class="num">— 03</span><span>Второй путь</span><span class="line"></span></div>
-    <h2>Не продавать, <em>а занять под залог</em>.</h2>
+    <h2>Не продавать, <em>а занять под залог</em>.</h2>
     <div class="cols">
       <div class="card">
         <h4>Как это устроено</h4>
         <ul>
-          <li>BTC, ETH, XRP, SOL и другие ликвидные активы передаются в залог</li>
-          <li>Заём выдаётся в стейблкоинах или фиате</li><li>Если это стейблкоины — они проходят тот же путь, что и в схеме выше: лицензированный обмен, KYC / AML, эскроу-счёт</li><li>На полученные дирхамы покупается резиденция</li>
-          <li>Объект сдаётся, и арендный доход обслуживает заём</li>
-          <li>Активы остаются вашими: вы не фиксируете продажу и не выходите из позиции</li>
-          <li>Размер займа к залогу, ставку, условия довнесения и порядок хранения определяет кредитор</li>
+          <li>BTC, ETH, XRP, SOL и другую ликвидную криптовалюту отдают в залог</li>
+          <li>Заём выдают в стейблкоинах или обычных деньгах</li><li>Если это стейблкоины — они проходят тот же путь, что и в схеме выше: лицензированный обмен, KYC / AML, эскроу-счёт</li><li>На полученные дирхамы покупается резиденция</li>
+          <li>Объект сдаётся, и арендный доход обслуживает заём</li>
+          <li>Криптовалюта остаётся вашей: вы ничего не продаёте</li>
+          <li>Сумму займа, ставку, условия довнесения залога и порядок хранения определяет кредитор</li>
         </ul>
       </div>
       <div class="card">
-        <h4>О чём предупреждаем сразу</h4>
+        <h4>О чём предупреждаем сразу</h4>
         <ul>
-          <li>При падении курса кредитор потребует довнести залог — это главный риск схемы</li>
-          <li>Условия у всех разные: сравнивать нужно не ставку, а весь договор целиком</li>
-          <li>Мы знакомим с кредиторами и ведём сторону объекта, но заём вы берёте напрямую у них</li>
-          <li>Heart of the City не выдаёт займы и не принимает активы в залог</li>
+          <li>Если курс упадёт, кредитор попросит довнести залог. Это главный риск</li>
+          <li>Условия у всех разные: сравнивать надо не ставку, а весь договор</li>
+          <li>Мы знакомим с кредиторами и ведём сделку по недвижимости, а заём вы берёте у них напрямую</li>
+          <li>Heart of the City не выдаёт займы и не принимает активы в залог</li>
         </ul>
       </div>
     </div>
     <div class="note" style="margin-top:28px; font-size:14px; line-height:1.6; opacity:0.85;">
       У Heart of the City нет лицензий VARA, Центрального банка ОАЭ, кредитной или финансово-консультационной.
-      Мы не принимаем, не храним, не конвертируем и не переводим криптоактивы и не выдаём займы.
-      Мы знакомим и сопровождаем; каждый регулируемый шаг выполняет независимый лицензированный контрагент,
-      который проводит собственную проверку KYC и AML. Это не финансовый и не инвестиционный совет.
+      Мы не принимаем, не храним, не конвертируем и не переводим криптоактивы и не выдаём займы.
+      Мы знакомим и сопровождаем; каждый регулируемый шаг выполняет независимый лицензированный контрагент,
+      который проводит собственную проверку KYC и AML. Это не финансовый и не инвестиционный совет.
     </div>
   </div>
 </section>
@@ -581,52 +591,52 @@ aa[m].innerHTML=aa[m].innerHTML.replace(/One Central, The Offices 4, WeWork[^<]*
 
     <details class="faq-item">
       <summary>Какую криптовалюту можно использовать?</summary>
-      <p>Проще всего — основные ликвидные активы: BTC, ETH и ведущие стейблкоины (USDT, USDC). Точный список и лимиты определяет лицензированный партнёр на момент сделки. Скажите, что у вас есть, — подтвердим.</p>
+      <p>Проще всего — основные ликвидные активы: BTC, ETH и ведущие стейблкоины (USDT, USDC). Точный список и лимиты определяет лицензированный партнёр на момент сделки. Скажите, что у вас есть, — уточним и подтвердим.</p>
     </details>
     <details class="faq-item">
-      <summary>Законна ли покупка недвижимости за крипту в ОАЭ?</summary>
-      <p>Крипта не передаётся застройщику. Её меняет на фиат лицензированный партнёр при полном KYC/AML, а недвижимость затем оплачивается и регистрируется в дирхамах, как любая другая сделка. Именно поэтому её принимают банки, застройщиками и Земельным департаментом.</p>
+      <summary>Законна ли покупка недвижимости за криптовалюту в ОАЭ?</summary>
+      <p>Криптовалюту застройщику никто не передаёт. Её меняет на обычные деньги лицензированный партнёр, с полной проверкой KYC и AML, а недвижимость затем оплачивается и регистрируется в дирхамах, как любая другая сделка. Именно поэтому её принимают банки, застройщиками и Земельным департаментом.</p>
     </details>
     <details class="faq-item">
-      <summary>Кто держит эскроу — мои деньги в безопасности?</summary>
-      <p>Банк открывает и ведёт эскроу-счёт; трастовый счёт проекта — регулируемая третья сторона, не мы. Для off-plan платежи застройщику по закону идут на регулируемый эскроу-счёт проекта (RERA). Мы не храним ваши средства.</p>
+      <summary>Кто держит эскроу — мои деньги в безопасности?</summary>
+      <p>Эскроу-счёт открывает и ведёт банк, а трастовый счёт проекта — независимая компания под надзором регулятора, не мы. Для off-plan платежи застройщику по закону идут на регулируемый эскроу-счёт проекта (RERA). Мы не храним ваши средства.</p>
     </details>
     <details class="faq-item">
-      <summary>Сколько это стоит и сколько занимает?</summary>
-      <p>Комиссии за обмен устанавливает OTC/биржевой партнёр и зависят от актива и суммы; мы покажем их прозрачно до того, как вы что-то подтвердите. Регистрация и конвертация обычно занимают несколько рабочих дней после прохождения KYC — сроки зависят от партнёра и суммы.</p>
+      <summary>Сколько это стоит и сколько занимает?</summary>
+      <p>Комиссии за обмен устанавливает OTC/биржевой партнёр и зависят от актива и суммы; мы покажем их полностью до того, как вы что-то подтвердите. Регистрация и обмен обычно занимают несколько рабочих дней после прохождения KYC — сроки зависят от партнёра и суммы.</p>
     </details>
     <details class="faq-item">
-      <summary>Работает ли это и для off-plan, и для вторички?</summary>
-      <p>Да. Для off-plan средства идут застройщику через трастовый счёт проекта. Для вторички эскроу-счёт используется для закрытия сделки с продавцом. Поток один и тот же — отличается лишь адрес назначения.</p>
+      <summary>Работает ли это и для off-plan, и для вторички?</summary>
+      <p>Да. Для off-plan средства идут застройщику через трастовый счёт проекта. Для вторички эскроу-счёт используется для закрытия сделки с продавцом. Схема одна и та же, отличается только получатель денег.</p>
     </details>
     <details class="faq-item">
       <summary>Будет ли подтверждение источника средств?</summary>
-      <p>Да — чистый задокументированный след и есть весь смысл. Вы получаете записи об обмене и комплаенсе, нужные банку, застройщику и для ваших собственных файлов.</p>
+      <p>Да, в этом и смысл: остаётся полный документальный след. Вы получаете записи об обмене и комплаенсе, нужные банку, застройщику и вам самим.</p>
     </details>
   </div>
 </section>
 
 <!-- ПРАВОВАЯ ОГОВОРКА -->
 <div class="note">
-  <p>Heart of the City — агентство недвижимости. Мы координируем знакомства и сделку по недвижимости; мы не оказываем финансовых, инвестиционных, налоговых или юридических консультаций, не обмениваем валюту и не храним средства клиентов. Весь обмен выполняют независимые лицензированные OTC-дески или биржи, а эскроу ведут регулируемые третьи стороны — в рамках их KYC/AML и применимого регулирования ОАЭ. Названия партнёров и точные условия подтверждаются приватно по каждой сделке.</p>
+  <p>Heart of the City — агентство недвижимости. Мы координируем знакомства и сделку по недвижимости; мы не оказываем финансовых, инвестиционных, налоговых или юридических консультаций, не обмениваем валюту и не храним средства клиентов. Весь обмен выполняют независимые лицензированные OTC-дески или биржи, а эскроу ведут регулируемые третьи стороны — в рамках их KYC/AML и применимого регулирования ОАЭ. Названия партнёров и точные условия подтверждаются приватно по каждой сделке.</p>
 </div>
 
 <!-- CTA -->
 <section class="cta-block" id="start">
-  <h2>Держите крипту и покупаете дом?<br><em>Соберём ваш маршрут.</em></h2>
-  <p>Скажите, что у вас за активы и что хотите купить, — разложим самый чистый и законный путь: партнёры, сроки и стоимость, до любых обязательств. Каждый запрос смотрим лично.</p>
+  <h2>Держите криптовалюту и хотите купить дом?<br><em>Разложим по шагам.</em></h2>
+  <p>Скажите, что у вас за активы и что хотите купить, — разложим самый чистый и законный путь: партнёры, сроки и стоимость. Ничего подписывать при этом не нужно.</p>
   <div class="cta-row">
     <a href="https://wa.me/971585905974?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D1%85%D0%BE%D1%87%D1%83%20%D0%BA%D1%83%D0%BF%D0%B8%D1%82%D1%8C%20%D0%BD%D0%B5%D0%B4%D0%B2%D0%B8%D0%B6%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C%20%D0%B7%D0%B0%20%D0%BA%D1%80%D0%B8%D0%BF%D1%82%D1%83." target="_blank" rel="noopener" class="cta">Написать в WhatsApp →</a>
-    <a href="/cdn-cgi/l/email-protection#8be2e5ede4cbe3eeeaf9ffeef8ffeaffeea5eaeeb4f8fee9e1eee8ffb6aecfbbaeb2caaecfbaaeb3bbaecfbbaec9b3aecfbbaec9cdaecfbaaeb3b9aecfbbaec9ceaeb9bbaecfbbaec9b3aeb9bbaecfbaaeb3cfaecfbaaeb3baaecfbbaec9caaecfbaaeb3bbaecfbbaec9ceaecfbaaeb3b8" class="cta ghost">Написать на почту</a>
+    <a href="mailto:info@heartestate.ae?subject=%D0%9A%D1%80%D0%B8%D0%BF%D1%82%D0%BE%20%D0%B8%20%D1%8D%D1%81%D0%BA%D1%80%D0%BE%D1%83" class="cta ghost">Написать на почту</a>
   </div>
 </section>
 
 <footer class="foot-mini">
   <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
-    <span>© 2026 Heart of the City · Qalb AlMadinah Real Estate Broker · ORN 12609</span>
+    <span>© 2026 Heart of the City · Heart of the City Properties L.L.C. · ORN 30550</span>
     <a href="/privacy">Политика конфиденциальности</a>
   </div>
-  <a href="heartestate-home-draft.html">← На главную</a>
+  <a href="/">← На главную</a>
 </footer>
 
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
@@ -653,8 +663,8 @@ aa[m].innerHTML=aa[m].innerHTML.replace(/One Central, The Offices 4, WeWork[^<]*
           <div class="contact-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="14" height="12" rx="2"/><path d="M16 10l6-3v10l-6-3z"/></svg>
           </div>
-          <h4 data-en="Book a Zoom call" data-ru="Записаться на Zoom">Book a Zoom call</h4>
-          <p data-en="Pick a time and we'll walk you through options on screen. Camera optional — voice-only is completely fine." data-ru="Выберем время и покажем объекты на экране. Камера по желанию — можно быть просто на голосе.">Pick a time and we'll walk you through options on screen. Camera optional — voice-only is completely fine.</p>
+          <h4 data-en="Book an online call" data-ru="Онлайн-звонок">Book an online call</h4>
+          <p data-en="Pick a time and we'll walk you through options on screen. Camera optional — voice-only is completely fine." data-ru="Выберем время и покажем объекты на экране. Камера по желанию — можно только голосом.">Pick a time and we'll walk you through options on screen. Camera optional — voice-only is completely fine.</p>
           <span class="contact-cta" data-en="Arrange a time →" data-ru="Выбрать время →">Arrange a time →</span>
         </a>
         <a class="contact-option" href="https://wa.me/971585905974?text=Hello%20Heart%20of%20the%20City%2C%20I%27d%20like%20to%20talk." target="_blank" rel="noopener">
@@ -662,11 +672,11 @@ aa[m].innerHTML=aa[m].innerHTML.replace(/One Central, The Offices 4, WeWork[^<]*
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
           </div>
           <h4 data-en="WhatsApp message" data-ru="Сообщение в WhatsApp">WhatsApp message</h4>
-          <p data-en="Quick questions, any hour. You reach a person who knows the portfolio — not a bot." data-ru="Короткие вопросы, в любое время. Вы попадёте на человека, который знает портфолио, — не на бота.">Quick questions, any hour. You reach a person who knows the portfolio — not a bot.</p>
+          <p data-en="Quick questions, any hour. You reach a person who knows the portfolio — not a bot." data-ru="Короткие вопросы. Отвечает человек, который знает портфолио, — не бот.">Quick questions, any hour. You reach a person who knows the portfolio — not a bot.</p>
           <span class="contact-cta" data-en="Open WhatsApp ↗" data-ru="Открыть WhatsApp ↗">Open WhatsApp ↗</span>
         </a>
       </div>
-      <div class="cx-email-row"><span data-en="Or reach us directly: " data-ru="Или напрямую: ">Or reach us directly: </span><a class="cx-email" href="tel:+971585905974">+971 58 590 5974</a><span class="cx-sep">·</span><a class="cx-email" href="/cdn-cgi/l/email-protection#90f9fef6ffd0f8f5f1e2e4f5e3e4f1e4f5bef1f5"><span class="__cf_email__" data-cfemail="741d1a121b341c111506001107001500115a1511">[email&#160;protected]</span></a></div>
+      <div class="cx-email-row"><span data-en="Or reach us directly: " data-ru="Или напрямую: ">Or reach us directly: </span><a class="cx-email" href="tel:+971585905974">+971 58 590 5974</a><span class="cx-sep">·</span><a class="cx-email" href="mailto:info@heartestate.ae">info@heartestate.ae</a></div>
     </div>
 
     <!-- legacy multi-step UI kept but hidden (single-contact Option A is above) -->
@@ -680,7 +690,7 @@ aa[m].innerHTML=aa[m].innerHTML.replace(/One Central, The Offices 4, WeWork[^<]*
         <p data-en="Prefer a set time? Message us and we'll confirm a 30-minute video call." data-ru="Хотите назначить время? Напишите — подтвердим 30-минутную видеовстречу.">Prefer a set time? Message us and we'll confirm a 30-minute video call.</p>
         <p style="margin-top:16px; display:flex; gap:12px; flex-wrap:wrap;">
           <a href="https://wa.me/971585905974?text=Hello%20Heart%20of%20the%20City%2C%20I%27d%20like%20to%20book%20a%2030-minute%20video%20consultation." target="_blank" rel="noopener" style="display:inline-block; padding:12px 20px; background:var(--accent); color:#fff; border-radius:100px; text-decoration:none; font-weight:500;" data-en="Book via WhatsApp →" data-ru="Записаться в WhatsApp →">Book via WhatsApp →</a>
-          <a href="/cdn-cgi/l/email-protection#98f1f6fef7d8f0fdf9eaecfdebecf9ecfdb6f9fda7ebedfaf2fdfbeca5cef1fcfdf7bdaaa8fbf7f6ebedf4ecf9ecf1f7f6bdaaa8eafde9edfdebec" style="display:inline-block; padding:12px 20px; border:1px solid var(--line); color:var(--ink); border-radius:100px; text-decoration:none;" data-en="Or email us" data-ru="Или на почту">Or email us</a>
+          <a href="mailto:info@heartestate.ae?subject=Video%20consultation%20request" style="display:inline-block; padding:12px 20px; border:1px solid var(--line); color:var(--ink); border-radius:100px; text-decoration:none;" data-en="Or email us" data-ru="Или на почту">Or email us</a>
         </p>
       </div>
       <button class="contact-back" type="button" data-contact-back data-en="← Back" data-ru="← Назад">← Back</button>
@@ -707,7 +717,6 @@ aa[m].innerHTML=aa[m].innerHTML.replace(/One Central, The Offices 4, WeWork[^<]*
           <select name="lang" id="contactLangSelect">
             <option value="en" data-en="English" data-ru="Английский">English</option>
             <option value="ru" data-en="Russian" data-ru="Русский">Russian</option>
-            <option value="ar" data-en="Arabic" data-ru="Арабский">Arabic</option>
           </select>
         </div>
         <button type="submit" class="contact-submit" data-en="Request callback →" data-ru="Запросить звонок →">Request callback →</button>
@@ -718,7 +727,7 @@ aa[m].innerHTML=aa[m].innerHTML.replace(/One Central, The Offices 4, WeWork[^<]*
     <div class="contact-step" id="contactStepThanks" hidden>
       <div class="contact-thanks">
         <h4 data-en="Got it — we'll be in touch." data-ru="Спасибо, получили. Скоро свяжемся.">Got it — we'll be in touch.</h4>
-        <p data-en="A Senior Advisor will reach out within working hours." data-ru="Старший консультант свяжется с вами в рабочее время.">A Senior Advisor will reach out within working hours.</p>
+        <p data-en="A Senior Advisor will be in touch shortly." data-ru="Старший консультант скоро свяжется с вами.">A Senior Advisor will be in touch shortly.</p>
       </div>
       <div style="text-align:center; margin-top:18px;">
         <button class="contact-back" type="button" data-contact-close data-en="Close" data-ru="Закрыть">Close</button>
@@ -750,5 +759,77 @@ aa[m].innerHTML=aa[m].innerHTML.replace(/One Central, The Offices 4, WeWork[^<]*
 <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"c037cf0d245b4b0d8940fd729d478bc8","r":1}' crossorigin="anonymous"></script>
 <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"c037cf0d245b4b0d8940fd729d478bc8","r":1}' crossorigin="anonymous"></script>
 <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"c037cf0d245b4b0d8940fd729d478bc8","r":1}' crossorigin="anonymous"></script>
+<script>
+/* русские версии сервисных страниц: применить data-ru к общим блокам (окно связи и т.п.) */
+(function(){
+  function apply(){
+    document.querySelectorAll('[data-en][data-ru]').forEach(function(el){
+      var t = el.getAttribute('data-ru');
+      if (t == null) return;
+      if (/[<&]/.test(t)) el.innerHTML = t; else el.textContent = t;
+    });
+    document.querySelectorAll('[data-placeholder-en][data-placeholder-ru]').forEach(function(el){
+      var p = el.getAttribute('data-placeholder-ru');
+      if (p != null) el.setAttribute('placeholder', p);
+    });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', apply); else apply();
+  document.addEventListener('click', function(){ setTimeout(apply, 30); }, true);
+})();
+</script>
+<script id="hnav-js">
+(function(){
+  function sync(){
+    var ru = (document.documentElement.getAttribute('lang')||'en').slice(0,2) === 'ru';
+    document.querySelectorAll('.hnav a[data-href-en][data-href-ru]').forEach(function(a){
+      a.setAttribute('href', ru ? a.dataset.hrefRu : a.dataset.hrefEn);
+    });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', sync); else sync();
+  document.addEventListener('click', function(e){ if (e.target.closest('.lang-toggle')) setTimeout(sync, 30); }, true);
+})();
+</script>
+<script id="lead-form">
+(function(){
+  var f = document.getElementById('contactPhoneForm');
+  if (!f || f.dataset.wired) return;
+  f.dataset.wired = '1';
+  var RU = (document.documentElement.lang || 'en').slice(0,2) === 'ru';
+  f.addEventListener('submit', function(e){
+    e.preventDefault();
+    var btn = f.querySelector('button[type=submit], button:not([type]), input[type=submit]');
+    var old = btn ? btn.textContent : '';
+    if (btn) { btn.disabled = true; btn.textContent = RU ? 'Отправляем…' : 'Sending…'; }
+    var g = function(n){ var el = f.querySelector('[name="'+n+'"]'); return el ? (el.value||'').trim() : ''; };
+    var payload = {
+      type: 'phone-callback',
+      project: (document.title || '').split('·')[0].trim(),
+      name: g('name'), phone: g('phone'),
+      message: (g('when') ? (RU ? 'Удобное время: ' : 'Best time to call: ') + g('when') : ''),
+      lang: g('lang') || (RU ? 'ru' : 'en'),
+      page: location.pathname, source: location.hostname,
+      ts: new Date().toISOString()
+    };
+    fetch('https://hotc-api.a821ka.workers.dev/lead', {
+      method: 'POST', headers: {'Content-Type':'application/json'},
+      body: JSON.stringify(payload)
+    }).then(function(r){
+      if (!r.ok) throw new Error('bad status');
+      var done = document.getElementById('contactStepThanks');
+      if (done) {
+        f.closest('.contact-step').hidden = true;
+        done.hidden = false;
+      } else {
+        f.innerHTML = '<p style="text-align:center;padding:40px 8px;font-size:17px;line-height:1.5;">'
+          + (RU ? 'Спасибо, получили. Скоро свяжемся.' : 'Thank you — we have it. We will be in touch shortly.')
+          + '</p>';
+      }
+    }).catch(function(){
+      if (btn) { btn.disabled = false; btn.textContent = old; }
+      alert(RU ? 'Не удалось отправить. Напишите нам в WhatsApp.' : 'Could not send. Please message us on WhatsApp.');
+    });
+  });
+})();
+</script>
 </body>
 </html>

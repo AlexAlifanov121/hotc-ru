@@ -7138,9 +7138,13 @@ aa[m].innerHTML=aa[m].innerHTML.replace(/One Central, The Offices 4, WeWork[^<]*
       // Phone form submit
       const phoneForm = document.getElementById('contactPhoneForm');
       if (phoneForm) {
+      var _ls = phoneForm.querySelector('[name="lang"]');
+      if (_ls) _ls.addEventListener('change', function(){ _ls.dataset.touched='1'; });
         phoneForm.addEventListener('submit', async (e) => {
           e.preventDefault();
-          const fd = new FormData(phoneForm);
+          const _sel = phoneForm.querySelector('[name="lang"]');
+        if (_sel && !_sel.dataset.touched && (document.documentElement.lang||'').slice(0,2)==='ru') _sel.value='ru';
+        const fd = new FormData(phoneForm);
           const payload = {
           type: 'phone-callback',
           project: lastIntent || 'general',
